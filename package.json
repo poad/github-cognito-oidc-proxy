@@ -1,0 +1,37 @@
+{
+  "name": "github-cognito-oidc-proxy",
+  "version": "0.1.0",
+  "bin": {
+    "github-cognito-oidc-proxy": "bin/github-cognito-oidc-proxy.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@swc/core": "*",
+    "@swc/helpers": "*",
+    "@types/aws-lambda": "*",
+    "@types/node": "*",
+    "@types/pem-jwk": "*",
+    "@types/prettier": "*",
+    "aws-cdk": "*",
+    "create-keypair": "*",
+    "cross-fetch": "*",
+    "regenerator-runtime": "*",
+    "ts-node": "*",
+    "typescript": "*"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigatewayv2-alpha": "^2.39.1-alpha.0",
+    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "^2.39.1-alpha.0",
+    "aws-cdk-lib": "*",
+    "aws-lambda": "*",
+    "constructs": "*",
+    "esbuild": "*",
+    "fp-ts": "*",
+    "pem-jwk": "*",
+    "source-map-support": "*"
+  }
+}
