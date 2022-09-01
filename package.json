@@ -7,7 +7,8 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "lint": "eslint --ext .ts lambda"
   },
   "devDependencies": {
     "@swc/core": "*",
@@ -16,9 +17,18 @@
     "@types/node": "*",
     "@types/pem-jwk": "*",
     "@types/prettier": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
     "aws-cdk": "*",
     "create-keypair": "*",
     "cross-fetch": "*",
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-config-airbnb-typescript": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-prettier": "*",
+    "prettier": "*",
     "regenerator-runtime": "*",
     "ts-node": "*",
     "typescript": "*"
