@@ -1,7 +1,9 @@
 import * as cdk from 'aws-cdk-lib';
 import { RemovalPolicy } from 'aws-cdk-lib';
 import { LambdaIntegration, RestApi } from 'aws-cdk-lib/aws-apigateway';
-import { Role, ServicePrincipal, PolicyDocument, PolicyStatement, Effect } from 'aws-cdk-lib/aws-iam';
+import {
+  Role, ServicePrincipal, PolicyDocument, PolicyStatement, Effect,
+} from 'aws-cdk-lib/aws-iam';
 import { Runtime } from 'aws-cdk-lib/aws-lambda';
 import { NodejsFunction, SourceMapMode } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { LogGroup, RetentionDays } from 'aws-cdk-lib/aws-logs';
@@ -182,7 +184,7 @@ export class GithubCognitoOidcProxyStack extends cdk.Stack {
     });
 
     const api = new RestApi(this, `GitHub Cognito OpenID Connect Proxy API (${environment})`, {
-      description: `GitHub Cognito OpenID Connect Proxy API (${environment})`
+      description: `GitHub Cognito OpenID Connect Proxy API (${environment})`,
     });
     api.root.addResource('.well-known').addResource('jwks.json').addMethod('GET', new LambdaIntegration(jwks));
 

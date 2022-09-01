@@ -1,14 +1,23 @@
-import { Handler, APIGatewayProxyEventV2, APIGatewayProxyResultV2 } from 'aws-lambda';
+import {
+  Handler,
+  APIGatewayProxyEventV2,
+  APIGatewayProxyResultV2,
+} from 'aws-lambda';
 import fetch from 'cross-fetch';
-import { left, right, isRight } from 'fp-ts/Either'
-
+import { left, right, isRight } from 'fp-ts/Either';
 
 const eventToRequest = (source: string) => {
   const bodyString = Buffer.from(source, 'base64').toString('ascii');
   const body = new URLSearchParams(bodyString);
-  const paramNames =[ 'grant_type', 'redirect_uri', 'client_id', 'client_secret', 'code' ];
+  const paramNames = [
+    'grant_type',
+    'redirect_uri',
+    'client_id',
+    'client_secret',
+    'code',
+  ];
 
-  const invalidParams = paramNames.filter(name => !body.has(name));
+  const invalidParams = paramNames.filter((name) => !body.has(name));
   if (invalidParams.length > 0) {
     return right(() => `token request body ${invalidParams}`);
   }
@@ -21,9 +30,12 @@ const eventToRequest = (source: string) => {
     code: body.get('code')!,
     state: body.get('state') ?? undefined,
   }));
-}
+};
 
-export const handler: Handler<APIGatewayProxyEventV2, APIGatewayProxyResultV2> = async (event, _context, _callback) => {
+export const handler: Handler<
+APIGatewayProxyEventV2,
+APIGatewayProxyResultV2
+> = async (event, _context, _callback) => {
   if (!event.body) {
     return {
       cookies: [],
@@ -43,13 +55,13 @@ export const handler: Handler<APIGatewayProxyEventV2, APIGatewayProxyResultV2> =
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
-      'Accept': 'application/json'
+      Accept: 'application/json',
     },
-    body
+    body,
   });
   return {
     cookies: [],
     statusCode: 200,
     body: JSON.stringify(await response.json()),
   };
-}
+};
