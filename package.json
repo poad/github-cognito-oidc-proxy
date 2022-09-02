@@ -11,6 +11,7 @@
     "lint": "eslint --ext .ts lambda"
   },
   "devDependencies": {
+    "@middy/core": "*",
     "@swc/core": "*",
     "@swc/helpers": "*",
     "@types/aws-lambda": "*",
