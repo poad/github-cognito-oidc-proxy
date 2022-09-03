@@ -2,15 +2,15 @@
 # yarn lockfile v1
 
 
-"@aws-cdk/aws-apigatewayv2-alpha@^2.39.1-alpha.0":
-  version "2.39.1-alpha.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-alpha/-/aws-apigatewayv2-alpha-2.39.1-alpha.0.tgz#003a4c9254289dbcf3243b5dc0e9d051014bdf4d"
-  integrity sha512-R5Kv7wfwEigDSpS6UzULtm3Ml7mrA6NXyThOj1wzlfTUwanarFF4iEPClWxgfkZTYVYZ3y0+xSmws5B0hJ/DWw==
+"@aws-cdk/aws-apigatewayv2-alpha@^2.40.0-alpha.0":
+  version "2.40.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-alpha/-/aws-apigatewayv2-alpha-2.40.0-alpha.0.tgz#8ad9981ac71da45ece1993eb8ced98a9674ba81a"
+  integrity sha512-VetlaG+IoiFNk3LwUPbivHIHVe0d6DtKMPcKDlW12sH+BGN/clYzp8gBHr4aNXq2+aGQ/BfT3qI8ZVWOLXK5vg==
 
-"@aws-cdk/aws-apigatewayv2-integrations-alpha@^2.39.1-alpha.0":
-  version "2.39.1-alpha.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-integrations-alpha/-/aws-apigatewayv2-integrations-alpha-2.39.1-alpha.0.tgz#dc8d5fb0e5638d815db61b7e2da236b85f4006cf"
-  integrity sha512-xWtGsjdIwG9W8lQRsBqSQhlG+4vLJ/rJ+EwtEgfy4OSjdZR2/eRkPcN8rT4/KwXq/tnqUBuOAvyq229+aLpFhw==
+"@aws-cdk/aws-apigatewayv2-integrations-alpha@^2.40.0-alpha.0":
+  version "2.40.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-integrations-alpha/-/aws-apigatewayv2-integrations-alpha-2.40.0-alpha.0.tgz#4c3143a6b66623521ea98cc727a9b0bde66f5221"
+  integrity sha512-ryTaaIZxyE1Z8HD7ByUQn9SB8hsu2pk0NxR26uqYZHvVK9unplpBq7HpBD3ngz3B3WRY2BXBxq6mHBsUtiP+lg==
 
 "@aws-lambda-powertools/commons@^1.2.1":
   version "1.2.1"
@@ -504,9 +504,9 @@ aws-lambda@*:
     watchpack "^2.0.0-beta.10"
 
 aws-sdk@^2.814.0:
-  version "2.1208.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1208.0.tgz#7dc8c877652d2b1ea126a3c256157c1cbd2e20e2"
-  integrity sha512-Wyq9TJyvRZMcHmcGwmOJag5/94m+Gq3BHcK2klwFvgUf1OWWJc4OYqmi90d7qJ09ydTeGGMeodNJildQdkOrYQ==
+  version "2.1209.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1209.0.tgz#fd7b9efd4047ab6b45bba2c890529d4c296a4b85"
+  integrity sha512-m4Dd0HtyKeKBjwzP9rhe+NcmsRKR0wW+QXfpepu6vgXYhmcJuOB9TLUoeB7jiNDPimmwU+KxtL6eonRfeFhANw==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"

@@ -10,7 +10,7 @@ import { LogGroup, RetentionDays } from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
 
 interface GithubCognitoOidcProxyStackProps extends cdk.StackProps {
-  environment: string
+  environment?: string
 }
 
 export class GithubCognitoOidcProxyStack extends cdk.Stack {
@@ -18,8 +18,9 @@ export class GithubCognitoOidcProxyStack extends cdk.Stack {
     super(scope, id, props);
 
     const { environment } = props;
+    const envPrefix = environment ? `${environment}-` : '';
 
-    const configFunctionName = `${environment}-github-cognito-openid-proxy-openid-configuration`;
+    const configFunctionName = `${envPrefix}github-cognito-openid-proxy-openid-configuration`;
     const configLogs = new LogGroup(this, 'GithubCognitoOidcProxyConfigFunctionLogGroup', {
       logGroupName: `/aws/lambda/${configFunctionName}`,
       removalPolicy: RemovalPolicy.DESTROY,
@@ -60,7 +61,7 @@ export class GithubCognitoOidcProxyStack extends cdk.Stack {
       }),
     });
 
-    const jwksFunctionName = `${environment}-github-cognito-openid-proxy-jwks`;
+    const jwksFunctionName = `${envPrefix}github-cognito-openid-proxy-jwks`;
     const jwksLogs = new LogGroup(this, 'GithubCognitoOidcProxyJwksFunctionLogGroup', {
       logGroupName: `/aws/lambda/${jwksFunctionName}`,
       removalPolicy: RemovalPolicy.DESTROY,
@@ -117,7 +118,7 @@ export class GithubCognitoOidcProxyStack extends cdk.Stack {
       }),
     });
 
-    const userInfoFunctionName = `${environment}-github-cognito-openid-proxy-user-info`;
+    const userInfoFunctionName = `${envPrefix}github-cognito-openid-proxy-user-info`;
     const userInfoLogs = new LogGroup(this, 'GithubCognitoOidcProxyUserInfoFunctionLogGroup', {
       logGroupName: `/aws/lambda/${userInfoFunctionName}`,
       removalPolicy: RemovalPolicy.DESTROY,
@@ -158,7 +159,7 @@ export class GithubCognitoOidcProxyStack extends cdk.Stack {
       }),
     });
 
-    const authorizeFunctionName = `${environment}-github-cognito-openid-proxy-authorize`;
+    const authorizeFunctionName = `${envPrefix}github-cognito-openid-proxy-authorize`;
     const authorizeLogs = new LogGroup(this, 'GithubCognitoOidcProxyAuthorizeFunctionLogGroup', {
       logGroupName: `/aws/lambda/${authorizeFunctionName}`,
       removalPolicy: RemovalPolicy.DESTROY,
@@ -199,7 +200,7 @@ export class GithubCognitoOidcProxyStack extends cdk.Stack {
       }),
     });
 
-    const tokenFunctionName = `${environment}-github-cognito-openid-proxy-token`;
+    const tokenFunctionName = `${envPrefix}github-cognito-openid-proxy-token`;
     const tokenLogs = new LogGroup(this, 'GithubCognitoOidcProxyTokenFunctionLogGroup', {
       logGroupName: `/aws/lambda/${tokenFunctionName}`,
       removalPolicy: RemovalPolicy.DESTROY,
@@ -240,9 +241,15 @@ export class GithubCognitoOidcProxyStack extends cdk.Stack {
       }),
     });
 
-    const api = new RestApi(this, `GitHub Cognito OpenID Connect Proxy API (${environment})`, {
-      description: `GitHub Cognito OpenID Connect Proxy API (${environment})`,
+    const apuDescription = `GitHub Cognito OpenID Connect Proxy API${environment ? ` (${environment})` : ''}`;
+    const api = new RestApi(this, apuDescription, {
+      description: apuDescription,
+      deployOptions: {
+        stageName: 'default',
+      },
     });
+
+    api.deploymentStage.urlForPath('/');
 
     const wellKnown = api.root.addResource('.well-known');
     wellKnown.addResource('jwks.json').addMethod('GET', new LambdaIntegration(jwks));

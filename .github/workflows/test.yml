@@ -26,6 +26,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
         check-latest: true
         cache: yarn
+        cache-dependency-path:  |
+          package/yarn.lock
+          example/yarn.lock
+          example/app/yarn.lock
 
     - uses: actions/cache@v3
       with:
@@ -34,7 +38,16 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-node-
 
-    - name: Build
+    - name: Build (package)
+      working-directory: package
+      run: yarn install && yarn lint && yarn build
+
+    - name: Build (example)
+      working-directory: example
+      run: yarn install && yarn lint && yarn build
+
+    - name: Build (example/app)
+      working-directory: example/app
       run: yarn install && yarn lint && yarn build
 
   configure:

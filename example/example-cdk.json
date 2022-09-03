@@ -1,5 +1,5 @@
 {
-  "app": "test -e jwtRS256.private.pem || yarn run -p create-keypair --bits 4096 jwtRS256 && npx ts-node --prefer-ts-exts bin/github-cognito-oidc-proxy.ts",
+  "app": "yarn lint && npx ts-node --prefer-ts-exts bin/github-oidc-proxy-example-cognito.ts",
   "watch": {
     "include": [
       "**"
@@ -38,6 +38,14 @@
     "@aws-cdk/core:target-partitions": [
       "aws",
       "aws-cn"
-    ]
+    ],
+    "dev": {
+      "domainPrefix": "{Your Cognito User Pool Domain Prefix}",
+      "identityProviderClientId": "{Your GitHub OAuth App Client ID}",
+      "identityProviderClientSecret": "{Your GitHub OAuth App Client Secret}",
+      "identityProviderRequestMethod": "GET",
+      "identityProviderIssuerURL": "{Your API Gateway Endpoint}",
+      "identityProviderAuthorizeScopes": "openid read:user user:email"
+    }
   }
 }

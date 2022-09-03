@@ -12,7 +12,29 @@ updates:
       - poad
 
   - package-ecosystem: npm
-    directory: '/'
+    directory: '/package/'
+    schedule:
+      interval: daily
+      timezone: Asia/Tokyo
+    allow:
+      - dependency-type: all
+    rebase-strategy: auto
+    assignees:
+      - poad
+
+  - package-ecosystem: npm
+    directory: '/example/'
+    schedule:
+      interval: daily
+      timezone: Asia/Tokyo
+    allow:
+      - dependency-type: all
+    rebase-strategy: auto
+    assignees:
+      - poad
+
+  - package-ecosystem: npm
+    directory: '/example/app/'
     schedule:
       interval: daily
       timezone: Asia/Tokyo
