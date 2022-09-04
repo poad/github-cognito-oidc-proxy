@@ -1,5 +1,10 @@
 # GitHub OAuth 2.0 OpenID Connect Proxy for AWS Cognito
 
+<p align='center'>
+  [![Build and Test](https://github.com/poad/github-cognito-oidc-proxy/actions/workflows/test.yml/badge.svg)](https://github.com/poad/github-cognito-oidc-proxy/actions/workflows/test.yml)
+  [![Deploy](https://github.com/poad/github-cognito-oidc-proxy/actions/workflows/deploy.yml/badge.svg)](https://github.com/poad/github-cognito-oidc-proxy/actions/workflows/deploy.yml)
+</p>
+
 Connect to AWS Cognito using API Gateway and Lambda Function as a proxy for GitHub OAuth applications and as an Identity Provider via OpenID Connect.
 
 ## How to use?

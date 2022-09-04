@@ -1,0 +1,164 @@
+name: Deploy
+ 
+on:
+  push:
+    branches:    
+    - main 
+
+  workflow_dispatch:
+
+env:
+  OIDC_IAM_ROLE_ARN: ${{ secrets.OIDC_IAM_ROLE_ARN }}
+  AWS_REGION: us-west-2
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    runs-on: ubuntu-latest
+    steps:
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        role-to-assume: ${OIDC_IAM_ROLE_ARN}
+        role-session-name: GitHubActions
+        aws-region: ${AWS_REGION}
+
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3.4.1
+      with:
+        node-version: ${{ matrix.node-version }}
+        check-latest: true
+        cache: yarn
+        cache-dependency-path:  |
+          package/yarn.lock
+          example/yarn.lock
+          example/app/yarn.lock
+
+    - uses: actions/cache@v3
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - name: Install global packages
+      run: |
+        npm -g i npm yarn
+        yarn global add aws-cdk
+
+    - name: Install AWS CLI
+      run: |
+        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+        unzip awscliv2.zip
+        sudo ./aws/install
+        rm -rf awscliv2.zip aws
+
+    - name: Build (package)
+      working-directory: package
+      run: yarn install && yarn lint && yarn build
+
+    - name: deploy (package)
+      working-directory: package
+      run: cdk deploy -c env=dev
+
+    - name: Build (example)
+      working-directory: example
+      run: yarn install && yarn lint && yarn build
+
+    - name: Generate API Gateway endpoint URL
+      run: |
+        API_ID=$(aws cloudformation describe-stack-resources --stack-name dev-github-cognito-oidc-proxy-stack --query 'StackResources[?ResourceType == `AWS::ApiGateway::RestApi`].PhysicalResourceId[]' --no-cli-pager --output text)
+        API_STAGE=$(aws cloudformation describe-stack-resources --stack-name dev-github-cognito-oidc-proxy-stack --query 'StackResources[?ResourceType == `AWS::ApiGateway::Stage`].PhysicalResourceId[]' --no-cli-pager --output text)
+        echo "API_GATEWAY_ENDPOINT=https://${API_ID}.execute-api.${AWS_REGION}.amazonaws.com/${API_STAGE}" >> $GITHUB_ENV
+
+    - name: generate cdk.json
+      working-directory: example
+      run: |
+        cat << EOS >> cdk.json
+        {
+          "app": "yarn lint && npx ts-node --prefer-ts-exts bin/github-oidc-proxy-example-cognito.ts",
+          "watch": {
+            "include": [
+              "**"
+            ],
+            "exclude": [
+              "README.md",
+              "cdk*.json",
+              "**/*.d.ts",
+              "**/*.js",
+              "tsconfig.json",
+              "package*.json",
+              "yarn.lock",
+              "node_modules",
+              "test"
+            ]
+          },
+          "requireApproval": "never",
+          "context": {
+            "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
+            "@aws-cdk/core:stackRelativeExports": true,
+            "@aws-cdk/aws-rds:lowercaseDbIdentifier": true,
+            "@aws-cdk/aws-lambda:recognizeVersionProps": true,
+            "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
+            "@aws-cdk/aws-cloudfront:defaultSecurityPolicyTLSv1.2_2021": true,
+            "@aws-cdk-containers/ecs-service-extensions:enableDefaultLogDriver": true,
+            "@aws-cdk/aws-ec2:uniqueImdsv2TemplateName": true,
+            "@aws-cdk/core:checkSecretUsage": true,
+            "@aws-cdk/aws-iam:minimizePolicies": true,
+            "@aws-cdk/aws-ecs:arnFormatIncludesClusterName": true,
+            "@aws-cdk/core:validateSnapshotRemovalPolicy": true,
+            "@aws-cdk/aws-codepipeline:crossAccountKeyAliasStackSafeResourceName": true,
+            "@aws-cdk/aws-s3:createDefaultLoggingPolicy": true,
+            "@aws-cdk/aws-sns-subscriptions:restrictSqsDescryption": true,
+            "@aws-cdk/aws-apigateway:disableCloudWatchRole": true,
+            "@aws-cdk/core:enablePartitionLiterals": true,
+            "@aws-cdk/core:target-partitions": [
+              "aws",
+              "aws-cn"
+            ],
+            "dev": {
+              "domainPrefix": "github-openid-example",
+              "identityProviderClientId": "${{ secrets.OAUTH_APP_CLIENT_ID }}",
+              "identityProviderClientSecret": "${{ secrets.OAUTH_APP_CLIENT_SECRET }}",
+              "identityProviderRequestMethod": "GET",
+              "identityProviderIssuerURL": "${{ env.API_GATEWAY_ENDPOINT }}",
+              "identityProviderAuthorizeScopes": "openid read:user user:email"
+            }
+          }
+        }
+        EOS
+
+    - name: deploy (example)
+      working-directory: example
+      run: cdk deploy -c env=dev
+
+    - name: Set environment variables
+      run: |
+        USER_POOL_ID=$(aws cloudformation describe-stack-resources --stack-name dev-github-oidc-proxy-example-stack --query 'StackResources[?ResourceType == `AWS::Cognito::UserPool`].PhysicalResourceId[]' --no-cli-pager --output text)
+        CLIENT_ID=$(aws cloudformation describe-stack-resources --stack-name dev-github-oidc-proxy-example-stack --query 'StackResources[?ResourceType == `AWS::Cognito::UserPoolClient`].PhysicalResourceId[]' --no-cli-pager --output text)
+        echo "::add-mask::${USER_POOL_ID}"
+        echo "::add-mask::${CLIENT_ID}"
+        CLIENT_SECRET=$("aws cognito-idp describe-user-pool-client --user-pool-id ${USER_POOL_ID} --client-id ${CLIENT_ID} --query 'UserPoolClient.ClientSecret' --no-cli-pager --output text")
+        echo "::add-mask::${CLIENT_SECRET}"
+        echo "NEXT_PUBLIC_COGNITO_CLIENT_ID=${CLIENT_ID}" >> $GITHUB_ENV
+        echo "NEXT_PUBLIC_COGNITO_CLIENT_SECRET=${CLIENT_SECRET}" >> $GITHUB_ENV
+
+    - name: Build (example/app)
+      working-directory: example/app
+      run: yarn install && yarn lint && yarn build
+
+    - name: deploy (example) upload next.js app
+      working-directory: example
+      env:
+        NEXT_PUBLIC_COGNITO_CLIENT_ID: ${{ env.NEXT_PUBLIC_COGNITO_CLIENT_ID }}
+        NEXT_PUBLIC_COGNITO_CLIENT_SECRET: ${{ env.NEXT_PUBLIC_COGNITO_CLIENT_SECRET }}
+      run: cdk deploy -c env=dev
