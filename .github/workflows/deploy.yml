@@ -26,9 +26,9 @@ jobs:
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        role-to-assume: ${OIDC_IAM_ROLE_ARN}
+        role-to-assume: ${{ env.OIDC_IAM_ROLE_ARN }}
         role-session-name: GitHubActions
-        aws-region: ${AWS_REGION}
+        aws-region: ${{ env.AWS_REGION }}
 
     - uses: actions/checkout@v3
 
@@ -59,7 +59,7 @@ jobs:
       run: |
         curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
         unzip awscliv2.zip
-        sudo ./aws/install
+        sudo ./aws/install --update
         rm -rf awscliv2.zip aws
 
     - name: Build (package)
@@ -147,7 +147,7 @@ jobs:
         CLIENT_ID=$(aws cloudformation describe-stack-resources --stack-name dev-github-oidc-proxy-example-stack --query 'StackResources[?ResourceType == `AWS::Cognito::UserPoolClient`].PhysicalResourceId[]' --no-cli-pager --output text)
         echo "::add-mask::${USER_POOL_ID}"
         echo "::add-mask::${CLIENT_ID}"
-        CLIENT_SECRET=$("aws cognito-idp describe-user-pool-client --user-pool-id ${USER_POOL_ID} --client-id ${CLIENT_ID} --query 'UserPoolClient.ClientSecret' --no-cli-pager --output text")
+        CLIENT_SECRET=$(aws cognito-idp describe-user-pool-client --user-pool-id "${USER_POOL_ID}" --client-id "${CLIENT_ID}" --query 'UserPoolClient.ClientSecret' --no-cli-pager --output text)
         echo "::add-mask::${CLIENT_SECRET}"
         echo "NEXT_PUBLIC_COGNITO_CLIENT_ID=${CLIENT_ID}" >> $GITHUB_ENV
         echo "NEXT_PUBLIC_COGNITO_CLIENT_SECRET=${CLIENT_SECRET}" >> $GITHUB_ENV
