@@ -145,12 +145,14 @@ jobs:
       run: |
         USER_POOL_ID=$(aws cloudformation describe-stack-resources --stack-name dev-github-oidc-proxy-example-stack --query 'StackResources[?ResourceType == `AWS::Cognito::UserPool`].PhysicalResourceId[]' --no-cli-pager --output text)
         CLIENT_ID=$(aws cloudformation describe-stack-resources --stack-name dev-github-oidc-proxy-example-stack --query 'StackResources[?ResourceType == `AWS::Cognito::UserPoolClient`].PhysicalResourceId[]' --no-cli-pager --output text)
+        CFN_DOMAINNAME=$(aws cloudfront get-distribution --id $(aws cloudformation describe-stack-resources --stack-name dev-github-oidc-proxy-example-stack --query 'StackResources[?ResourceType == `AWS::CloudFront::Distribution`].PhysicalResourceId[]' --no-cli-pager --output text) --query 'Distribution.DomainName' --output text --no-cli-pager)
         echo "::add-mask::${USER_POOL_ID}"
         echo "::add-mask::${CLIENT_ID}"
         CLIENT_SECRET=$(aws cognito-idp describe-user-pool-client --user-pool-id "${USER_POOL_ID}" --client-id "${CLIENT_ID}" --query 'UserPoolClient.ClientSecret' --no-cli-pager --output text)
         echo "::add-mask::${CLIENT_SECRET}"
         echo "NEXT_PUBLIC_COGNITO_CLIENT_ID=${CLIENT_ID}" >> $GITHUB_ENV
         echo "NEXT_PUBLIC_COGNITO_CLIENT_SECRET=${CLIENT_SECRET}" >> $GITHUB_ENV
+        echo "CFN_DOMAINNAME=${CFN_DOMAINNAME}" >> $GITHUB_ENV
 
     - name: Build (example/app)
       working-directory: example/app
@@ -162,3 +164,8 @@ jobs:
         NEXT_PUBLIC_COGNITO_CLIENT_ID: ${{ env.NEXT_PUBLIC_COGNITO_CLIENT_ID }}
         NEXT_PUBLIC_COGNITO_CLIENT_SECRET: ${{ env.NEXT_PUBLIC_COGNITO_CLIENT_SECRET }}
       run: cdk deploy -c env=dev
+
+    - name: Display deployed CloudFront Domain name
+      env:
+        DOMAIN: ${{ env.CFN_DOMAINNAME }}
+      run: echo "https://${DOMAIN}"
