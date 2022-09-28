@@ -509,9 +509,9 @@ confusing-browser-globals@^1.0.10:
   integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
 
 constructs@*:
-  version "10.1.114"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.114.tgz#0bc27afb59e9a394fcd0e7a7c4ccb7efb61ae2db"
-  integrity sha512-yWcs4MkgUoSXdFkcp3u0/HoalghPGwn9PfCwqTwHoB9uOhKg6MsrcuKfr3qicJBLac0ihc1YM6Q1Aml+h4h9/A==
+  version "10.1.115"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.115.tgz#2399afb4cdf280eda7ffd69f913c7e4344129435"
+  integrity sha512-pX3LI9Tf9ltsf0Qm7RCTdht0seLi4mLwjLuQ0znvzk2S88dWIKZdhzjI2zraN2kjY1a3fByYWg4aK8/St3sS+Q==
 
 create-require@^1.1.0:
   version "1.1.1"
@@ -1795,9 +1795,9 @@ type-fest@^0.20.2:
   integrity sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==
 
 typescript@*:
-  version "4.8.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.8.3.tgz#d59344522c4bc464a65a730ac695007fdb66dd88"
-  integrity sha512-goMHfm00nWPa8UvR/CPSvykqf6dVV8x/dp0c5mFTMTIu0u0FlGWRioyy7Nn0PGAdHxpJZnuO/ut+PpQ8UiHAig==
+  version "4.8.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.8.4.tgz#c464abca159669597be5f96b8943500b238e60e6"
+  integrity sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
