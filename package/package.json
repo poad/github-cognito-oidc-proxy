@@ -8,7 +8,9 @@
     "build": "tsc",
     "watch": "tsc -w",
     "cdk": "cdk",
-    "lint": "eslint --ext .ts lambda bin lib"
+    "lint": "eslint --ext .ts lambda bin lib",
+    "style-check": "prettier --write lambda bin lib",
+    "format": "prettier --write lambda bin lib"
   },
   "devDependencies": {
     "@middy/core": "*",

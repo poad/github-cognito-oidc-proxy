@@ -11,17 +11,15 @@
   },
   "extends": [
     "airbnb-base",
-    "plugin:import/typescript"
+    "plugin:import/typescript",
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": [
     "@typescript-eslint"
   ],
   "rules": {
-    "@typescript-eslint/indent": [
-      "error",
-      2
-    ],
+    "@typescript-eslint/indent": ["off"],
     "spaced-comment": [
       "error",
       "always",
@@ -42,6 +40,6 @@
     "react/display-name": ["off"],
     "import/prefer-default-export": ["off"],
     "camelcase": ["off"],
-    "no-unused-vars": ["off"]
+    "no-unused-vars": ["off"],
   }
 }

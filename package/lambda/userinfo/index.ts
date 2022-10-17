@@ -4,9 +4,7 @@ import {
   APIGatewayProxyResultV2,
 } from 'aws-lambda';
 import fetch from 'cross-fetch';
-import {
-  left, right, isRight, Either,
-} from 'fp-ts/Either';
+import { left, right, isRight, Either } from 'fp-ts/Either';
 import { Logger } from '@aws-lambda-powertools/logger';
 
 const logger = new Logger();
@@ -18,15 +16,22 @@ interface Email {
   visibility?: 'private' | 'public';
 }
 
-const getUser = async (token: string): Promise<Either<{
-  id: number;
-  name: string,
-  login: string,
-  html_url: string,
-  avatar_url: string,
-  blog: string,
-  updated_at: string
-}, string>> => {
+const getUser = async (
+  token: string,
+): Promise<
+  Either<
+    {
+      id: number;
+      name: string;
+      login: string;
+      html_url: string;
+      avatar_url: string;
+      blog: string;
+      updated_at: string;
+    },
+    string
+  >
+> => {
   const response = await fetch('https://api.github.com/user', {
     method: 'GET',
     headers: {
@@ -42,12 +47,12 @@ const getUser = async (token: string): Promise<Either<{
 
   const user = (await response.json()) as {
     id: number;
-    name: string,
-    login: string,
-    html_url: string,
-    avatar_url: string,
-    blog: string,
-    updated_at: string
+    name: string;
+    login: string;
+    html_url: string;
+    avatar_url: string;
+    blog: string;
+    updated_at: string;
   };
 
   return left({
@@ -84,16 +89,17 @@ const getValidEmail = async (token: string): Promise<Either<Email, string>> => {
   logger.info(JSON.stringify(emails));
 
   const email = emails.find(
-    (it) => it.primary
-      && it.verified
-      && !it.email.trim().endsWith('noreply.github.com'),
+    (it) =>
+      it.primary &&
+      it.verified &&
+      !it.email.trim().endsWith('noreply.github.com'),
   );
   return email ? left(email) : right('/user/emails returned no valid emails');
 };
 
 export const handler: Handler<
-APIGatewayProxyEventV2,
-APIGatewayProxyResultV2 | void
+  APIGatewayProxyEventV2,
+  APIGatewayProxyResultV2 | void
 > = async (event, _context, callback) => {
   const { headers } = event;
   const authHeader = headers.authorization || headers.Authorization;

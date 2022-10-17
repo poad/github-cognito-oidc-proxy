@@ -1,5 +1,5 @@
 {
-  "app": "test -e jwtRS256.private.pem || yarn run -p create-keypair --bits 4096 jwtRS256 && yarn lint && npx ts-node --prefer-ts-exts bin/github-cognito-oidc-proxy.ts",
+  "app": "test -e jwtRS256.private.pem || yarn run -p create-keypair --bits 4096 jwtRS256 && yarn style-check && yarn lint && npx ts-node --prefer-ts-exts bin/github-cognito-oidc-proxy.ts",
   "watch": {
     "include": [
       "**"

@@ -9,6 +9,10 @@ const env = app.node.tryGetContext('env');
 const envPrefix = env ? `${env}-` : '';
 
 // eslint-disable-next-line no-new
-new GithubCognitoOidcProxyStack(app, `${envPrefix}github-cognito-oidc-proxy-stack`, {
-  environment: env,
-});
+new GithubCognitoOidcProxyStack(
+  app,
+  `${envPrefix}github-cognito-oidc-proxy-stack`,
+  {
+    environment: env,
+  },
+);

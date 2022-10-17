@@ -8,8 +8,8 @@ import { Logger } from '@aws-lambda-powertools/logger';
 const logger = new Logger();
 
 export const handler: Handler<
-APIGatewayProxyEventV2,
-APIGatewayProxyResultV2 | void
+  APIGatewayProxyEventV2,
+  APIGatewayProxyResultV2 | void
 > = async (event, _context, callback) => {
   const host = event.headers.Host!;
   const stage = event.requestContext && event.requestContext.stage;

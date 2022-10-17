@@ -1,13 +1,25 @@
 /* eslint-disable no-new */
 import * as cdk from 'aws-cdk-lib';
 import {
-  UserPool, Mfa, AccountRecovery, CfnUserPoolIdentityProvider, UserPoolIdentityProvider,
-  UserPoolClientIdentityProvider, UserPoolClient, OAuthScope, ClientAttributes,
-  CfnIdentityPool, CfnIdentityPoolRoleAttachment,
+  UserPool,
+  Mfa,
+  AccountRecovery,
+  CfnUserPoolIdentityProvider,
+  UserPoolIdentityProvider,
+  UserPoolClientIdentityProvider,
+  UserPoolClient,
+  OAuthScope,
+  ClientAttributes,
+  CfnIdentityPool,
+  CfnIdentityPoolRoleAttachment,
 } from 'aws-cdk-lib/aws-cognito';
 import { Construct } from 'constructs';
 import { HttpOrigin } from 'aws-cdk-lib/aws-cloudfront-origins';
-import { Distribution, CachePolicy, OriginProtocolPolicy } from 'aws-cdk-lib/aws-cloudfront';
+import {
+  Distribution,
+  CachePolicy,
+  OriginProtocolPolicy,
+} from 'aws-cdk-lib/aws-cloudfront';
 import { Duration, RemovalPolicy } from 'aws-cdk-lib';
 import { BucketDeployment, Source } from 'aws-cdk-lib/aws-s3-deployment';
 import * as crypto from 'crypto';
@@ -16,40 +28,61 @@ import {
   AccountPrincipal,
   AccountRootPrincipal,
   ArnPrincipal,
-  Effect, FederatedPrincipal, PolicyDocument, PolicyStatement, Role, ServicePrincipal, StarPrincipal,
+  Effect,
+  FederatedPrincipal,
+  PolicyDocument,
+  PolicyStatement,
+  Role,
+  ServicePrincipal,
+  StarPrincipal,
 } from 'aws-cdk-lib/aws-iam';
 
 interface GitHubOidcProxyExampleCognitoStackProps extends cdk.StackProps {
-  environment: string,
-  domainPrefix: string,
-  identityProviderClientId: string,
-  identityProviderClientSecret: string,
-  identityProviderRequestMethod: string,
-  identityProviderIssuerURL: string,
-  identityProviderAuthorizeScopes: string,
+  environment: string;
+  domainPrefix: string;
+  identityProviderClientId: string;
+  identityProviderClientSecret: string;
+  identityProviderRequestMethod: string;
+  identityProviderIssuerURL: string;
+  identityProviderAuthorizeScopes: string;
 }
 
 export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
-  constructor(scope: Construct, id: string, props: GitHubOidcProxyExampleCognitoStackProps) {
+  constructor(
+    scope: Construct,
+    id: string,
+    props: GitHubOidcProxyExampleCognitoStackProps,
+  ) {
     super(scope, id, props);
 
     const {
-      environment, domainPrefix, identityProviderClientId, identityProviderClientSecret, identityProviderRequestMethod,
-      identityProviderIssuerURL, identityProviderAuthorizeScopes,
+      environment,
+      domainPrefix,
+      identityProviderClientId,
+      identityProviderClientSecret,
+      identityProviderRequestMethod,
+      identityProviderIssuerURL,
+      identityProviderAuthorizeScopes,
     } = props;
 
-    const hash = crypto.createHash('md5').update(new Date().getTime().toString()).digest('hex');
+    const hash = crypto
+      .createHash('md5')
+      .update(new Date().getTime().toString())
+      .digest('hex');
 
     const s3BucketName = `${environment}-github-oidc-proxy-example-static-stite`;
 
     const cloudfront = new Distribution(this, 'CloudFront', {
       defaultBehavior: {
-        origin: new HttpOrigin(`${s3BucketName}.s3-website-${this.region}.amazonaws.com`, {
-          customHeaders: {
-            Referer: hash,
+        origin: new HttpOrigin(
+          `${s3BucketName}.s3-website-${this.region}.amazonaws.com`,
+          {
+            customHeaders: {
+              Referer: hash,
+            },
+            protocolPolicy: OriginProtocolPolicy.HTTP_ONLY,
           },
-          protocolPolicy: OriginProtocolPolicy.HTTP_ONLY,
-        }),
+        ),
         cachePolicy: CachePolicy.CACHING_DISABLED,
       },
       enableIpv6: false,
@@ -74,58 +107,57 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
           statements: [
             new PolicyStatement({
               effect: Effect.ALLOW,
-              actions: [
-                's3:*',
-              ],
-              resources: [
-                `${s3bucket.bucketArn}/`,
-                `${s3bucket.bucketArn}/*`,
-              ],
+              actions: ['s3:*'],
+              resources: [`${s3bucket.bucketArn}/`, `${s3bucket.bucketArn}/*`],
             }),
           ],
         }),
       },
     });
 
-    s3bucket.addToResourcePolicy(new PolicyStatement({
-      effect: Effect.DENY,
-      actions: ['s3:*'],
-      principals: [
-        new StarPrincipal(),
-      ],
-      resources: [`${s3bucket.bucketArn}/*`],
-      conditions: {
-        StringNotLike: {
-          'aws:Referer': hash,
+    s3bucket.addToResourcePolicy(
+      new PolicyStatement({
+        effect: Effect.DENY,
+        actions: ['s3:*'],
+        principals: [new StarPrincipal()],
+        resources: [`${s3bucket.bucketArn}/*`],
+        conditions: {
+          StringNotLike: {
+            'aws:Referer': hash,
+          },
+          StringNotEquals: {
+            's3:ResourceAccount': this.account,
+            'aws:PrincipalArn': new ArnPrincipal(deployRole.roleArn).arn,
+          },
         },
-        StringNotEquals: {
-          's3:ResourceAccount': this.account,
-          'aws:PrincipalArn': new ArnPrincipal(deployRole.roleArn).arn,
+      }),
+    );
+    s3bucket.addToResourcePolicy(
+      new PolicyStatement({
+        effect: Effect.ALLOW,
+        actions: ['s3:GetObject'],
+        principals: [new StarPrincipal()],
+        resources: [`${s3bucket.bucketArn}/*`],
+        conditions: {
+          StringLike: {
+            'aws:Referer': hash,
+          },
         },
-      },
-    }));
-    s3bucket.addToResourcePolicy(new PolicyStatement({
-      effect: Effect.ALLOW,
-      actions: ['s3:GetObject'],
-      principals: [new StarPrincipal()],
-      resources: [`${s3bucket.bucketArn}/*`],
-      conditions: {
-        StringLike: {
-          'aws:Referer': hash,
+      }),
+    );
+    s3bucket.addToResourcePolicy(
+      new PolicyStatement({
+        effect: Effect.ALLOW,
+        actions: ['s3:*'],
+        principals: [new AccountPrincipal(this.account)],
+        resources: [`${s3bucket.bucketArn}/*`],
+        conditions: {
+          StringEquals: {
+            's3:ResourceAccount': this.account,
+          },
         },
-      },
-    }));
-    s3bucket.addToResourcePolicy(new PolicyStatement({
-      effect: Effect.ALLOW,
-      actions: ['s3:*'],
-      principals: [new AccountPrincipal(this.account)],
-      resources: [`${s3bucket.bucketArn}/*`],
-      conditions: {
-        StringEquals: {
-          's3:ResourceAccount': this.account,
-        },
-      },
-    }));
+      }),
+    );
 
     new BucketDeployment(this, 'DeployWebsite', {
       sources: [Source.asset(`${process.cwd()}/app/out`)],
@@ -191,11 +223,16 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
           preferredUsername: 'preferred_username',
         },
         userPoolId: userPool.userPoolId,
-      }).providerName : undefined;
+      }).providerName
+      : undefined;
 
     if (idpName) {
       userPool.registerIdentityProvider(
-        UserPoolIdentityProvider.fromProviderName(this, 'CognitoIdPGitHub', idpName),
+        UserPoolIdentityProvider.fromProviderName(
+          this,
+          'CognitoIdPGitHub',
+          idpName,
+        ),
       );
       UserPoolClientIdentityProvider.custom(idpName);
     }
@@ -255,80 +292,83 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
     const identityPool = new CfnIdentityPool(this, 'CognitoIdPool', {
       allowUnauthenticatedIdentities: false,
       allowClassicFlow: true,
-      cognitoIdentityProviders: [
-        identityPoolProvider,
-      ],
+      cognitoIdentityProviders: [identityPoolProvider],
       identityPoolName: `${environment} Cognito GitHub OIDC Proxy idp`,
     });
 
-    const unauthenticatedRole = new Role(this, 'CognitoDefaultUnauthenticatedRole', {
-      roleName: `${environment}-github-oidc-proxy-example-cognito-unauth-role`,
-      assumedBy: new FederatedPrincipal('cognito-identity.amazonaws.com', {
-        StringEquals: {
-          'cognito-identity.amazonaws.com:aud': identityPool.ref,
+    const unauthenticatedRole = new Role(
+      this,
+      'CognitoDefaultUnauthenticatedRole',
+      {
+        roleName: `${environment}-github-oidc-proxy-example-cognito-unauth-role`,
+        assumedBy: new FederatedPrincipal(
+          'cognito-identity.amazonaws.com',
+          {
+            StringEquals: {
+              'cognito-identity.amazonaws.com:aud': identityPool.ref,
+            },
+            'ForAnyValue:StringLike': {
+              'cognito-identity.amazonaws.com:amr': 'unauthenticated',
+            },
+          },
+          'sts:AssumeRoleWithWebIdentity',
+        ),
+        maxSessionDuration: Duration.hours(12),
+        inlinePolicies: {
+          'cognito-policy': new PolicyDocument({
+            statements: [
+              new PolicyStatement({
+                effect: Effect.ALLOW,
+                actions: ['cognito-sync:*', 'cognito-identity:*'],
+                resources: ['*'],
+              }),
+              new PolicyStatement({
+                effect: Effect.ALLOW,
+                actions: ['sts:*'],
+                resources: ['*'],
+              }),
+            ],
+          }),
         },
-        'ForAnyValue:StringLike': {
-          'cognito-identity.amazonaws.com:amr': 'unauthenticated',
-        },
-      }, 'sts:AssumeRoleWithWebIdentity'),
-      maxSessionDuration: Duration.hours(12),
-      inlinePolicies: {
-        'cognito-policy': new PolicyDocument({
-          statements: [
-            new PolicyStatement({
-              effect: Effect.ALLOW,
-              actions: [
-                'cognito-sync:*',
-                'cognito-identity:*',
-              ],
-              resources: ['*'],
-            }),
-            new PolicyStatement({
-              effect: Effect.ALLOW,
-              actions: [
-                'sts:*',
-              ],
-              resources: ['*'],
-            }),
-          ],
-        }),
       },
-    });
+    );
 
-    const authenticatedRole = new Role(this, 'CognitoDefaultAuthenticatedRole', {
-      roleName: `${environment}-github-oidc-proxy-example-cognito-auth-role`,
-      assumedBy: new FederatedPrincipal('cognito-identity.amazonaws.com', {
-        StringEquals: {
-          'cognito-identity.amazonaws.com:aud': identityPool.ref,
+    const authenticatedRole = new Role(
+      this,
+      'CognitoDefaultAuthenticatedRole',
+      {
+        roleName: `${environment}-github-oidc-proxy-example-cognito-auth-role`,
+        assumedBy: new FederatedPrincipal(
+          'cognito-identity.amazonaws.com',
+          {
+            StringEquals: {
+              'cognito-identity.amazonaws.com:aud': identityPool.ref,
+            },
+            'ForAnyValue:StringLike': {
+              'cognito-identity.amazonaws.com:amr': 'authenticated',
+            },
+          },
+          'sts:AssumeRoleWithWebIdentity',
+        ).withSessionTags(),
+        maxSessionDuration: Duration.hours(12),
+        inlinePolicies: {
+          'cognito-policy': new PolicyDocument({
+            statements: [
+              new PolicyStatement({
+                effect: Effect.ALLOW,
+                actions: ['cognito-sync:*', 'cognito-identity:*'],
+                resources: ['*'],
+              }),
+              new PolicyStatement({
+                effect: Effect.ALLOW,
+                actions: ['sts:*'],
+                resources: ['*'],
+              }),
+            ],
+          }),
         },
-        'ForAnyValue:StringLike': {
-          'cognito-identity.amazonaws.com:amr': 'authenticated',
-        },
-      }, 'sts:AssumeRoleWithWebIdentity')
-        .withSessionTags(),
-      maxSessionDuration: Duration.hours(12),
-      inlinePolicies: {
-        'cognito-policy': new PolicyDocument({
-          statements: [
-            new PolicyStatement({
-              effect: Effect.ALLOW,
-              actions: [
-                'cognito-sync:*',
-                'cognito-identity:*',
-              ],
-              resources: ['*'],
-            }),
-            new PolicyStatement({
-              effect: Effect.ALLOW,
-              actions: [
-                'sts:*',
-              ],
-              resources: ['*'],
-            }),
-          ],
-        }),
       },
-    });
+    );
 
     new CfnIdentityPoolRoleAttachment(this, 'CognitoIdPoolRoleAttachment', {
       identityPoolId: identityPool.ref,

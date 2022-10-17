@@ -9,7 +9,9 @@
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
-    "lint": "eslint --ext .ts,.ts bin lib"
+    "lint": "eslint --ext .ts,.ts bin lib",
+    "style-check": "prettier --write bin lib",
+    "format": "prettier --write bin lib"
   },
   "devDependencies": {
     "@swc/core": "*",

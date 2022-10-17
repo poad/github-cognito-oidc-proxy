@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "release": "next build && next export"
+    "release": "next build && next export",
+    "style-check": "prettier --check src",
+    "format": "prettier --write src"
   },
   "dependencies": {
     "cross-fetch": "*",

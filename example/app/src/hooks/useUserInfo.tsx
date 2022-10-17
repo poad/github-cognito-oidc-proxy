@@ -6,21 +6,21 @@ const endpoint = process.env.NEXT_PUBLIC_COGNITO_ENDPOINT;
 const tokenEndpointUrl = `${endpoint}oauth2/userInfo`;
 
 interface UserInfoResp {
-  sub: string,
-  username?: string,
-  given_name?: string,
-  family_name?: string,
-  preferred_username?: string,
-  email: string,
+  sub: string;
+  username?: string;
+  given_name?: string;
+  family_name?: string;
+  preferred_username?: string;
+  email: string;
 }
 
 export interface UserInfo {
-  sub: string,
-  username?: string,
-  givenName?: string,
-  familyName?: string,
-  preferredUsername?: string,
-  email: string,
+  sub: string;
+  username?: string;
+  givenName?: string;
+  familyName?: string;
+  preferredUsername?: string;
+  email: string;
 }
 
 const useUserInfo = (accessToken?: string) => {

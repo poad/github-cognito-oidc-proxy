@@ -21,7 +21,12 @@ const eventToRequest = (bodyString: string) => {
 
   const invalidParams = paramNames.filter((name) => !body.has(name));
   if (invalidParams.length > 0) {
-    return right(() => `token request body [${invalidParams}] in [${paramNames}]. body: ${JSON.stringify(body)}`);
+    return right(
+      () =>
+        `token request body [${invalidParams}] in [${paramNames}]. body: ${JSON.stringify(
+          body,
+        )}`,
+    );
   }
 
   return left(() => ({
@@ -35,8 +40,8 @@ const eventToRequest = (bodyString: string) => {
 };
 
 export const handler: Handler<
-APIGatewayProxyEventV2,
-APIGatewayProxyResultV2 | void
+  APIGatewayProxyEventV2,
+  APIGatewayProxyResultV2 | void
 > = async (event, _context, callback) => {
   if (!event.body) {
     logger.warn('body is undefined');
@@ -48,7 +53,11 @@ APIGatewayProxyResultV2 | void
   const result = eventToRequest(event.body);
   if (isRight(result)) {
     const message = result.right();
-    logger.warn(`cannot convert event to request. reson: ${message}, request: ${JSON.stringify(event)}`);
+    logger.warn(
+      `cannot convert event to request. reson: ${message}, request: ${JSON.stringify(
+        event,
+      )}`,
+    );
     callback(null, {
       statusCode: 400,
       body: result.right(),

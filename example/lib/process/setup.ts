@@ -9,21 +9,21 @@ export const nextJsExport = () => {
       });
     }
   });
-  ['yarn install'].forEach(((cmd) => {
+  ['yarn install'].forEach((cmd) => {
     childProcess.execSync(cmd, {
       cwd: `${process.cwd()}/app`,
       stdio: ['ignore', 'inherit', 'inherit'],
       env: { ...process.env },
       shell: 'bash',
     });
-  }));
+  });
 
-  ['yarn release'].forEach(((cmd) => {
+  ['yarn release'].forEach((cmd) => {
     childProcess.execSync(cmd, {
       cwd: `${process.cwd()}/app`,
       stdio: ['ignore', 'inherit', 'inherit'],
       env: { ...process.env },
       shell: 'bash',
     });
-  }));
+  });
 };

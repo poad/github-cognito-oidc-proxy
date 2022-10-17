@@ -1,5 +1,5 @@
 {
-  "app": "yarn lint && npx ts-node --prefer-ts-exts bin/github-oidc-proxy-example-cognito.ts",
+  "app": "yarn format && yarn lint && npx ts-node --prefer-ts-exts bin/github-oidc-proxy-example-cognito.ts",
   "watch": {
     "include": [
       "**"
