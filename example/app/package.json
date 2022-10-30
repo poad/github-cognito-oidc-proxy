@@ -13,17 +13,16 @@
     "format": "prettier --write src"
   },
   "dependencies": {
+    "@next/font": "^13",
     "cross-fetch": "*",
-    "next": "^12",
-    "preact": "*",
-    "preact-render-to-string": "*",
-    "react": "npm:@preact/compat",
-    "react-dom": "npm:@preact/compat",
-    "react-ssr-prepass": "npm:preact-ssr-prepass",
+    "next": "^13",
+    "react": "*",
+    "react-dom": "*",
     "web-vitals": "*"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^13",
+    "@next/codemod": "^13",
     "@types/node": "*",
     "@types/react": "*",
     "@types/react-dom": "*",
@@ -42,7 +41,6 @@
     "eslint-plugin-prettier": "*",
     "eslint-plugin-react": "*",
     "eslint-plugin-react-hooks": "*",
-    "next-plugin-preact": "*",
     "next-transpile-modules": "*",
     "prettier": "*",
     "typescript": "*"
