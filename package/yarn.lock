@@ -2,15 +2,15 @@
 # yarn lockfile v1
 
 
-"@aws-cdk/aws-apigatewayv2-alpha@^2.47.0-alpha.0":
-  version "2.47.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-alpha/-/aws-apigatewayv2-alpha-2.47.0-alpha.0.tgz#5e3dc15dd5cb1d9bc2b198a4bd83a71218f3b1a6"
-  integrity sha512-o8oM6xZoNNXIv6W9h9ieVF8NRuHMAvXQBlGXu0v689XOqTzQqXGcfvr8R08d/iFpXboC3LubloLBg0evTS0SOw==
+"@aws-cdk/aws-apigatewayv2-alpha@^2.50.0-alpha.0":
+  version "2.50.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-alpha/-/aws-apigatewayv2-alpha-2.50.0-alpha.0.tgz#e4879e9cef6816933efd4b906904c8d0f76f662a"
+  integrity sha512-dttWDqy+nTg/fD9y0egvj7/zdnOVEo0qyGsep1RV+p16R3F4ObMKyPVIg15fz57tK//Gp/i1QgXsZaSqbcWHOg==
 
-"@aws-cdk/aws-apigatewayv2-integrations-alpha@^2.47.0-alpha.0":
-  version "2.47.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-integrations-alpha/-/aws-apigatewayv2-integrations-alpha-2.47.0-alpha.0.tgz#1d00ff40bc85bf9d515d1e5ff5d715f608819ed4"
-  integrity sha512-PvFccVpQlpkxYIs9BlZyQC4pKpQjJ3lmXTTFCkl+8Bl7OK1tHQ9wfyK/LhPdcfwoKZi1QW/xzrTbd/dqVjRv2g==
+"@aws-cdk/aws-apigatewayv2-integrations-alpha@^2.50.0-alpha.0":
+  version "2.50.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-integrations-alpha/-/aws-apigatewayv2-integrations-alpha-2.50.0-alpha.0.tgz#be5a64f862232d89acef79778d50f750d44f2d75"
+  integrity sha512-XEhz4HsU0HtQJnbs9XSb/yPN/1EEYAOZthWRKyniS9IWeGruVjEhWndoXpu0S7w+M5Bni7D9wrCTkqTgmTEvlw==
 
 "@aws-lambda-powertools/commons@^1.4.0":
   version "1.4.0"
