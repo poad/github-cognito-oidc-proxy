@@ -2,21 +2,21 @@
 
 CUR=$(pwd)
 
-CURRENT=$(cd $(dirname $0);pwd)
+CURRENT=$(cd "$(dirname "$0")" || exit;pwd)
 echo "${CURRENT}"
 
-cd "${CURRENT}"
+cd "${CURRENT}" || exit
 git pull --prune
 result=$?
 if [ $result -ne 0 ]; then
-  cd "${CUR}"
+  cd "${CUR}" || exit
   exit $result
 fi
 
-cd "${CURRENT}"/package
+cd "${CURRENT}"/package || exit
 result=$?
 if [ $result -ne 0 ]; then
-  cd "${CUR}"
+  cd "${CUR}" || exit
   exit $result
 fi
 echo ""
@@ -24,14 +24,14 @@ pwd
 yarn install && yarn upgrade && yarn build
 result=$?
 if [ $result -ne 0 ]; then
-  cd "${CUR}"
+  cd "${CUR}" || exit
   exit $result
 fi
 
-cd "${CURRENT}"/example
+cd "${CURRENT}"/example || exit
 result=$?
 if [ $result -ne 0 ]; then
-  cd "${CUR}"
+  cd "${CUR}" || exit
   exit $result
 fi
 echo ""
@@ -39,14 +39,14 @@ pwd
 yarn install && yarn upgrade
 result=$?
 if [ $result -ne 0 ]; then
-  cd "${CUR}"
+  cd "${CUR}" || exit
   exit $result
 fi
 
-cd "${CURRENT}"/example/app
+cd "${CURRENT}"/example/app || exit
 result=$?
 if [ $result -ne 0 ]; then
-  cd "${CUR}"
+  cd "${CUR}" || exit
   exit $result
 fi
 echo ""
@@ -54,21 +54,21 @@ pwd
 yarn install && yarn upgrade
 result=$?
 if [ $result -ne 0 ]; then
-  cd "${CUR}"
+  cd "${CUR}" || exit
   exit $result
 fi
 
-cd "${CURRENT}"
+cd "${CURRENT}" || exit
 result=$?
 if [ $result -ne 0 ]; then
-  cd "${CUR}"
+  cd "${CUR}" || exit
   exit $result
 fi
 git commit -am "Bumps node modules" && git push
 result=$?
 if [ $result -ne 0 ]; then
-  cd "${CUR}"
+  cd "${CUR}" || exit
   exit $result
 fi
 
-cd "${CUR}"
+cd "${CUR}" || exit
