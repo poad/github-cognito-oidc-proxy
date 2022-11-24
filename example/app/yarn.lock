@@ -451,9 +451,9 @@
     webpack-bundle-analyzer "4.7.0"
 
 "@next/codemod@^13":
-  version "13.0.4"
-  resolved "https://registry.yarnpkg.com/@next/codemod/-/codemod-13.0.4.tgz#8842f3b07adc068061d08c049b1dad051fdbfb96"
-  integrity sha512-/3cmE6cSVyc20iMLQHgKMT459nLojBN/PmqP2NhCWADLgQp/2b06qFrRZScBMV67I3pZ/9VidHqbk4ZIrsYEXw==
+  version "13.0.5"
+  resolved "https://registry.yarnpkg.com/@next/codemod/-/codemod-13.0.5.tgz#e8d2b6226737d0ef14813a7e1403730637ef6df1"
+  integrity sha512-KD8KiwgHG9u00lW45VWMeFF+IrRUW8VIiUuZV6pwl8jfN7QAqMda+I7DLSEKIZywwxvzWiBS4yONJY4X17CFmg==
   dependencies:
     chalk "4.1.0"
     cheerio "1.0.0-rc.9"
