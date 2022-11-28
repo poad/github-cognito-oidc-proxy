@@ -17,15 +17,15 @@
   resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.27.tgz#9ea5adb1501db2eb89e124ec83df422a51d9ad18"
   integrity sha512-BBqOLyfGL2xH4sxHkNA7IVxikdgE/R/BkHkFuN902kDzDZ0GH/04HYV6UiVMwj+5SsjQozzaIKT00BzNIN1qOg==
 
-"@aws-cdk/aws-apigatewayv2-alpha@^2.50.0-alpha.0":
-  version "2.50.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-alpha/-/aws-apigatewayv2-alpha-2.50.0-alpha.0.tgz#e4879e9cef6816933efd4b906904c8d0f76f662a"
-  integrity sha512-dttWDqy+nTg/fD9y0egvj7/zdnOVEo0qyGsep1RV+p16R3F4ObMKyPVIg15fz57tK//Gp/i1QgXsZaSqbcWHOg==
+"@aws-cdk/aws-apigatewayv2-alpha@^2.52.0-alpha.0":
+  version "2.52.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-alpha/-/aws-apigatewayv2-alpha-2.52.0-alpha.0.tgz#83236e45e9155b39293d4c14befa1a11a2e3016a"
+  integrity sha512-GAVx+7xxbDYKxaMN6n7ngd8bp1neTQGsoTbdudkKmxGX5lmifrJLgOxqxloUCdJY3LdOALgPE3y3atLn880oug==
 
-"@aws-cdk/aws-apigatewayv2-integrations-alpha@^2.50.0-alpha.0":
-  version "2.50.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-integrations-alpha/-/aws-apigatewayv2-integrations-alpha-2.50.0-alpha.0.tgz#be5a64f862232d89acef79778d50f750d44f2d75"
-  integrity sha512-XEhz4HsU0HtQJnbs9XSb/yPN/1EEYAOZthWRKyniS9IWeGruVjEhWndoXpu0S7w+M5Bni7D9wrCTkqTgmTEvlw==
+"@aws-cdk/aws-apigatewayv2-integrations-alpha@^2.52.0-alpha.0":
+  version "2.52.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-integrations-alpha/-/aws-apigatewayv2-integrations-alpha-2.52.0-alpha.0.tgz#00941bfaaa3685c4c3e172bbdb18aab5820d039e"
+  integrity sha512-GXSb8vHkkCMvznFi5UqnBSfznIhUJK68onVPeSnaix1xZI/eUHuX1xcT0FuoFoNt9+gNKhStwdtYgbG65jUZSw==
 
 "@aws-lambda-powertools/commons@^1.5.0":
   version "1.5.0"
@@ -488,9 +488,9 @@ aws-lambda@*:
     watchpack "^2.0.0-beta.10"
 
 aws-sdk@^2.814.0:
-  version "2.1261.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1261.0.tgz#838657b29348feee067b887e352e488331590c1b"
-  integrity sha512-Lumifi52Vj6ss1tlZ9Z+BvJ+Yk2MTwPQyrDCZh79xggFgXYoDU/g4rZUr47/1AXBZje3mVkLeRM15hvUwKlTaA==
+  version "2.1262.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1262.0.tgz#434980d0bee9e67c4764a532577f3a2a54b1c38a"
+  integrity sha512-XbaK/XUIxwLEBnHANhJ0RTZtiU288lFRj5FllSihQ5Kb0fibKyW8kJFPsY+NzzDezLH5D3WdGbTKb9fycn5TbA==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
