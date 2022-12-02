@@ -42,7 +42,7 @@ export class GithubCognitoOidcProxyStack extends cdk.Stack {
       this,
       'GithubCognitoOidcProxyConfigFunction',
       {
-        runtime: Runtime.NODEJS_16_X,
+        runtime: Runtime.NODEJS_18_X,
         entry: './lambda/openid-configuration/index.ts',
         architecture: Architecture.ARM_64,
         functionName: configFunctionName,
