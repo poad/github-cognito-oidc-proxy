@@ -1965,9 +1965,9 @@ flatted@^3.1.0:
   integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
 
 flow-parser@0.*:
-  version "0.196.1"
-  resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.196.1.tgz#3c31f102454518f0c68eeb99f57501c2a0c9bff0"
-  integrity sha512-V3yaKHyBWhl+LF6sxgbfqxMlwoFKs8UKh2DYTrGj1AHi9ST7Zyp+9ToF4l9eoL6l/DxdFwCNF3MAJ1vCVrgJmw==
+  version "0.196.3"
+  resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.196.3.tgz#dd923f29a6c194770a4f999f8026ef1da79d428b"
+  integrity sha512-R8wj12eHW6og+IBWeRS6aihkdac1Prh4zw1bfxtt/aeu8r5OFmQEZjnmINcjO/5Q+OKvI4Eg367ygz2SHvtH+w==
 
 for-in@^1.0.2:
   version "1.0.2"
