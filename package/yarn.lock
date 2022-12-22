@@ -3,9 +3,9 @@
 
 
 "@aws-cdk/asset-awscli-v1@^2.2.30":
-  version "2.2.36"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.36.tgz#7daa80df0ee206423df714e5cc365ec52a275de1"
-  integrity sha512-q4jde7ZqXjOfnEPjfn/VNIKmTFBg4GWCn5KxB8EDny6FWhGE+TkJxTjyu4KgUvcRZCvNqsdWvxGMQOFTTsqaVA==
+  version "2.2.37"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.37.tgz#10253cfc75770f44603e266dc8a87ace70175396"
+  integrity sha512-1jLfQLpFEurbcBuwBLgw7u7OxRYQZTTl9L8/6Bx44fQksJch+9dyvbVnbhigAfc9K9z2e0QAsepZybE6lAGCDQ==
 
 "@aws-cdk/asset-kubectl-v20@^2.1.1":
   version "2.1.1"
@@ -216,9 +216,9 @@
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
 "@middy/core@*":
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/@middy/core/-/core-4.0.8.tgz#d9c0f70ba21f111e3d69bf6cbd131d650a3206c4"
-  integrity sha512-7KzPkM4Ax4H5Wr9KFn6WfBcYlxX9rcXN8J9zoiG4EF2rxCtXlZrTo81dZVamBGLmUGaCUeHRpBA7w/Wv/WIHqA==
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/@middy/core/-/core-4.0.9.tgz#5d51bf772b4348f137cc5a6659dfbee6bd2f4c85"
+  integrity sha512-DZjkBhBJD82UmkFgOebtlluiYpHSYGYVShNvfLUMI8u2pqKu4t00C0oPtYCVsIhU2gyhSdFP4THMD58jn01SIA==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -588,9 +588,9 @@ aws-lambda@*:
     watchpack "^2.0.0-beta.10"
 
 aws-sdk@^2.814.0:
-  version "2.1280.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1280.0.tgz#7eeac40e2061643299619d1332a08af028ed9ddb"
-  integrity sha512-6Dv/RuMQdye7wps4HwcMZwRw9han51PQVcMXq4e5KUNqzQ9wHmaFMFVI/kY4NIkR7D3IczEg4WoUCoKhj464hA==
+  version "2.1281.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1281.0.tgz#dba7015f095cc587fc2077ee6eb6b183742336f4"
+  integrity sha512-nrDezd78ebYSI58iGTxNR5j6l/beYAGO0pAPMITg/Ili6SUCIGL3359fv2gxhVOI2NIwOsKs5/Mjr83+6G+zCQ==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
