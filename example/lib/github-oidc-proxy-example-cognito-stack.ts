@@ -26,7 +26,6 @@ import * as crypto from 'crypto';
 import { Bucket, BucketAccessControl } from 'aws-cdk-lib/aws-s3';
 import {
   AccountPrincipal,
-  AccountRootPrincipal,
   ArnPrincipal,
   Effect,
   FederatedPrincipal,
