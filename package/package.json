@@ -37,8 +37,8 @@
     "typescript": "*"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigatewayv2-alpha": "^2.52.0-alpha.0",
-    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "^2.52.0-alpha.0",
+    "@aws-cdk/aws-apigatewayv2-alpha": "^2.57.0-alpha.0",
+    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "^2.57.0-alpha.0",
     "@aws-lambda-powertools/logger": "*",
     "aws-cdk-lib": "*",
     "aws-lambda": "*",
@@ -47,5 +47,8 @@
     "fp-ts": "*",
     "pem-jwk": "*",
     "source-map-support": "*"
+  },
+  "resolutions": {
+    "json5": ">=2.2.2"
   }
 }

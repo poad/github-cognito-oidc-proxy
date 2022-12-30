@@ -44,5 +44,8 @@
     "next-transpile-modules": "*",
     "prettier": "*",
     "typescript": "*"
+  },
+  "resolutions": {
+    "json5": ">=2.2.2"
   }
 }
