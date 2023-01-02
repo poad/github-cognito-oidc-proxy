@@ -45,6 +45,7 @@
     "constructs": "*",
     "esbuild": "*",
     "fp-ts": "*",
+    "json5": ">=2.2.2",
     "pem-jwk": "*",
     "source-map-support": "*"
   },
