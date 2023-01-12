@@ -216,9 +216,9 @@
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
 "@middy/core@*":
-  version "4.0.10"
-  resolved "https://registry.yarnpkg.com/@middy/core/-/core-4.0.10.tgz#1d86697defc778ee9c2c71ad72af1d1c1a5b9d99"
-  integrity sha512-Kt+uV/zxwglsNldlvEA5rFDZdTTFqH46S2uPT1VP8hQ5wlavFflnKnye5WUtaJ2gbsLsk9iVolYCWWmDXvTBdQ==
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@middy/core/-/core-4.1.0.tgz#2ef22e37ed93a00754959b44ee96b9ff2b9a3800"
+  integrity sha512-mBnHFXSbQNNZNJcoiOzBOtPYd3XdTm7y3YQE+0R+IK8Pa1WiCQho81bjR+0ry73hpl0cW378DkcXPQ0BgBZY1Q==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
