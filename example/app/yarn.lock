@@ -2022,9 +2022,9 @@ flatted@^3.1.0:
   integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
 
 flow-parser@0.*:
-  version "0.197.0"
-  resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.197.0.tgz#9a581ef7c0b1c3377b195cec0bbad794b88be67b"
-  integrity sha512-yhwkJPxH1JBg0aJunk/jVRy5p3UhVZBGkzL1hq/GK+GaBh6bKr2YKkv6gDuiufaw+i3pKWQgOLtD++1cvrgXLA==
+  version "0.198.0"
+  resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.198.0.tgz#ddb3a2698e28b3cea0e379a24790012d6ae0e812"
+  integrity sha512-uMSUGYk2qUKe22W9+h3md2I9BiossGdrqwiOBPyiKW9cpnbSdUkV4TU5Pc5QESkrvIKHYid1vbL5ZadOxnewog==
 
 for-each@^0.3.3:
   version "0.3.3"
