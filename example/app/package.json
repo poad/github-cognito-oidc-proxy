@@ -15,18 +15,21 @@
   "dependencies": {
     "@next/font": "^13",
     "cross-fetch": "*",
-    "json5": ">=2.2.2",
     "next": "^13",
     "react": "*",
     "react-dom": "*",
+    "react-no-ssr": "*",
     "web-vitals": "*"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^13",
     "@next/codemod": "^13",
+    "@swc/cli": "*",
+    "@swc/core": "*",
+    "@swc/helpers": "*",
     "@types/node": "*",
     "@types/react": "*",
     "@types/react-dom": "*",
+    "@types/react-no-ssr": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
     "eslint": "*",
@@ -44,6 +47,8 @@
     "eslint-plugin-react-hooks": "*",
     "next-transpile-modules": "*",
     "prettier": "*",
+    "regenerator-runtime": "*",
+    "swc-loader": "*",
     "typescript": "*"
   },
   "resolutions": {

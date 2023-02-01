@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../styles/Home.module.css';
 
 const authEndpoint = process.env.NEXT_PUBLIC_COGNITO_ENDPOINT;
 const clirenId = process.env.NEXT_PUBLIC_COGNITO_CLIENT_ID;
@@ -12,13 +13,13 @@ const onClick = () =>
 const SignInButton = () => {
   return (
     <>
-      <p>
+      <p className={styles.card}>
+        <p>
+          <textarea>
+            {typeof window !== 'undefined' ? window.location.href : ''}
+          </textarea>
+        </p>        
         <button onClick={onClick}>SignIn</button>
-      </p>
-      <p>
-        <textarea>
-          {typeof window !== 'undefined' ? window.location.href : ''}
-        </textarea>
       </p>
     </>
   );
