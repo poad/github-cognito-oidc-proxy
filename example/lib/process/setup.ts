@@ -1,7 +1,7 @@
 import * as childProcess from 'child_process';
 import * as fs from 'fs';
 
-export const nextJsExport = () => {
+export const nextJsExport = (endpoint: string) => {
   [`${process.cwd()}/app/.next`, `${process.cwd()}/app/out`].forEach((dir) => {
     if (fs.existsSync(dir)) {
       fs.rmdirSync(dir, {

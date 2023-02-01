@@ -23,7 +23,7 @@ const Home: NextPage = () => {
         </h1>
 
         <div className={styles.grid}>
-          {!token.code && !token.token ? <SignInButton /> : <></>}
+          {!(token.code || token.token ) ? <SignInButton /> : <></>}
           {userInfo ? (
             <>
               <table>
@@ -46,7 +46,7 @@ const Home: NextPage = () => {
         </div>
       </main>
 
-      <footer className={styles.footer}></footer>
+      <footer className={styles.footer} />
     </div>
   );
 };

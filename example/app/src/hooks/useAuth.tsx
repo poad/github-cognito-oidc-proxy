@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import { Buffer } from 'buffer';
 
 const endpoint = process.env.NEXT_PUBLIC_COGNITO_ENDPOINT;
-const clirenId = process.env.NEXT_PUBLIC_COGNITO_CLIENT_ID;
-const clirenSecret = process.env.NEXT_PUBLIC_COGNITO_CLIENT_SECRET;
+const clientId = process.env.NEXT_PUBLIC_COGNITO_CLIENT_ID;
+const clientSecret = process.env.NEXT_PUBLIC_COGNITO_CLIENT_SECRET;
 
 const tokenEndpointUrl = `${endpoint}oauth2/token`;
 
@@ -33,11 +33,11 @@ const useAuth = () => {
   useEffect(() => {
     const fetchToken = async () => {
       const clientSecretBasic = Buffer.from(
-        `${clirenId}:${clirenSecret}`,
+        `${clientId}:${clientSecret}`,
       ).toString('base64');
       const data = {
         grant_type: 'authorization_code',
-        client_id: clirenId,
+        client_id: clientId,
         code,
         redirect_uri: location?.toString().replaceAll(location?.search, ''),
       };

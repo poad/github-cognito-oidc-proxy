@@ -36,14 +36,17 @@ import {
   StarPrincipal,
 } from 'aws-cdk-lib/aws-iam';
 
-interface GitHubOidcProxyExampleCognitoStackProps extends cdk.StackProps {
-  environment: string;
+export interface GitHubOidcProxyExampleCognitoConfig {
   domainPrefix: string;
   identityProviderClientId: string;
   identityProviderClientSecret: string;
   identityProviderRequestMethod: string;
   identityProviderIssuerURL: string;
   identityProviderAuthorizeScopes: string;
+}
+
+interface GitHubOidcProxyExampleCognitoStackProps extends GitHubOidcProxyExampleCognitoConfig, cdk.StackProps {
+  environment: string;
 }
 
 export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
