@@ -10,7 +10,9 @@ const env = app.node.tryGetContext('env') as string;
 
 const config = app.node.tryGetContext(env) as GitHubOidcProxyExampleCognitoConfig;
 
-nextJsExport(config.domainPrefix);
+nextJsExport({
+  endpoint: `https://${config.domainPrefix}.auth.${app.region}.amazoncognito.com/`,
+});
 
 // eslint-disable-next-line no-new
 new GitHubOidcProxyExampleCognitoStack(

@@ -1,7 +1,9 @@
 import * as childProcess from 'child_process';
 import * as fs from 'fs';
 
-export const nextJsExport = (endpoint: string) => {
+export const nextJsExport = ({
+  endpoint,
+}: {endpoint: string}) => {
   [`${process.cwd()}/../app/.next`, `${process.cwd()}/../app/out`].forEach((dir) => {
     if (fs.existsSync(dir)) {
       fs.rmdirSync(dir, {
@@ -22,7 +24,10 @@ export const nextJsExport = (endpoint: string) => {
     childProcess.execSync(cmd, {
       cwd: `${process.cwd()}/../app`,
       stdio: ['ignore', 'inherit', 'inherit'],
-      env: { ...process.env },
+      env: {
+        ...process.env,
+        NEXT_PUBLIC_COGNITO_ENDPOINT: endpoint,
+      },
       shell: 'bash',
     });
   });
