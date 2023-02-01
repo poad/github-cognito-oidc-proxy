@@ -11,7 +11,7 @@ const env = app.node.tryGetContext('env') as string;
 const config = app.node.tryGetContext(env) as GitHubOidcProxyExampleCognitoConfig;
 
 nextJsExport({
-  endpoint: `https://${config.domainPrefix}.auth.${app.region}.amazoncognito.com/`,
+  endpoint: `https://${config.domainPrefix}.auth.us-west-2.amazoncognito.com/`,
 });
 
 // eslint-disable-next-line no-new
