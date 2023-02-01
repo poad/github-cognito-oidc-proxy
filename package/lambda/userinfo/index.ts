@@ -6,6 +6,7 @@ import {
 import fetch from 'cross-fetch';
 import { left, right, isRight, Either } from 'fp-ts/Either';
 import { Logger } from '@aws-lambda-powertools/logger';
+import * as EmailValidator from 'email-validator';
 
 const logger = new Logger();
 
@@ -92,6 +93,7 @@ const getValidEmail = async (token: string): Promise<Either<Email, string>> => {
     (it) =>
       it.primary &&
       it.verified &&
+      EmailValidator.validate(it.email.trim()) &&
       !it.email.trim().endsWith('noreply.github.com'),
   );
   return email ? left(email) : right('/user/emails returned no valid emails');

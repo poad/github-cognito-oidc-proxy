@@ -17,15 +17,15 @@
   resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.42.tgz#e0833c219ba866eb2232a63dfc96c2a6db2f7394"
   integrity sha512-PxvP1UU2xa4k3Ea78DxAYY8ADvwWZ/nPu+xsjQLsT+MP+aB3RZ3pGc/fNlH7Rg56Zyb/j3GSdihAy4Oi5xa+TQ==
 
-"@aws-cdk/aws-apigatewayv2-alpha@^2.57.0-alpha.0":
-  version "2.57.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-alpha/-/aws-apigatewayv2-alpha-2.57.0-alpha.0.tgz#70f67cd7277054627fa95a77e9592ea64a3c9173"
-  integrity sha512-BouuiqVfiOUdREo2Oz56ZGeWtx9CbkczWZWoHtCER6yX2eXKy6cqhvzy4OggckspeZM/c09rX/kQGQvIBexewA==
+"@aws-cdk/aws-apigatewayv2-alpha@^2.63.0-alpha.0":
+  version "2.63.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-alpha/-/aws-apigatewayv2-alpha-2.63.0-alpha.0.tgz#ad08a22bc0ae15961ca7f4b09d84bb3d425cabef"
+  integrity sha512-NQ/sjvcvXSrEvTVu159LQ1EfoZtJNHjQB8FGhU4Dh+tnnzjc6iObwBudoITGbTx0KVuNAj/F5Najai2CAkUPkA==
 
-"@aws-cdk/aws-apigatewayv2-integrations-alpha@^2.57.0-alpha.0":
-  version "2.57.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-integrations-alpha/-/aws-apigatewayv2-integrations-alpha-2.57.0-alpha.0.tgz#5bf4843ac5d14dd9a5ee04c77fe4c637fad324ee"
-  integrity sha512-0IQCIuTpYAtu6Fkom5XaBSwk4Phq25Fkxillx10yMtjYRtazKwWhYyugTiP+Jwq4Mpywu9jqS0PMcQDrY7KsFA==
+"@aws-cdk/aws-apigatewayv2-integrations-alpha@^2.63.0-alpha.0":
+  version "2.63.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-integrations-alpha/-/aws-apigatewayv2-integrations-alpha-2.63.0-alpha.0.tgz#3712039129eb2d7b776aca151518f5a9a139ce5b"
+  integrity sha512-IcHv3p4tVyp0xp1tQtzB1FciuIoxCPi+g1lSda8p7FLMEJH/1J2SVL9/U1f15VJL/y/5aVlMI+29Jq13Sryhtw==
 
 "@aws-lambda-powertools/commons@^1.5.1":
   version "1.5.1"
@@ -802,6 +802,11 @@ doctrine@^3.0.0:
   integrity sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==
   dependencies:
     esutils "^2.0.2"
+
+email-validator@*:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/email-validator/-/email-validator-2.0.4.tgz#b8dfaa5d0dae28f1b03c95881d904d4e40bfe7ed"
+  integrity sha512-gYCwo7kh5S3IDyZPLZf6hSS0MnZT8QmJFqYvbqlDZSbwdZlY6QZWxJ4i/6UhITOJ4XzyI647Bm2MXKCLqnJ4nQ==
 
 es-abstract@^1.19.0, es-abstract@^1.20.4:
   version "1.21.1"
@@ -1583,7 +1588,7 @@ json-stable-stringify-without-jsonify@^1.0.1:
   resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
   integrity sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==
 
-json5@>=2.2.2, json5@^1.0.1:
+json5@>=2.2.3, json5@^1.0.1:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
   integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
