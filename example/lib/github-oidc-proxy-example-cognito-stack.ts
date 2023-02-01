@@ -72,6 +72,7 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
     const s3BucketName = `${environment}-github-oidc-proxy-example-static-stite`;
 
     const cloudfront = new Distribution(this, 'CloudFront', {
+      comment: 'example for github-cognito-oidc-proxy',
       defaultBehavior: {
         origin: new HttpOrigin(
           `${s3BucketName}.s3-website-${this.region}.amazonaws.com`,
