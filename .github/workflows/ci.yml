@@ -28,22 +28,28 @@ jobs:
         cache: yarn
         cache-dependency-path:  |
           package/yarn.lock
-          example/yarn.lock
+          example/cdk/yarn.lock
           example/app/yarn.lock
 
+
+    - name: Get yarn cache directory path
+      id: yarn-cache-dir-path
+      run: echo "dir=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
+
     - uses: actions/cache@v3
+      id: yarn-cache
       with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
-          ${{ runner.os }}-node-
+          ${{ runner.os }}-yarn-
 
     - name: Build (package)
       working-directory: package
       run: yarn install && yarn lint && yarn build
 
     - name: Build (example)
-      working-directory: example
+      working-directory: example/cdk
       run: yarn install && yarn lint && yarn build
 
     - name: Build (example/app)

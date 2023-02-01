@@ -2,7 +2,7 @@
 
 <p align='center'>
 
-  [![Build and Test](https://github.com/poad/github-cognito-oidc-proxy/actions/workflows/test.yml/badge.svg)](https://github.com/poad/github-cognito-oidc-proxy/actions/workflows/test.yml)
+  [![Build and Test](https://github.com/poad/github-cognito-oidc-proxy/actions/workflows/ci.yml/badge.svg)](https://github.com/poad/github-cognito-oidc-proxy/actions/workflows/ci.yml)
   [![Deploy](https://github.com/poad/github-cognito-oidc-proxy/actions/workflows/deploy.yml/badge.svg)](https://github.com/poad/github-cognito-oidc-proxy/actions/workflows/deploy.yml)
   
 </p>
@@ -51,7 +51,6 @@ The stage name of the deployed API Gateway is default.
 
 The value to be set for the Issue URL is as follows:
 
-https://~{API ID}~.execute-api.~{AWS Region}~.amazonaws.com/default
+<https://~{API> ID}~.execute-api.~{AWS Region}~.amazonaws.com/default
 
 ### Attributes Mapping
-

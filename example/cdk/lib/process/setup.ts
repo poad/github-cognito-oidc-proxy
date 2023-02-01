@@ -2,7 +2,7 @@ import * as childProcess from 'child_process';
 import * as fs from 'fs';
 
 export const nextJsExport = (endpoint: string) => {
-  [`${process.cwd()}/app/.next`, `${process.cwd()}/app/out`].forEach((dir) => {
+  [`${process.cwd()}/../app/.next`, `${process.cwd()}/../app/out`].forEach((dir) => {
     if (fs.existsSync(dir)) {
       fs.rmdirSync(dir, {
         recursive: true,
@@ -11,7 +11,7 @@ export const nextJsExport = (endpoint: string) => {
   });
   ['yarn install'].forEach((cmd) => {
     childProcess.execSync(cmd, {
-      cwd: `${process.cwd()}/app`,
+      cwd: `${process.cwd()}/../app`,
       stdio: ['ignore', 'inherit', 'inherit'],
       env: { ...process.env },
       shell: 'bash',
@@ -20,7 +20,7 @@ export const nextJsExport = (endpoint: string) => {
 
   ['yarn release'].forEach((cmd) => {
     childProcess.execSync(cmd, {
-      cwd: `${process.cwd()}/app`,
+      cwd: `${process.cwd()}/../app`,
       stdio: ['ignore', 'inherit', 'inherit'],
       env: { ...process.env },
       shell: 'bash',

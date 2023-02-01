@@ -1,40 +1,13 @@
 /* eslint-disable no-new */
 import * as cdk from 'aws-cdk-lib';
-import {
-  UserPool,
-  Mfa,
-  AccountRecovery,
-  CfnUserPoolIdentityProvider,
-  UserPoolIdentityProvider,
-  UserPoolClientIdentityProvider,
-  UserPoolClient,
-  OAuthScope,
-  ClientAttributes,
-  CfnIdentityPool,
-  CfnIdentityPoolRoleAttachment,
-} from 'aws-cdk-lib/aws-cognito';
+import * as cognito from 'aws-cdk-lib/aws-cognito';
 import { Construct } from 'constructs';
-import { HttpOrigin } from 'aws-cdk-lib/aws-cloudfront-origins';
-import {
-  Distribution,
-  CachePolicy,
-  OriginProtocolPolicy,
-} from 'aws-cdk-lib/aws-cloudfront';
-import { Duration, RemovalPolicy } from 'aws-cdk-lib';
-import { BucketDeployment, Source } from 'aws-cdk-lib/aws-s3-deployment';
+import * as origin from 'aws-cdk-lib/aws-cloudfront-origins';
+import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
+import * as deployment from 'aws-cdk-lib/aws-s3-deployment';
 import * as crypto from 'crypto';
-import { Bucket, BucketAccessControl } from 'aws-cdk-lib/aws-s3';
-import {
-  AccountPrincipal,
-  ArnPrincipal,
-  Effect,
-  FederatedPrincipal,
-  PolicyDocument,
-  PolicyStatement,
-  Role,
-  ServicePrincipal,
-  StarPrincipal,
-} from 'aws-cdk-lib/aws-iam';
+import * as s3 from 'aws-cdk-lib/aws-s3';
+import * as iam from 'aws-cdk-lib/aws-iam';
 
 export interface GitHubOidcProxyExampleCognitoConfig {
   domainPrefix: string;
@@ -57,6 +30,8 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
   ) {
     super(scope, id, props);
 
+    const { account, region } = this;
+
     const {
       environment,
       domainPrefix,
@@ -74,42 +49,42 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
 
     const s3BucketName = `${environment}-github-oidc-proxy-example-static-stite`;
 
-    const cloudfront = new Distribution(this, 'CloudFront', {
+    const distribution = new cloudfront.Distribution(this, 'CloudFront', {
       comment: 'example for github-cognito-oidc-proxy',
       defaultBehavior: {
-        origin: new HttpOrigin(
-          `${s3BucketName}.s3-website-${this.region}.amazonaws.com`,
+        origin: new origin.HttpOrigin(
+          `${s3BucketName}.s3-website-${region}.amazonaws.com`,
           {
             customHeaders: {
               Referer: hash,
             },
-            protocolPolicy: OriginProtocolPolicy.HTTP_ONLY,
+            protocolPolicy: cloudfront.OriginProtocolPolicy.HTTP_ONLY,
           },
         ),
-        cachePolicy: CachePolicy.CACHING_DISABLED,
+        cachePolicy: cloudfront.CachePolicy.CACHING_DISABLED,
       },
       enableIpv6: false,
       defaultRootObject: 'index.html',
     });
 
-    const s3bucket = new Bucket(this, 'S3Bucket', {
+    const s3bucket = new s3.Bucket(this, 'S3Bucket', {
       bucketName: s3BucketName,
       versioned: false,
-      removalPolicy: RemovalPolicy.DESTROY,
+      removalPolicy: cdk.RemovalPolicy.DESTROY,
       autoDeleteObjects: true,
-      accessControl: BucketAccessControl.PRIVATE,
+      accessControl: s3.BucketAccessControl.PRIVATE,
       publicReadAccess: false,
       websiteIndexDocument: 'index.html',
     });
 
-    const deployRole = new Role(this, 'DeployWebsiteRole', {
+    const deployRole = new iam.Role(this, 'DeployWebsiteRole', {
       roleName: `${environment}-github-oidc-proxy-deploy-role`,
-      assumedBy: new ServicePrincipal('lambda.amazonaws.com'),
+      assumedBy: new iam.ServicePrincipal('lambda.amazonaws.com'),
       inlinePolicies: {
-        's3-policy': new PolicyDocument({
+        's3-policy': new iam.PolicyDocument({
           statements: [
-            new PolicyStatement({
-              effect: Effect.ALLOW,
+            new iam.PolicyStatement({
+              effect: iam.Effect.ALLOW,
               actions: ['s3:*'],
               resources: [`${s3bucket.bucketArn}/`, `${s3bucket.bucketArn}/*`],
             }),
@@ -119,27 +94,27 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
     });
 
     s3bucket.addToResourcePolicy(
-      new PolicyStatement({
-        effect: Effect.DENY,
+      new iam.PolicyStatement({
+        effect: iam.Effect.DENY,
         actions: ['s3:*'],
-        principals: [new StarPrincipal()],
+        principals: [new iam.StarPrincipal()],
         resources: [`${s3bucket.bucketArn}/*`],
         conditions: {
           StringNotLike: {
             'aws:Referer': hash,
           },
           StringNotEquals: {
-            's3:ResourceAccount': this.account,
-            'aws:PrincipalArn': new ArnPrincipal(deployRole.roleArn).arn,
+            's3:ResourceAccount': account,
+            'aws:PrincipalArn': new iam.ArnPrincipal(deployRole.roleArn).arn,
           },
         },
       }),
     );
     s3bucket.addToResourcePolicy(
-      new PolicyStatement({
-        effect: Effect.ALLOW,
+      new iam.PolicyStatement({
+        effect: iam.Effect.ALLOW,
         actions: ['s3:GetObject'],
-        principals: [new StarPrincipal()],
+        principals: [new iam.StarPrincipal()],
         resources: [`${s3bucket.bucketArn}/*`],
         conditions: {
           StringLike: {
@@ -149,21 +124,21 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
       }),
     );
     s3bucket.addToResourcePolicy(
-      new PolicyStatement({
-        effect: Effect.ALLOW,
+      new iam.PolicyStatement({
+        effect: iam.Effect.ALLOW,
         actions: ['s3:*'],
-        principals: [new AccountPrincipal(this.account)],
+        principals: [new iam.AccountPrincipal(account)],
         resources: [`${s3bucket.bucketArn}/*`],
         conditions: {
           StringEquals: {
-            's3:ResourceAccount': this.account,
+            's3:ResourceAccount': account,
           },
         },
       }),
     );
 
-    new BucketDeployment(this, 'DeployWebsite', {
-      sources: [Source.asset(`${process.cwd()}/app/out`)],
+    new deployment.BucketDeployment(this, 'DeployWebsite', {
+      sources: [deployment.Source.asset(`${process.cwd()}/../app/out`)],
       destinationBucket: s3bucket,
       destinationKeyPrefix: '/',
       exclude: ['.DS_Store', '*/.DS_Store'],
@@ -172,9 +147,9 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
       role: deployRole,
     });
 
-    const userPool = new UserPool(this, 'CognitoUserPool', {
+    const userPool = new cognito.UserPool(this, 'CognitoUserPool', {
       userPoolName: `${environment}-github-oidc-proxy-user-pool`,
-      removalPolicy: RemovalPolicy.DESTROY,
+      removalPolicy: cdk.RemovalPolicy.DESTROY,
       signInAliases: {
         username: false,
         email: true,
@@ -195,11 +170,11 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
           required: false,
         },
       },
-      mfa: Mfa.OFF,
+      mfa: cognito.Mfa.OFF,
       passwordPolicy: {
         minLength: 8,
       },
-      accountRecovery: AccountRecovery.EMAIL_ONLY,
+      accountRecovery: cognito.AccountRecovery.EMAIL_ONLY,
     });
 
     userPool.addDomain('UserPoolDomain', {
@@ -209,7 +184,7 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
     });
 
     const idpName = identityProviderIssuerURL
-      ? new CfnUserPoolIdentityProvider(this, 'CfnCognitoIdPGitHub', {
+      ? new cognito.CfnUserPoolIdentityProvider(this, 'CfnCognitoIdPGitHub', {
         providerName: 'GitHub',
         providerDetails: {
           client_id: identityProviderClientId,
@@ -231,16 +206,16 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
 
     if (idpName) {
       userPool.registerIdentityProvider(
-        UserPoolIdentityProvider.fromProviderName(
+        cognito.UserPoolIdentityProvider.fromProviderName(
           this,
           'CognitoIdPGitHub',
           idpName,
         ),
       );
-      UserPoolClientIdentityProvider.custom(idpName);
+      cognito.UserPoolClientIdentityProvider.custom(idpName);
     }
 
-    const client = new UserPoolClient(this, 'CognitoAppClient', {
+    const client = new cognito.UserPoolClient(this, 'CognitoAppClient', {
       userPool,
       userPoolClientName: 'GitHub',
       generateSecret: true,
@@ -251,11 +226,11 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
       },
       oAuth: {
         callbackUrls: [
-          `https://${cloudfront.distributionDomainName}/`,
+          `https://${distribution.distributionDomainName}/`,
           'http://localhost:3000/',
         ],
         logoutUrls: [
-          `https://${cloudfront.distributionDomainName}/`,
+          `https://${distribution.distributionDomainName}/`,
           'http://localhost:3000/',
         ],
         flows: {
@@ -263,13 +238,13 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
           implicitCodeGrant: true,
         },
         scopes: [
-          OAuthScope.COGNITO_ADMIN,
-          OAuthScope.EMAIL,
-          OAuthScope.OPENID,
-          OAuthScope.PROFILE,
+          cognito.OAuthScope.COGNITO_ADMIN,
+          cognito.OAuthScope.EMAIL,
+          cognito.OAuthScope.OPENID,
+          cognito.OAuthScope.PROFILE,
         ],
       },
-      readAttributes: new ClientAttributes().withStandardAttributes({
+      readAttributes: new cognito.ClientAttributes().withStandardAttributes({
         email: true,
         familyName: true,
         givenName: true,
@@ -278,7 +253,7 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
         emailVerified: true,
         profilePage: true,
       }),
-      writeAttributes: new ClientAttributes().withStandardAttributes({
+      writeAttributes: new cognito.ClientAttributes().withStandardAttributes({
         email: true,
         familyName: true,
         givenName: true,
@@ -292,19 +267,19 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
       clientId: client.userPoolClientId,
       providerName: userPool.userPoolProviderName,
     };
-    const identityPool = new CfnIdentityPool(this, 'CognitoIdPool', {
+    const identityPool = new cognito.CfnIdentityPool(this, 'CognitoIdPool', {
       allowUnauthenticatedIdentities: false,
       allowClassicFlow: true,
       cognitoIdentityProviders: [identityPoolProvider],
       identityPoolName: `${environment} Cognito GitHub OIDC Proxy idp`,
     });
 
-    const unauthenticatedRole = new Role(
+    const unauthenticatedRole = new iam.Role(
       this,
       'CognitoDefaultUnauthenticatedRole',
       {
         roleName: `${environment}-github-oidc-proxy-example-cognito-unauth-role`,
-        assumedBy: new FederatedPrincipal(
+        assumedBy: new iam.FederatedPrincipal(
           'cognito-identity.amazonaws.com',
           {
             StringEquals: {
@@ -316,17 +291,17 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
           },
           'sts:AssumeRoleWithWebIdentity',
         ),
-        maxSessionDuration: Duration.hours(12),
+        maxSessionDuration: cdk.Duration.hours(12),
         inlinePolicies: {
-          'cognito-policy': new PolicyDocument({
+          'cognito-policy': new iam.PolicyDocument({
             statements: [
-              new PolicyStatement({
-                effect: Effect.ALLOW,
+              new iam.PolicyStatement({
+                effect: iam.Effect.ALLOW,
                 actions: ['cognito-sync:*', 'cognito-identity:*'],
                 resources: ['*'],
               }),
-              new PolicyStatement({
-                effect: Effect.ALLOW,
+              new iam.PolicyStatement({
+                effect: iam.Effect.ALLOW,
                 actions: ['sts:*'],
                 resources: ['*'],
               }),
@@ -336,12 +311,12 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
       },
     );
 
-    const authenticatedRole = new Role(
+    const authenticatedRole = new iam.Role(
       this,
       'CognitoDefaultAuthenticatedRole',
       {
         roleName: `${environment}-github-oidc-proxy-example-cognito-auth-role`,
-        assumedBy: new FederatedPrincipal(
+        assumedBy: new iam.FederatedPrincipal(
           'cognito-identity.amazonaws.com',
           {
             StringEquals: {
@@ -353,17 +328,17 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
           },
           'sts:AssumeRoleWithWebIdentity',
         ).withSessionTags(),
-        maxSessionDuration: Duration.hours(12),
+        maxSessionDuration: cdk.Duration.hours(12),
         inlinePolicies: {
-          'cognito-policy': new PolicyDocument({
+          'cognito-policy': new iam.PolicyDocument({
             statements: [
-              new PolicyStatement({
-                effect: Effect.ALLOW,
+              new iam.PolicyStatement({
+                effect: iam.Effect.ALLOW,
                 actions: ['cognito-sync:*', 'cognito-identity:*'],
                 resources: ['*'],
               }),
-              new PolicyStatement({
-                effect: Effect.ALLOW,
+              new iam.PolicyStatement({
+                effect: iam.Effect.ALLOW,
                 actions: ['sts:*'],
                 resources: ['*'],
               }),
@@ -373,7 +348,7 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
       },
     );
 
-    new CfnIdentityPoolRoleAttachment(this, 'CognitoIdPoolRoleAttachment', {
+    new cognito.CfnIdentityPoolRoleAttachment(this, 'CognitoIdPoolRoleAttachment', {
       identityPoolId: identityPool.ref,
       roles: {
         authenticated: authenticatedRole.roleArn,

@@ -70,8 +70,8 @@ jobs:
       working-directory: package
       run: cdk deploy -c env=dev
 
-    - name: Build (example)
-      working-directory: example
+    - name: Build (example/cdk)
+      working-directory: example/cdk
       run: yarn install && yarn lint && yarn build
 
     - name: Generate API Gateway endpoint URL
@@ -81,7 +81,7 @@ jobs:
         echo "API_GATEWAY_ENDPOINT=https://${API_ID}.execute-api.${AWS_REGION}.amazonaws.com/${API_STAGE}" >> $GITHUB_ENV
 
     - name: generate cdk.json
-      working-directory: example
+      working-directory: example/cdk
       run: |
         cat << EOS >> cdk.json
         {
@@ -137,8 +137,8 @@ jobs:
         }
         EOS
 
-    - name: deploy (example)
-      working-directory: example
+    - name: deploy (example/cdk)
+      working-directory: example/cdk
       run: cdk deploy -c env=dev
 
     - name: Set environment variables
@@ -159,7 +159,7 @@ jobs:
       run: yarn install && yarn lint && yarn build
 
     - name: deploy (example) upload next.js app
-      working-directory: example
+      working-directory: example/cdk
       env:
         NEXT_PUBLIC_COGNITO_CLIENT_ID: ${{ env.NEXT_PUBLIC_COGNITO_CLIENT_ID }}
         NEXT_PUBLIC_COGNITO_CLIENT_SECRET: ${{ env.NEXT_PUBLIC_COGNITO_CLIENT_SECRET }}

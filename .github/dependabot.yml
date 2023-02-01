@@ -23,7 +23,7 @@ updates:
       - poad
 
   - package-ecosystem: npm
-    directory: '/example/'
+    directory: '/example/cdk/'
     schedule:
       interval: daily
       timezone: Asia/Tokyo

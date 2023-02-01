@@ -28,7 +28,7 @@ if [ $result -ne 0 ]; then
   exit $result
 fi
 
-cd "${CURRENT}"/example || exit
+cd "${CURRENT}"/example/cdk || exit
 result=$?
 if [ $result -ne 0 ]; then
   cd "${CUR}" || exit
