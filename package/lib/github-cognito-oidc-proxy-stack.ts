@@ -294,11 +294,14 @@ export class GithubCognitoOidcProxyStack extends cdk.Stack {
       },
     );
 
-    const apuDescription = `GitHub Cognito OpenID Connect Proxy API${
+    const apiName = `GitHub Cognito OpenID Connect Proxy API${
       environment ? ` (${environment})` : ''
     }`;
-    const api = new RestApi(this, apuDescription, {
-      description: apuDescription,
+    const api = new RestApi(this, 'APIGateway', {
+      restApiName: apiName,
+      description: `API for GitHub Cognito OpenID Connect Proxy${
+        environment ? ` (${environment})` : ''
+      }`,
       deployOptions: {
         stageName: 'default',
       },
