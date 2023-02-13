@@ -3,9 +3,9 @@
 
 
 "@aws-cdk/asset-awscli-v1@^2.2.52":
-  version "2.2.62"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.62.tgz#b793eec92652d036171becf69726cbe9be1c8ac0"
-  integrity sha512-oU6HChRTFDXDy3yg+fGGF2EZuxwM2flF791RehcFoStw2Rbf6F/BRSudfCpziafv1MPhBUF1wSrPScCycaIFAA==
+  version "2.2.66"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.66.tgz#063ae1aa38e54d9b26d77ed6b15de768d5fa1ac3"
+  integrity sha512-MdC2UpjDVi0ePQkXZg938/FZvK5pu0o2im9legoojmNZNKGssqpscz5gPISeZhrW124WI8IF+6hYPkHVYnod2w==
 
 "@aws-cdk/asset-kubectl-v20@^2.1.1":
   version "2.1.1"
@@ -13,9 +13,9 @@
   integrity sha512-U1ntiX8XiMRRRH5J1IdC+1t5CE89015cwyt5U63Cpk0GnMlN5+h9WsWMlKlPXZR4rdq/m806JRlBMRpBUB2Dhw==
 
 "@aws-cdk/asset-node-proxy-agent-v5@^2.0.42":
-  version "2.0.51"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.51.tgz#413f45ddac09a52ae0384ff55f89b4c0930e2e53"
-  integrity sha512-HNevmp8hAnOM3SuIJxUvNyKk7v2j2VZ1LEE+IPcTXCei7Mr0P6jb/ocl423jM95qi0bMzrjdmAHNiBx2boZl3w==
+  version "2.0.55"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.55.tgz#7ce3254e3efdf228bc4f28a6e99932ebbdc70baf"
+  integrity sha512-wqw3I/Bdy3SURLiGKtU47Fkz6OnSPsNs9O0FlkJyBFWVh4e5kMe1BfEmc3kZ/QukvKxI+Fnqk9Yz8tui0goqiQ==
 
 "@balena/dockerignore@^1.0.2":
   version "1.0.2"
@@ -707,9 +707,9 @@ confusing-browser-globals@^1.0.10:
   integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
 
 constructs@*:
-  version "10.1.246"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.246.tgz#fe354fcb51c30f44c270b1f47d8be724cd2988df"
-  integrity sha512-2U2hnAuA4tCGGjHk/TulZfSlPobTyokEh+Azuch9nivv2yGI7/5nXDHC14i2MU/K7HFnnkQOHRSrwKSmOZkT/w==
+  version "10.1.249"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.249.tgz#2eef9dc0b22a37e88b8e939fe4da1cde7edd7324"
+  integrity sha512-xttf/MWHfvMyOjg88CYymlC7RZCP7kF6knA1xtJgDfhvel11uYUhomEGxuQiqy6BOvKyKxJUBaGl8jfp8s1MLA==
 
 content-disposition@^0.5.4:
   version "0.5.4"
@@ -773,9 +773,9 @@ defer-to-connect@^2.0.1:
   integrity sha512-4tvttepXG1VaYGrRibk5EwJd1t4udunSOVMdLSAL6mId1ix438oPwPZMALY41FCijukO1L0twNcGsdzS7dHgDg==
 
 define-properties@^1.1.3, define-properties@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/define-properties/-/define-properties-1.1.4.tgz#0b14d7bd7fbeb2f3572c3a7eda80ea5d57fb05b1"
-  integrity sha512-uckOqKcfaVvtBdsVkdPv3XjveQJsNQqmhXgRi8uhvWWuPYZCNlzT8qAyblUgNoXdHdjMTzAqeGjAoli8f+bzPA==
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/define-properties/-/define-properties-1.2.0.tgz#52988570670c9eacedd8064f4a990f2405849bd5"
+  integrity sha512-xvqAVKGfT1+UAvPwKTVw/njhdQ8ZhXK4lI0bCIuCMrp2up9nPnaDftrLtmpTazqd1o+UY4zgzU+avtMbDP+ldA==
   dependencies:
     has-property-descriptors "^1.0.0"
     object-keys "^1.1.1"
@@ -1008,9 +1008,9 @@ eslint-visitor-keys@^3.3.0:
   integrity sha512-mQ+suqKJVyeuwGYHAdjMFqjCyfl8+Ldnxuyp3ldiMBFKkvytrXUZWaiPCEav8qDHKty44bD+qV1IP4T+w+xXRA==
 
 eslint@*:
-  version "8.33.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.33.0.tgz#02f110f32998cb598c6461f24f4d306e41ca33d7"
-  integrity sha512-WjOpFQgKK8VrCnAtl8We0SUOy/oVZ5NHykyMiagV1M9r8IFpIJX7DduK6n1mpfhlG7T1NLWm2SuD8QB7KFySaA==
+  version "8.34.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.34.0.tgz#fe0ab0ef478104c1f9ebc5537e303d25a8fb22d6"
+  integrity sha512-1Z8iFsucw+7kSqXNZVslXS8Ioa4u2KM7GPwuKtkTFAqZ/cHMcEaR+1+Br0wLlot49cNxIiZk5wp8EAbPcYZxTg==
   dependencies:
     "@eslint/eslintrc" "^1.4.1"
     "@humanwhocodes/config-array" "^0.11.8"
