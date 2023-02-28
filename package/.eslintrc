@@ -40,6 +40,6 @@
     "react/display-name": ["off"],
     "import/prefer-default-export": ["off"],
     "camelcase": ["off"],
-    "no-unused-vars": ["off"],
+    "no-unused-vars": ["off"]
   }
 }

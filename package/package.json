@@ -10,7 +10,8 @@
     "cdk": "cdk",
     "lint": "eslint --ext .ts lambda bin lib",
     "style-check": "prettier --write lambda bin lib",
-    "format": "prettier --write lambda bin lib"
+    "format": "prettier --write lambda bin lib",
+    "prebuild": "yarn lint --fix && yarn format"
   },
   "devDependencies": {
     "@middy/core": "*",
@@ -37,8 +38,8 @@
     "typescript": "*"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigatewayv2-alpha": "^2.63.0-alpha.0",
-    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "^2.63.0-alpha.0",
+    "@aws-cdk/aws-apigatewayv2-alpha": "^2.66.1-alpha.0",
+    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "^2.66.1-alpha.0",
     "@aws-lambda-powertools/logger": "*",
     "aws-cdk-lib": "*",
     "aws-lambda": "*",
