@@ -3,9 +3,9 @@
 
 
 "@aws-cdk/asset-awscli-v1@^2.2.69":
-  version "2.2.85"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.85.tgz#3671dc4de44f243571a806d651697bb4f49d06c1"
-  integrity sha512-oNX4HMupi2+/blbUNctA8WIwyqFTLOGhGDB+gginMSy7QHevLWb/duMlwa7Np4wpiHeiBDMF/ccc5Mfb352srg==
+  version "2.2.86"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.86.tgz#2dd443e58559e4c44a7a080779afdf1e0e6fb855"
+  integrity sha512-O9jRUV41sVRTL0Fw2ShiBy7pjsVIt7s/4Svo3XWZSGbPCVxPiE7jEu+dbve2PRuXTnoOX8dJrDhgGKYzUexL/A==
 
 "@aws-cdk/asset-kubectl-v20@^2.1.1":
   version "2.1.1"
@@ -13,9 +13,9 @@
   integrity sha512-U1ntiX8XiMRRRH5J1IdC+1t5CE89015cwyt5U63Cpk0GnMlN5+h9WsWMlKlPXZR4rdq/m806JRlBMRpBUB2Dhw==
 
 "@aws-cdk/asset-node-proxy-agent-v5@^2.0.58":
-  version "2.0.71"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.71.tgz#dd269f8aa160473e006633d2f0f5384f46747693"
-  integrity sha512-vB/KF9naAYkELP6Hi5+Oib59B4ZAz6jjtrpsKNzsIZTmcTs0IIBb4nVdAuwMpMkPcwT0mzhMg2tlsiSyjrOFBA==
+  version "2.0.72"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.72.tgz#006377d30c156d8bbef7ee962d53e0b732178ba9"
+  integrity sha512-oI8M4yc6sRRmlb862C1mbQA0KOrMOdkniEiEYyzIyJGvZIWhG6eBQXu+862q4vGu8ZQdWr7gpirDyJpqjEAUdQ==
 
 "@balena/dockerignore@^1.0.2":
   version "1.0.2"
@@ -701,9 +701,9 @@ confusing-browser-globals@^1.0.10:
   integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
 
 constructs@*:
-  version "10.1.264"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.264.tgz#84d418b582e6938b998d67e493a6db49011277bc"
-  integrity sha512-f9db+zgEV9xiIhmHxBuxNU2DjmnIQkM5M4IyLvjP+pBtS3r+PflQFwdZlDuy3K84NMnSaI4J/Sz5i5aNgwmDAg==
+  version "10.1.265"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.265.tgz#1017d7f1a95bf5c0ac015b7e88ed92954aeb2f30"
+  integrity sha512-Cc/OWdUlOS2N30SuQ4WDbENklSVYhNuyVKMpOK/Fap01dYKjyZvGNGFef+8qKGBQebq5NvdBWqWOz3+lrvFn8w==
 
 content-disposition@^0.5.4:
   version "0.5.4"
