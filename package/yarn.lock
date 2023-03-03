@@ -28,9 +28,9 @@
   integrity sha512-niXQ0lqkjoOutasEPYoBWOaTjsnikiUl3wO+XCJ8LoqPNrEvwh0C1C8gFg3K9GVvwHW9Or6NRoQ1xPyveZl9xA==
 
 "@aws-lambda-powertools/commons@^1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@aws-lambda-powertools/commons/-/commons-1.5.1.tgz#b74eec754c3ec2442d068c8c6e16dca405475136"
-  integrity sha512-qp13/WksB6M/liEHgV3301qmI/aeQKmrYk1iODB+rrkVWeKW4AJqBMuWQ26gIlbD8t82EtuUNPUFle1a2qwjIg==
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@aws-lambda-powertools/commons/-/commons-1.6.0.tgz#266c0b7e6cadb6b2c3bec9125a694144219a7e33"
+  integrity sha512-83YWf63FZN872Bodk+tJHdSZ2o8y5zsAcpQZgBTqL8TEFNBef/zkDuIuvDIUBmif9q+ZaYVAEtileWjjDTvgGA==
 
 "@aws-lambda-powertools/logger@*":
   version "1.5.1"
