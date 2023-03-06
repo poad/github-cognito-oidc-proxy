@@ -37,6 +37,7 @@
     "aws-cdk-lib": "*",
     "constructs": "*",
     "esbuild": "*",
+    "got": ">=11.8.5",
     "source-map-support": "*"
   },
   "resolutions": {
