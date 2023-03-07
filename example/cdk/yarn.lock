@@ -3,9 +3,9 @@
 
 
 "@aws-cdk/asset-awscli-v1@^2.2.85":
-  version "2.2.94"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.94.tgz#393458881b12473208c1ccd25f70abb00d60cd81"
-  integrity sha512-uVl7ybVbAhXw+aLPegItvO9Zqh9iof4NkLsUz2vMAM9zCUPSqzg1srGl42BgeZvQHuKd0s+nC3n4UwzY2ULQNQ==
+  version "2.2.97"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.97.tgz#af6fcefe7b9ddecc6656691bd0b4061f5c5eabf2"
+  integrity sha512-bWFkQphw1U7Q8XngShvGy0S1yqDui6q72zjnLciqKQ5ucZq17/TEujLTpSv+v2K5qJU8oa8VaMDiRyYbdPD6MA==
 
 "@aws-cdk/asset-kubectl-v20@^2.1.1":
   version "2.1.1"
