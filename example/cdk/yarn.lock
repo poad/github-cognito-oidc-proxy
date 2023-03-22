@@ -732,9 +732,9 @@ confusing-browser-globals@^1.0.10:
   integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
 
 constructs@*:
-  version "10.1.284"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.284.tgz#a157e1f60b691583bbca7ad069cf719211cfe570"
-  integrity sha512-PuvECXLnOUotHX7I0Y+UnpiZqh4+MgR1CHVI2zAlniRN09cNEGRuXadd5lXh7STX4CgzOKBWCBoW1i8k/m4vKA==
+  version "10.1.285"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.285.tgz#a4fb59f41d1825b49aaafa64f41c6f7764c047b7"
+  integrity sha512-yBSo0lXqcqnZApHCc8ffgamJjvWuCNACr7H3eZSDFKuZUqxB9bbgyjAx9DzImgQZIDbL/WVHAlYPt2708KSftw==
 
 content-disposition@^0.5.4:
   version "0.5.4"
@@ -2018,9 +2018,9 @@ prettier-linter-helpers@^1.0.0:
     fast-diff "^1.1.2"
 
 prettier@*:
-  version "2.8.5"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.5.tgz#3dd8ae1ebddc4f6aa419c9b64d8c8319a7e0d982"
-  integrity sha512-3gzuxrHbKUePRBB4ZeU08VNkUcqEHaUaouNt0m7LGP4Hti/NuB07C7PPTM/LkWqXoJYJn2McEo5+kxPNrtQkLQ==
+  version "2.8.6"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.6.tgz#5c174b29befd507f14b83e3c19f83fdc0e974b71"
+  integrity sha512-mtuzdiBbHwPEgl7NxWlqOkithPyp4VN93V7VeHVWBF+ad3I5avc0RVDT4oImXQy9H/AqxA2NSQH8pSxHW6FYbQ==
 
 pseudomap@^1.0.2:
   version "1.0.2"
