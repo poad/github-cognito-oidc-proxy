@@ -13,9 +13,9 @@
   integrity sha512-U1ntiX8XiMRRRH5J1IdC+1t5CE89015cwyt5U63Cpk0GnMlN5+h9WsWMlKlPXZR4rdq/m806JRlBMRpBUB2Dhw==
 
 "@aws-cdk/asset-node-proxy-agent-v5@^2.0.77":
-  version "2.0.93"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.93.tgz#598c71faaa2e5c0653be85e8dce0d7b24864e598"
-  integrity sha512-AGe18nXI+aUcnqsv2ITWjht0+8tBe8NRfsxa8e9PVMpQb3qqzUn1mYgFNRIHoz/4Lzq596qSAgp7mM1mQPjOHQ==
+  version "2.0.94"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.94.tgz#465172f9e1de7c03e92eb73f7631869891f4957e"
+  integrity sha512-uJPea9sFl7AsxgLSzm4XGazLtbjfX1cL9WJeztWxr/Ims85Jwmbm52yUlxXMmXEiUrmJnZYRi9z+Mb3TQkYHLA==
 
 "@aws-cdk/aws-apigatewayv2-alpha@^2.66.1-alpha.0":
   version "2.66.1-alpha.0"
