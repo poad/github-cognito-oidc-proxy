@@ -2313,9 +2313,9 @@ flatted@^3.1.0:
   integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
 
 flow-parser@0.*:
-  version "0.202.1"
-  resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.202.1.tgz#3f87222e6910f6790bb2ce4648c20e1b87d6f9d7"
-  integrity sha512-IA8mhyNEUtzAKh+lj1yNDLFiUr1NSwPC+exQgghQNARFU/DeWGpoNmuYYzMDFIYsOdVdDoTJTxRc+/cS9CVvNg==
+  version "0.203.0"
+  resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.203.0.tgz#bd34370c76312522761fccc06daea8ee1e1d0621"
+  integrity sha512-VLEWgXfvDr6q0PkXuIsbQRmZQIr/LRq+ozZlAA7SoJp7Gvkjl4Znsq6LTdYqqqQ9FVRWaI76wYaL8tRVCJ+T1Q==
 
 for-each@^0.3.3:
   version "0.3.3"
