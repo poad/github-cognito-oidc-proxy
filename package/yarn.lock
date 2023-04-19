@@ -757,9 +757,9 @@ confusing-browser-globals@^1.0.10:
   integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
 
 constructs@*:
-  version "10.1.313"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.313.tgz#faa59fa14044e6ad0b2aaa2f0758117a159013df"
-  integrity sha512-O/koKidDn8A1j1MWs7M1P27GszzvYFTD935/hG7FaWvDghOTp+0aZZ6ZPWPV9vuAiHW4E+TAbX/DN3oXYwhnvg==
+  version "10.2.1"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.1.tgz#eb0749912d96cd751cc032c2133c08a39f6cd2c5"
+  integrity sha512-XJSrPWg3iXHe7a7bk1+Ty+yd4G2xQQP1dKEcOdoaBcCWEHIZMJ8D/J/ogptgJwp0hbJzlZueSab79osa29z5ug==
 
 create-keypair@*:
   version "0.1.2"
