@@ -38,8 +38,8 @@
     "typescript": "*"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigatewayv2-alpha": "^2.73.0-alpha.0",
-    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "^2.73.0-alpha.0",
+    "@aws-cdk/aws-apigatewayv2-alpha": "^2.76.0-alpha.0",
+    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "^2.76.0-alpha.0",
     "@aws-lambda-powertools/logger": "*",
     "aws-cdk-lib": "*",
     "aws-lambda": "*",
