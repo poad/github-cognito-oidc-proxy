@@ -479,9 +479,9 @@
     os-filter-obj "^2.0.0"
 
 "@next/codemod@^13":
-  version "13.3.2"
-  resolved "https://registry.yarnpkg.com/@next/codemod/-/codemod-13.3.2.tgz#fa5dea44d74cbdefd8e3897f1cba0ff68e3869ba"
-  integrity sha512-47usQ/YyrAwGNBbAnuzwIMev5fkKrNLM4ZWjITcUCayqm5oeoXqnI7ck5bphRU70RvSfFFloUvfbUnHiUP52AQ==
+  version "13.3.4"
+  resolved "https://registry.yarnpkg.com/@next/codemod/-/codemod-13.3.4.tgz#633e233fbcf23a6840b0bbd4e0e85f7cdc84052f"
+  integrity sha512-gzR05O4VeXoWNBQOYyprjNc9xbIhwKhrhxelBFbEI35byQV/kDShoyItUrgpMlfDYny2c7hBg0kSTu/Lfe/btg==
   dependencies:
     chalk "4.1.0"
     cheerio "1.0.0-rc.9"
