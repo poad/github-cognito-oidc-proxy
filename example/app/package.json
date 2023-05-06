@@ -8,21 +8,18 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "release": "next build && next export",
+    "release": "next build",
     "style-check": "prettier --check src",
     "format": "prettier --write src"
   },
   "dependencies": {
-    "@next/font": "^13",
     "cross-fetch": "*",
     "next": "^13",
     "react": "*",
     "react-dom": "*",
-    "react-no-ssr": "*",
     "web-vitals": "*"
   },
   "devDependencies": {
-    "@next/codemod": "^13",
     "@swc/cli": "*",
     "@swc/core": "*",
     "@swc/helpers": "*",
@@ -50,10 +47,5 @@
     "regenerator-runtime": "*",
     "swc-loader": "*",
     "typescript": "*"
-  },
-  "resolutions": {
-    "got": ">=11.8.5",
-    "json5": ">=2.2.3",
-    "semver-regex": ">=3.1.3"
   }
 }

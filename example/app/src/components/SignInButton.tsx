@@ -1,5 +1,4 @@
-import React from 'react';
-import styles from '../styles/Home.module.css';
+import styles from '../app/styles/Home.module.css';
 
 const authEndpoint = process.env.NEXT_PUBLIC_COGNITO_ENDPOINT;
 const clirenId = process.env.NEXT_PUBLIC_COGNITO_CLIENT_ID;
