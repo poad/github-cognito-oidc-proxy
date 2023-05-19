@@ -774,9 +774,9 @@ confusing-browser-globals@^1.0.10:
   integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
 
 constructs@*:
-  version "10.2.27"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.27.tgz#44835f100064604be21f32820209cb9edd674910"
-  integrity sha512-77XJ+QjfQQpLOlpSxOuYeUxsyp5EDI888p7RVPJlsbN9aYeEPb3jPodptvcM5rK+dB4gN9UMTsi99K4zSe8ARg==
+  version "10.2.28"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.28.tgz#3195e7e363a09100b5407794ff167968436584b0"
+  integrity sha512-qP0ryyp1ZVM0sbLgnGwa4aEOsJYQ1ghK4WA3WkPyft9JsSfbU/Wf8fMujWZWl+6txnyYyuvXabsCxiscjTyzMQ==
 
 content-disposition@^0.5.4:
   version "0.5.4"
