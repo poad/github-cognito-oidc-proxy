@@ -774,9 +774,9 @@ confusing-browser-globals@^1.0.10:
   integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
 
 constructs@*:
-  version "10.2.46"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.46.tgz#fbe15b8e8c81173eff7548de248192ce300312e9"
-  integrity sha512-65xztcy6yV47/Lacfb38JMB5AHQTSr7I9nnSkcUlbzaJFQRYyGa1619RCsmPMe/KayHzg5zn7P+bV1OLrdLDjQ==
+  version "10.2.47"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.47.tgz#10e1ee53ae79db49a698f39fd63aba636bfa7ef4"
+  integrity sha512-gy1TBktMG31cN8IHT0BqXhVMjjhjr59f7U8a2TfKmirEfJKDrK0vwbGDm9lXWWzvDrNwBnNWSv7jQ8f8x/Ivuw==
 
 content-disposition@^0.5.4:
   version "0.5.4"
@@ -2492,9 +2492,9 @@ tslib@^1.8.1:
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
 tslib@^2.4.0:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.5.2.tgz#1b6f07185c881557b0ffa84b111a0106989e8338"
-  integrity sha512-5svOrSA2w3iGFDs1HibEVBGbDrAY82bFQ3HZ3ixB+88nsbsWQoKqDRb5UBYAUPEzbBn6dAp5gRNXglySbx1MlA==
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.5.3.tgz#24944ba2d990940e6e982c4bea147aba80209913"
+  integrity sha512-mSxlJJwl3BMEQCUNnxXBU9jP4JBktcEGhURcPR6VQVlnP0FdDEsIaz0C35dXNGLyRfrATNofF0F5p2KPxQgB+w==
 
 tsutils@^3.21.0:
   version "3.21.0"
