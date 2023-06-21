@@ -32,28 +32,23 @@ jobs:
 
     - uses: actions/checkout@v3
 
+    - uses: pnpm/action-setup@v2
+      name: Install pnpm
+      id: pnpm-install
+      with:
+        version: 8.6.3
+        run_install: |
+          - recursive: true
+            args: [--no-frozen-lockfile]
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3.6.0
       with:
         node-version: ${{ matrix.node-version }}
         check-latest: true
-        cache: yarn
-        cache-dependency-path:  |
-          package/yarn.lock
-          example/yarn.lock
-          example/app/yarn.lock
-
-    - uses: actions/cache@v3
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
 
     - name: Install global packages
-      run: |
-        npm -g i npm yarn
-        yarn global add aws-cdk
+      run: npm -g i npm aws-cdk
 
     - name: Install AWS CLI
       run: |
@@ -64,7 +59,7 @@ jobs:
 
     - name: Build (package)
       working-directory: package
-      run: yarn install && yarn lint && yarn build
+      run: pnpm lint && pnpm build
 
     - name: deploy (package)
       working-directory: package
@@ -72,7 +67,7 @@ jobs:
 
     - name: Build (example/cdk)
       working-directory: example/cdk
-      run: yarn install && yarn lint && yarn build
+      run: pnpm lint && pnpm build
 
     - name: Generate API Gateway endpoint URL
       run: |
@@ -85,7 +80,7 @@ jobs:
       run: |
         cat << EOS >> cdk.json
         {
-          "app": "yarn lint && npx ts-node --prefer-ts-exts bin/github-oidc-proxy-example-cognito.ts",
+          "app": "pnpm lint && npx ts-node --prefer-ts-exts bin/github-oidc-proxy-example-cognito.ts",
           "watch": {
             "include": [
               "**"
@@ -97,7 +92,7 @@ jobs:
               "**/*.js",
               "tsconfig.json",
               "package*.json",
-              "yarn.lock",
+              "pnpm.lock",
               "node_modules",
               "test"
             ]
@@ -156,7 +151,7 @@ jobs:
 
     - name: Build (example/app)
       working-directory: example/app
-      run: yarn install && yarn lint && yarn build
+      run: pnpm lint && pnpm build
 
     - name: deploy (example) upload next.js app
       working-directory: example/cdk
