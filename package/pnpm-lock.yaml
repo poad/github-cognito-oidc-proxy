@@ -921,14 +921,14 @@ packages:
     resolution: {integrity: sha512-9GNFMRrEMG5y3Jvv+V4azWvc+qNWdWLTjDdhf/zgMlz8haaaLWv0xeAIWxz9PuWUBawsVxy0zZotjCdR3Xq+2w==}
     hasBin: true
     dependencies:
-      aws-sdk: 2.1403.0
+      aws-sdk: 2.1404.0
       commander: 3.0.2
       js-yaml: 3.14.1
       watchpack: 2.4.0
     dev: false
 
-  /aws-sdk@2.1403.0:
-    resolution: {integrity: sha512-qRhiE2iqfXhTEsGJ0unNY7mz5Y7YA4ljEh/1lU/HaUI8hPCQtmZjU3P2/w2YcHFaSzJsu9J9svzjkALfHpetoA==}
+  /aws-sdk@2.1404.0:
+    resolution: {integrity: sha512-pt8SXXH/CDwA0qTNV1SkHhLXnIb9fk1NTutE5w/tj9u8Z5DSbHbc9bnmju1B9aoRG1VTR48/SqOyzkfquVnMCw==}
     engines: {node: '>= 10.0.0'}
     dependencies:
       buffer: 4.9.2
