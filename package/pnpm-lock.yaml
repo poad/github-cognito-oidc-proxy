@@ -8,8 +8,8 @@ dependencies:
     specifier: 2.84.0-alpha.0
     version: 2.84.0-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.84.0-alpha.0)(aws-cdk-lib@2.84.0)(constructs@10.2.57)
   '@aws-lambda-powertools/logger':
-    specifier: ^1.9.0
-    version: 1.9.0
+    specifier: ^1.10.0
+    version: 1.10.0
   aws-cdk-lib:
     specifier: ^2.84.0
     version: 2.84.0(constructs@10.2.57)
@@ -141,14 +141,14 @@ packages:
       constructs: 10.2.57
     dev: false
 
-  /@aws-lambda-powertools/commons@1.9.0:
-    resolution: {integrity: sha512-hxCYIgzApRyExDuheWfrsURXvsDOG1le6x3Qhp6rPsTFeg66Gq94ZsSLi+LtLxdbvBpaU8h5G4LdgwmVja1HdQ==}
+  /@aws-lambda-powertools/commons@1.10.0:
+    resolution: {integrity: sha512-MgiQrspYfywSwiWbKjWNfhhgVoYCPRXvhBOzUrGhOomBxX+Fd9YxXaJDWTYLL6myOuCD2KjzUUiQmWnxH9/3Xg==}
     dev: false
 
-  /@aws-lambda-powertools/logger@1.9.0:
-    resolution: {integrity: sha512-DI4+HbRdWRiG53a4ySV8Hr25wZ7UEQrcZvTx1e66TOC5OR8aYOXcZP2C1YhMzFqvQX+xUjEX3lZWzEzPy9fBvA==}
+  /@aws-lambda-powertools/logger@1.10.0:
+    resolution: {integrity: sha512-tuXCpadvanMNwpu+zjK8WHDF3d4BUPB7YMzgrhLxDR1Z6so4FdBSZlt0UQW4l26UKVBdn9hoM4ztunsTVlbO1Q==}
     dependencies:
-      '@aws-lambda-powertools/commons': 1.9.0
+      '@aws-lambda-powertools/commons': 1.10.0
       lodash.merge: 4.6.2
     dev: false
 
