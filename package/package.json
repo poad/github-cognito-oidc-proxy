@@ -21,7 +21,7 @@
     "@types/node": "^20.3.2",
     "@types/pem-jwk": "^2.0.0",
     "@types/prettier": "^2.7.3",
-    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
     "aws-cdk": "^2.85.0",
     "create-keypair": "^0.1.2",
