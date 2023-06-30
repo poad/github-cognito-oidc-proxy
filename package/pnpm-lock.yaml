@@ -12,8 +12,8 @@ dependencies:
     specifier: 2.84.0-alpha.0
     version: 2.84.0-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.84.0-alpha.0)(aws-cdk-lib@2.86.0)(constructs@10.2.64)
   '@aws-lambda-powertools/logger':
-    specifier: ^1.10.0
-    version: 1.10.0
+    specifier: ^1.11.0
+    version: 1.11.0
   aws-cdk-lib:
     specifier: ^2.86.0
     version: 2.86.0(constructs@10.2.64)
@@ -154,8 +154,8 @@ packages:
     resolution: {integrity: sha512-hcye14k93PM1DhkdsOkmEMnGu6bihY95ZZrmBgknP2Y1Z8vnGxN6qVKfxQ+xjd0O/hV8o72DjVjug07fGl2WrQ==}
     dev: false
 
-  /@aws-lambda-powertools/logger@1.10.0:
-    resolution: {integrity: sha512-tuXCpadvanMNwpu+zjK8WHDF3d4BUPB7YMzgrhLxDR1Z6so4FdBSZlt0UQW4l26UKVBdn9hoM4ztunsTVlbO1Q==}
+  /@aws-lambda-powertools/logger@1.11.0:
+    resolution: {integrity: sha512-BS/i+vNSb5AbuTb7P74+CBjMnZHsYs5uA0BVOKzqFRKJ6CYPc8n03xUpb2OEO0532mrj77EUHEsHDX1aEUVFCQ==}
     dependencies:
       '@aws-lambda-powertools/commons': 1.11.0
       lodash.merge: 4.6.2
