@@ -778,7 +778,7 @@ confusing-browser-globals@^1.0.10:
   resolved "https://registry.yarnpkg.com/confusing-browser-globals/-/confusing-browser-globals-1.0.11.tgz#ae40e9b57cdd3915408a2805ebd3a5585608dc81"
   integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
 
-constructs@^10.2.63:
+constructs@^10.2.64:
   version "10.2.64"
   resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.64.tgz#a47e217d7b45e1c3a4444e31abe697c0337a9159"
   integrity sha512-qailkROYUkrVmfVku0yTLx/xQ1QMilmZ0+MSSdKHOM4WYYHPw69uLFPlr7/7rG4QfAxJepX8gTQlmFScqO3EtQ==
