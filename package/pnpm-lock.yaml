@@ -41,8 +41,8 @@ dependencies:
 
 devDependencies:
   '@middy/core':
-    specifier: ^4.5.2
-    version: 4.5.2
+    specifier: ^4.5.3
+    version: 4.5.3
   '@swc/core':
     specifier: ^1.3.67
     version: 1.3.67(@swc/helpers@0.5.1)
@@ -443,8 +443,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /@middy/core@4.5.2:
-    resolution: {integrity: sha512-UPShFdYeXFFBpNQAjYtxyXIRZi7RLyyY09zA6jvH1NfuGhf4VvEyVluG3BcZj+HXOOO4dHevYxvM8XvQgivONQ==}
+  /@middy/core@4.5.3:
+    resolution: {integrity: sha512-S6dV1xpfMRTDa0xPKNUAloeo7ZFvUd5VrKu6eQ3r5k0umHeQCPO+37fuVOBzn3C0yY+wy4sdllcHsnQZcBOarg==}
     engines: {node: '>=16'}
     dev: true
 
