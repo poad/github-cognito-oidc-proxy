@@ -150,14 +150,14 @@ packages:
       constructs: 10.2.69
     dev: false
 
-  /@aws-lambda-powertools/commons@1.11.0:
-    resolution: {integrity: sha512-hcye14k93PM1DhkdsOkmEMnGu6bihY95ZZrmBgknP2Y1Z8vnGxN6qVKfxQ+xjd0O/hV8o72DjVjug07fGl2WrQ==}
+  /@aws-lambda-powertools/commons@1.11.1:
+    resolution: {integrity: sha512-REOINoiK7axtBKS9buYCkuhBNcmf6FKN1vboQvfIWabzyBrG+7jrUDGzx8UmurXI/F6GrCA7mLCIeYQfy2baUg==}
     dev: false
 
   /@aws-lambda-powertools/logger@1.11.0:
     resolution: {integrity: sha512-BS/i+vNSb5AbuTb7P74+CBjMnZHsYs5uA0BVOKzqFRKJ6CYPc8n03xUpb2OEO0532mrj77EUHEsHDX1aEUVFCQ==}
     dependencies:
-      '@aws-lambda-powertools/commons': 1.11.0
+      '@aws-lambda-powertools/commons': 1.11.1
       lodash.merge: 4.6.2
     dev: false
 
