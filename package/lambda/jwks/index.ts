@@ -1,10 +1,10 @@
+import * as fs from 'fs';
 import {
   Handler,
   APIGatewayProxyEventV2,
   APIGatewayProxyResultV2,
 } from 'aws-lambda';
 import { pem2jwk } from 'pem-jwk';
-import * as fs from 'fs';
 
 export const handler: Handler<
   APIGatewayProxyEventV2,
