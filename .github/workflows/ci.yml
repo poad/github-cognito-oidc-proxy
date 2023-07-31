@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  build:
     strategy:
       matrix:
         node-version: [16.x, 18.x, 20.x]
@@ -24,7 +24,7 @@ jobs:
       name: Install pnpm
       id: pnpm-install
       with:
-        version: 8.6.3
+        version: 8.6.11
         run_install: |
           - recursive: true
             args: [--no-frozen-lockfile]
@@ -35,6 +35,35 @@ jobs:
         node-version: ${{ matrix.node-version }}
         check-latest: true
 
+    - name: Build (example/app)
+      working-directory: example/app
+      run: pnpm lint && pnpm build
+
+  build-backend:
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x]
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: pnpm/action-setup@v2
+      name: Install pnpm
+      id: pnpm-install
+      with:
+        version: 8.6.11
+        run_install: |
+          - recursive: true
+            args: [--no-frozen-lockfile]
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3.7.0
+      with:
+        node-version: ${{ matrix.node-version }}
+        check-latest: true
+
+
     - name: Build (package)
       working-directory: package
       run: pnpm lint && pnpm build
@@ -42,23 +71,3 @@ jobs:
     - name: Build (example)
       working-directory: example/cdk
       run: pnpm lint && pnpm build
-
-    - name: Build (example/app)
-      working-directory: example/app
-      run: pnpm lint && pnpm build
-
-  configure:
-    runs-on: ubuntu-latest
-
-    if: github.actor != 'dependabot[bot]'
-
-    steps:
-    - name: Pull request auto merge enabler
-      if: github.event_name == 'pull_request'
-      uses: poad/github-pull-request-auto-merge-enable-action@v1.0.4
-      with:
-        pull_request_id: ${{ github.event.pull_request.node_id }}
-        github_token: ${{ secrets.PERSONAL_TOKEN_FOR_GITHUB_ACTIONS }}
-        repository: ${{ github.event.repository.name }}
-        owner: ${{ github.repository_owner }}
-        merge_method: SQUASH
