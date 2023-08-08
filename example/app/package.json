@@ -44,7 +44,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "next-transpile-modules": "^10.0.1",
     "prettier": "^3.0.1",
-    "regenerator-runtime": "^0.13.11",
+    "regenerator-runtime": "^0.14.0",
     "swc-loader": "^0.2.3",
     "typescript": "^5.1.6"
   }
