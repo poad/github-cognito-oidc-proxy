@@ -21,6 +21,25 @@ updates:
     rebase-strategy: auto
     assignees:
       - poad
+    groups:
+      cdk-lambda:
+        patterns:
+          - 'aws-cdk*'
+          - '@aws-cdk/*'
+          - '@aws-lambda-powertools/*'
+          - '@middy/*'
+          - '@swc/*'
+          - 'constructs'
+          - 'esbuild'
+          - 'regenerator-runtime'
+          - 'source-map-support'
+          - 'ts-node'
+      eslint-prettier:
+        patterns:
+          - '@typescript-eslint/*'
+          - 'eslint'
+          - 'eslint-*'
+          - 'prettier'
 
   - package-ecosystem: npm
     directory: '/example/cdk/'
@@ -32,6 +51,23 @@ updates:
     rebase-strategy: auto
     assignees:
       - poad
+    groups:
+      cdk-lambda:
+        patterns:
+          - 'aws-cdk*'
+          - '@aws-cdk/*'
+          - '@swc/*'
+          - 'constructs'
+          - 'esbuild'
+          - 'regenerator-runtime'
+          - 'source-map-support'
+          - 'ts-node'
+      eslint-prettier:
+        patterns:
+          - '@typescript-eslint/*'
+          - 'eslint'
+          - 'eslint-*'
+          - 'prettier'
 
   - package-ecosystem: npm
     directory: '/example/app/'
@@ -43,3 +79,17 @@ updates:
     rebase-strategy: auto
     assignees:
       - poad
+    groups:
+      nextjs:
+        patterns:
+          - 'next'
+          - '@next/*'
+          - 'eslint-config-next'
+      eslint-prettier:
+        patterns:
+          - '@typescript-eslint/*'
+          - 'eslint'
+          - 'eslint-*'
+          - 'prettier'
+        exclude-patterns:
+          - 'eslint-config-next'
