@@ -3,7 +3,6 @@ import {
   APIGatewayProxyEventV2,
   APIGatewayProxyResultV2,
 } from 'aws-lambda';
-import fetch from 'cross-fetch';
 import { left, right, isRight, Either } from 'fp-ts/Either';
 import { Logger } from '@aws-lambda-powertools/logger';
 import * as EmailValidator from 'email-validator';

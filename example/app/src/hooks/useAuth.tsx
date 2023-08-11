@@ -1,4 +1,3 @@
-import fetch from 'cross-fetch';
 import { useEffect, useState } from 'react';
 import { Buffer } from 'buffer';
 

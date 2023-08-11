@@ -56,6 +56,7 @@ export class GithubCognitoOidcProxyStack extends cdk.Stack {
           sourceMapMode: SourceMapMode.BOTH,
           sourcesContent: true,
           keepNames: true,
+          target: 'es2022',
         },
         role: new Role(
           this,

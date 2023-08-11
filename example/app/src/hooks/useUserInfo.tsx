@@ -1,4 +1,3 @@
-import fetch from 'cross-fetch';
 import { useEffect, useState } from 'react';
 
 const endpoint = process.env.NEXT_PUBLIC_COGNITO_ENDPOINT;

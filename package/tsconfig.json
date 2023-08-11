@@ -6,7 +6,8 @@
     "target": "ES2022",
     "module": "commonjs",
     "lib": [
-      "es2022"
+      "es2022",
+      "dom"
     ],
     "declaration": true,
     "strict": true,
