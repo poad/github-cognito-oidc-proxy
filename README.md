@@ -13,15 +13,15 @@ Connect to AWS Cognito using API Gateway and Lambda Function as a proxy for GitH
 
 ### requirement
 
-- Node.js 14+
+- Node.js 18+
 - AWS CDK
-- yarn 1.x
+- pnpm 8.7.4+
 
 ### Deploy AWS Resources
 
 ```sh
-cd api
-yarn install
+cd package
+pnpm install
 cdk deploy
 ```
 

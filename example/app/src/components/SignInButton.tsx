@@ -17,7 +17,7 @@ const SignInButton = () => {
           <textarea>
             {typeof window !== 'undefined' ? window.location.href : ''}
           </textarea>
-        </p>        
+        </p>
         <button onClick={onClick}>SignIn</button>
       </p>
     </>

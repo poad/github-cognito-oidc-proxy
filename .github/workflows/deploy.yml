@@ -36,18 +36,17 @@ jobs:
       name: Install pnpm
       id: pnpm-install
       with:
+        version: latest
         run_install: |
           - recursive: true
             args: [--no-frozen-lockfile]
+          - args: [--global, aws-cdk]
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3.8.1
       with:
         node-version: ${{ matrix.node-version }}
         check-latest: true
-
-    - name: Install global packages
-      run: npm -g i npm aws-cdk
 
     - name: Install AWS CLI
       run: |

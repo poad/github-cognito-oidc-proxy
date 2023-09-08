@@ -19,10 +19,7 @@
     "@typescript-eslint"
   ],
   "rules": {
-    "@typescript-eslint/indent": [
-      "error",
-      2
-    ],
+    "@typescript-eslint/indent": ["off"],
     "spaced-comment": [
       "error",
       "always",
@@ -37,12 +34,6 @@
       {
         "devDependencies": true,
         "optionalDependencies": false
-      }
-    ],
-    "max-len": [
-      "error",
-      {
-        "code": 200
       }
     ],
     "@next/next/no-img-element": [

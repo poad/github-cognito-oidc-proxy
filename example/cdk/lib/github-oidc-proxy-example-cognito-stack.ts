@@ -18,7 +18,9 @@ export interface GitHubOidcProxyExampleCognitoConfig {
   identityProviderAuthorizeScopes: string;
 }
 
-interface GitHubOidcProxyExampleCognitoStackProps extends GitHubOidcProxyExampleCognitoConfig, cdk.StackProps {
+interface GitHubOidcProxyExampleCognitoStackProps
+  extends GitHubOidcProxyExampleCognitoConfig,
+    cdk.StackProps {
   environment: string;
 }
 
@@ -185,23 +187,23 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
 
     const idpName = identityProviderIssuerURL
       ? new cognito.CfnUserPoolIdentityProvider(this, 'CfnCognitoIdPGitHub', {
-        providerName: 'GitHub',
-        providerDetails: {
-          client_id: identityProviderClientId,
-          client_secret: identityProviderClientSecret,
-          attributes_request_method: identityProviderRequestMethod,
-          oidc_issuer: identityProviderIssuerURL,
-          authorize_scopes: identityProviderAuthorizeScopes,
-        },
-        providerType: 'OIDC',
-        attributeMapping: {
-          email: 'email',
-          email_verified: 'email_verified',
-          username: 'sub',
-          preferredUsername: 'preferred_username',
-        },
-        userPoolId: userPool.userPoolId,
-      }).providerName
+          providerName: 'GitHub',
+          providerDetails: {
+            client_id: identityProviderClientId,
+            client_secret: identityProviderClientSecret,
+            attributes_request_method: identityProviderRequestMethod,
+            oidc_issuer: identityProviderIssuerURL,
+            authorize_scopes: identityProviderAuthorizeScopes,
+          },
+          providerType: 'OIDC',
+          attributeMapping: {
+            email: 'email',
+            email_verified: 'email_verified',
+            username: 'sub',
+            preferredUsername: 'preferred_username',
+          },
+          userPoolId: userPool.userPoolId,
+        }).providerName
       : undefined;
 
     if (idpName) {
@@ -348,12 +350,16 @@ export class GitHubOidcProxyExampleCognitoStack extends cdk.Stack {
       },
     );
 
-    new cognito.CfnIdentityPoolRoleAttachment(this, 'CognitoIdPoolRoleAttachment', {
-      identityPoolId: identityPool.ref,
-      roles: {
-        authenticated: authenticatedRole.roleArn,
-        unauthenticated: unauthenticatedRole.roleArn,
+    new cognito.CfnIdentityPoolRoleAttachment(
+      this,
+      'CognitoIdPoolRoleAttachment',
+      {
+        identityPoolId: identityPool.ref,
+        roles: {
+          authenticated: authenticatedRole.roleArn,
+          unauthenticated: unauthenticatedRole.roleArn,
+        },
       },
-    });
+    );
   }
 }

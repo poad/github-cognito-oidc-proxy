@@ -1,5 +1,5 @@
 {
-  "name": "github-cognito-oidc-proxy",
+  "name": "@github-cognito-oidc-proxy/package",
   "version": "0.1.0",
   "bin": {
     "github-cognito-oidc-proxy": "bin/github-cognito-oidc-proxy.js"
@@ -8,10 +8,13 @@
     "build": "tsc",
     "watch": "tsc -w",
     "cdk": "cdk",
-    "lint": "eslint --ext .ts lambda bin lib",
+    "eslint": "eslint --ext .ts lambda bin lib",
+    "eslint-fix": "eslint --ext .ts lambda bin lib --fix",
     "style-check": "prettier --write lambda bin lib",
     "format": "prettier --write lambda bin lib",
-    "prebuild": "pnpm lint --fix && pnpm format"
+    "prebuild": "pnpm lint-fix",
+    "lint": "pnpm eslint && pnpm style-check",
+    "lint-fix": "pnpm eslint-fix && pnpm format"
   },
   "devDependencies": {
     "@middy/core": "^4.6.1",
@@ -44,11 +47,5 @@
     "fp-ts": "^2.16.1",
     "pem-jwk": "^2.0.0",
     "source-map-support": "^0.5.21"
-  },
-  "packageManager": "pnpm@8.7.4",
-  "engines": {
-    "npm": "use pnpm please!",
-    "yarn": "use pnpm please!",
-    "pnpm": ">=8.7.4"
   }
 }

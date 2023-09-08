@@ -126,7 +126,7 @@ export default function Home() {
         </div>
 
         <div className={styles.grid}>
-          {!(token.code || token.token ) ? <SignInButton /> : <></>}
+          {!(token.code || token.token) ? <SignInButton /> : <></>}
           {userInfo ? (
             <>
               <table>
