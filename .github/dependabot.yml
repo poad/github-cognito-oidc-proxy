@@ -22,24 +22,9 @@ updates:
     assignees:
       - poad
     groups:
-      cdk-lambda:
+      package:
         patterns:
-          - 'aws-cdk*'
-          - '@aws-cdk/*'
-          - '@aws-lambda-powertools/*'
-          - '@middy/*'
-          - '@swc/*'
-          - 'constructs'
-          - 'esbuild'
-          - 'regenerator-runtime'
-          - 'source-map-support'
-          - 'ts-node'
-      eslint-prettier:
-        patterns:
-          - '@typescript-eslint/*'
-          - 'eslint'
-          - 'eslint-*'
-          - 'prettier'
+          - '*'
 
   - package-ecosystem: npm
     directory: '/example/cdk/'
@@ -52,22 +37,9 @@ updates:
     assignees:
       - poad
     groups:
-      cdk-lambda:
+      cdk:
         patterns:
-          - 'aws-cdk*'
-          - '@aws-cdk/*'
-          - '@swc/*'
-          - 'constructs'
-          - 'esbuild'
-          - 'regenerator-runtime'
-          - 'source-map-support'
-          - 'ts-node'
-      eslint-prettier:
-        patterns:
-          - '@typescript-eslint/*'
-          - 'eslint'
-          - 'eslint-*'
-          - 'prettier'
+          - '*'
 
   - package-ecosystem: npm
     directory: '/example/app/'
@@ -82,14 +54,4 @@ updates:
     groups:
       nextjs:
         patterns:
-          - 'next'
-          - '@next/*'
-          - 'eslint-config-next'
-      eslint-prettier:
-        patterns:
-          - '@typescript-eslint/*'
-          - 'eslint'
-          - 'eslint-*'
-          - 'prettier'
-        exclude-patterns:
-          - 'eslint-config-next'
+          - '*'
