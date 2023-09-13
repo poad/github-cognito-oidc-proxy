@@ -41,8 +41,8 @@ dependencies:
 
 devDependencies:
   '@middy/core':
-    specifier: ^4.6.1
-    version: 4.6.1
+    specifier: ^4.6.2
+    version: 4.6.2
   '@types/aws-lambda':
     specifier: ^8.10.120
     version: 8.10.120
@@ -428,8 +428,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /@middy/core@4.6.1:
-    resolution: {integrity: sha512-3fBaaL2fTX0564pkniDBcTm3S8qOatHVZKDZ8GG3ZrmEJhVkWGkv1e4iWywjtBsLaXzho75uuSUFwdeEbl3x5A==}
+  /@middy/core@4.6.2:
+    resolution: {integrity: sha512-pEy2tAvlQfo3hyskZBkgeEi2kjjc7ZQoblcLHKanyfgubf1NPfzW35oHj1jW5GNK4lDpJoV3LAflAMH1NxdX2Q==}
     engines: {node: '>=16'}
     dev: true
 
@@ -828,14 +828,14 @@ packages:
     resolution: {integrity: sha512-9GNFMRrEMG5y3Jvv+V4azWvc+qNWdWLTjDdhf/zgMlz8haaaLWv0xeAIWxz9PuWUBawsVxy0zZotjCdR3Xq+2w==}
     hasBin: true
     dependencies:
-      aws-sdk: 2.1455.0
+      aws-sdk: 2.1456.0
       commander: 3.0.2
       js-yaml: 3.14.1
       watchpack: 2.4.0
     dev: false
 
-  /aws-sdk@2.1455.0:
-    resolution: {integrity: sha512-OCH3YcWZ1mqePNRcOxvnB4F270++X44K+/cKA7op2HYRKjTkIJjFVqJGVdMDPQAHlc0GTCKYD6CJOUEhR2pp7w==}
+  /aws-sdk@2.1456.0:
+    resolution: {integrity: sha512-0fzxx55Skc44i4q6iMuNjYSHEEaCZIbjvl4jaT3Jki6GNYQAdWb0/+BPaTalkb8UgrY9wSZ0h86DH2w+nf6e7g==}
     engines: {node: '>= 10.0.0'}
     dependencies:
       buffer: 4.9.2
