@@ -24,7 +24,7 @@
     "web-vitals": "^3.4.0"
   },
   "devDependencies": {
-    "@types/node": "^20.6.0",
+    "@types/node": "^20.6.2",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.7.0",
