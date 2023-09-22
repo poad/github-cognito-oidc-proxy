@@ -12,8 +12,8 @@ dependencies:
     specifier: 2.95.0-alpha.0
     version: 2.95.0-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.95.0-alpha.0)(aws-cdk-lib@2.96.2)(constructs@10.2.70)
   '@aws-lambda-powertools/logger':
-    specifier: ^1.13.0
-    version: 1.13.0(@middy/core@4.6.4)
+    specifier: ^1.13.1
+    version: 1.13.1(@middy/core@4.6.4)
   aws-cdk-lib:
     specifier: ^2.96.2
     version: 2.96.2(constructs@10.2.70)
@@ -135,19 +135,19 @@ packages:
       constructs: 10.2.70
     dev: false
 
-  /@aws-lambda-powertools/commons@1.13.0:
-    resolution: {integrity: sha512-jIL1dj1pjAX5SOtQCagUF3ChIntbcDzy2Xwp08vTfvrRAqf4DMcWaW8z0Qb5A5CwrbIEXR0yFUIEEylkA4XXSQ==}
+  /@aws-lambda-powertools/commons@1.13.1:
+    resolution: {integrity: sha512-q0nRkiOBG1v1Mj16dYff5c27BtCxv2SZMpi5nqJ44NOp6MP1QVccjx1tvuEYKr+UvQzuBj7J7w5QhjmKDZqhGA==}
     dev: false
 
-  /@aws-lambda-powertools/logger@1.13.0(@middy/core@4.6.4):
-    resolution: {integrity: sha512-koACdj9RXwcrZTIdL8FBMujgqk3cFTHH9zYv0/gZ0ov21rSDXhMRkL4Xsu/Gdci9xtwJGPGiZFYxRa4MqtfegA==}
+  /@aws-lambda-powertools/logger@1.13.1(@middy/core@4.6.4):
+    resolution: {integrity: sha512-JZDrP/ow9lh6z3YArStahZciwCeaEYEDUaOnFQkJa+5hGnI9U2ZERkSK4xDFMXBxTna3lJKAZAkgoH69hHk9qA==}
     peerDependencies:
-      '@middy/core': '>=3.x <4.x'
+      '@middy/core': '>=3.x'
     peerDependenciesMeta:
       '@middy/core':
         optional: true
     dependencies:
-      '@aws-lambda-powertools/commons': 1.13.0
+      '@aws-lambda-powertools/commons': 1.13.1
       '@middy/core': 4.6.4
       lodash.merge: 4.6.2
     dev: false
