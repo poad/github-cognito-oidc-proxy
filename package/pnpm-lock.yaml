@@ -44,8 +44,8 @@ devDependencies:
     specifier: ^4.6.5
     version: 4.6.5
   '@types/aws-lambda':
-    specifier: ^8.10.124
-    version: 8.10.124
+    specifier: ^8.10.125
+    version: 8.10.125
   '@types/node':
     specifier: ^20.8.6
     version: 20.8.6
@@ -487,8 +487,8 @@ packages:
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
     dev: true
 
-  /@types/aws-lambda@8.10.124:
-    resolution: {integrity: sha512-PHqK0SuAkFS3tZjceqRXecxxrWIN3VqTicuialtK2wZmvBy7H9WGc3u3+wOgaZB7N8SpSXDpWk9qa7eorpTStg==}
+  /@types/aws-lambda@8.10.125:
+    resolution: {integrity: sha512-Vqw/WMlV4O1fJT6capim01v7VLDZkcX1n6Yhb52E7IfnMqYbNfwHfyDV8rRN42NLBtdDvfaqcCqs2K0fr5ljZw==}
     dev: true
 
   /@types/json-schema@7.0.13:
@@ -835,14 +835,14 @@ packages:
     resolution: {integrity: sha512-9GNFMRrEMG5y3Jvv+V4azWvc+qNWdWLTjDdhf/zgMlz8haaaLWv0xeAIWxz9PuWUBawsVxy0zZotjCdR3Xq+2w==}
     hasBin: true
     dependencies:
-      aws-sdk: 2.1474.0
+      aws-sdk: 2.1475.0
       commander: 3.0.2
       js-yaml: 3.14.1
       watchpack: 2.4.0
     dev: false
 
-  /aws-sdk@2.1474.0:
-    resolution: {integrity: sha512-yhIJuBMnLkf+zVj7FI6eYfTwe4ulSo9in3X7Owgc4Bc4Pd0SB8FV5l+zHYGq3G2uZKbzdBkDVohUgBpHfHTocw==}
+  /aws-sdk@2.1475.0:
+    resolution: {integrity: sha512-fYlDnmh7sDH/CS6TtP0EEH2RcLBemgHnJjUhkHGIqQvMTzi3N13EvBtyaYozoJsJ2i8/rcwU10/48HO7rNwL5g==}
     engines: {node: '>= 10.0.0'}
     dependencies:
       buffer: 4.9.2
