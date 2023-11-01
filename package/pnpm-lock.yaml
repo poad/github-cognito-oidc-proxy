@@ -813,14 +813,14 @@ packages:
     resolution: {integrity: sha512-9GNFMRrEMG5y3Jvv+V4azWvc+qNWdWLTjDdhf/zgMlz8haaaLWv0xeAIWxz9PuWUBawsVxy0zZotjCdR3Xq+2w==}
     hasBin: true
     dependencies:
-      aws-sdk: 2.1484.0
+      aws-sdk: 2.1485.0
       commander: 3.0.2
       js-yaml: 3.14.1
       watchpack: 2.4.0
     dev: false
 
-  /aws-sdk@2.1484.0:
-    resolution: {integrity: sha512-emfCmb5j/UtaB7U8tvLpGdVNAlZMg4xZOhoFvL8jBQwIVJyCRyaqcshe31JXTwJdafThn2pNPtQOeYbZJCE0Ow==}
+  /aws-sdk@2.1485.0:
+    resolution: {integrity: sha512-Lm+eLtZEOuVuLu9fWztAFhVFOiVpWprgVwauoS7Dd/IeXt4WafUWe+AnWQ46F8HuHZG+CuD+iUUNa/HDZWWP1g==}
     engines: {node: '>= 10.0.0'}
     dependencies:
       buffer: 4.9.2
