@@ -901,7 +901,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001559
-      electron-to-chromium: 1.4.571
+      electron-to-chromium: 1.4.572
       node-releases: 2.0.13
       update-browserslist-db: 1.0.13(browserslist@4.22.1)
 
@@ -1095,8 +1095,8 @@ packages:
       esutils: 2.0.3
     dev: true
 
-  /electron-to-chromium@1.4.571:
-    resolution: {integrity: sha512-Sc+VtKwKCDj3f/kLBjdyjMpNzoZsU6WuL/wFb6EH8USmHEcebxRXcRrVpOpayxd52tuey4RUDpUsw5OS5LhJqg==}
+  /electron-to-chromium@1.4.572:
+    resolution: {integrity: sha512-RlFobl4D3ieetbnR+2EpxdzFl9h0RAJkPK3pfiwMug2nhBin2ZCsGIAJWdpNniLz43sgXam/CgipOmvTA+rUiA==}
 
   /emoji-regex@9.2.2:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==}
