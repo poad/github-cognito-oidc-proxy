@@ -7,16 +7,16 @@ settings:
 dependencies:
   '@aws-cdk/aws-apigatewayv2-alpha':
     specifier: 2.95.0-alpha.0
-    version: 2.95.0-alpha.0(aws-cdk-lib@2.103.1)(constructs@10.3.0)
+    version: 2.95.0-alpha.0(aws-cdk-lib@2.104.0)(constructs@10.3.0)
   '@aws-cdk/aws-apigatewayv2-integrations-alpha':
     specifier: 2.95.0-alpha.0
-    version: 2.95.0-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.95.0-alpha.0)(aws-cdk-lib@2.103.1)(constructs@10.3.0)
+    version: 2.95.0-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.95.0-alpha.0)(aws-cdk-lib@2.104.0)(constructs@10.3.0)
   '@aws-lambda-powertools/logger':
     specifier: ^1.14.1
     version: 1.14.1(@middy/core@4.6.5)
   aws-cdk-lib:
-    specifier: ^2.103.1
-    version: 2.103.1(constructs@10.3.0)
+    specifier: ^2.104.0
+    version: 2.104.0(constructs@10.3.0)
   aws-lambda:
     specifier: ^1.0.7
     version: 1.0.7
@@ -59,8 +59,8 @@ devDependencies:
     specifier: ^6.9.1
     version: 6.9.1(eslint@8.52.0)(typescript@5.2.2)
   aws-cdk:
-    specifier: ^2.103.1
-    version: 2.103.1
+    specifier: ^2.104.0
+    version: 2.104.0
   create-keypair:
     specifier: ^0.1.2
     version: 0.1.2
@@ -111,18 +111,18 @@ packages:
     resolution: {integrity: sha512-DDt4SLdLOwWCjGtltH4VCST7hpOI5DzieuhGZsBpZ+AgJdSI2GCjklCXm0GCTwJG/SolkL5dtQXyUKgg9luBDg==}
     dev: false
 
-  /@aws-cdk/aws-apigatewayv2-alpha@2.95.0-alpha.0(aws-cdk-lib@2.103.1)(constructs@10.3.0):
+  /@aws-cdk/aws-apigatewayv2-alpha@2.95.0-alpha.0(aws-cdk-lib@2.104.0)(constructs@10.3.0):
     resolution: {integrity: sha512-9cGBbPziDGQKSIYhBvAOymX5W/mjWXoDK9Gbt8jP6c6N9MpI5S8E70jFqf0qD/kQxB8FSGvp+Uu99knn3RG8LA==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       aws-cdk-lib: 2.95.0
       constructs: ^10.0.0
     dependencies:
-      aws-cdk-lib: 2.103.1(constructs@10.3.0)
+      aws-cdk-lib: 2.104.0(constructs@10.3.0)
       constructs: 10.3.0
     dev: false
 
-  /@aws-cdk/aws-apigatewayv2-integrations-alpha@2.95.0-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.95.0-alpha.0)(aws-cdk-lib@2.103.1)(constructs@10.3.0):
+  /@aws-cdk/aws-apigatewayv2-integrations-alpha@2.95.0-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.95.0-alpha.0)(aws-cdk-lib@2.104.0)(constructs@10.3.0):
     resolution: {integrity: sha512-7JkYiX+R39lsaZT1EK5rIck3pYEe+MjhW6H8SamDnrejn8kXaE9QDV+tNztG6oHarmo/fEeDp+fFZZanktDLkw==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
@@ -130,8 +130,8 @@ packages:
       aws-cdk-lib: 2.95.0
       constructs: ^10.0.0
     dependencies:
-      '@aws-cdk/aws-apigatewayv2-alpha': 2.95.0-alpha.0(aws-cdk-lib@2.103.1)(constructs@10.3.0)
-      aws-cdk-lib: 2.103.1(constructs@10.3.0)
+      '@aws-cdk/aws-apigatewayv2-alpha': 2.95.0-alpha.0(aws-cdk-lib@2.104.0)(constructs@10.3.0)
+      aws-cdk-lib: 2.104.0(constructs@10.3.0)
       constructs: 10.3.0
     dev: false
 
@@ -778,8 +778,8 @@ packages:
     resolution: {integrity: sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==}
     engines: {node: '>= 0.4'}
 
-  /aws-cdk-lib@2.103.1(constructs@10.3.0):
-    resolution: {integrity: sha512-Y9P4dv+vdfTiqTGeYebajQ30OiPgsIDGonpaxjQYA1A4RYemYu62bX1J+QQBJh7FNd3amybD7YgJe3jKIUQuHw==}
+  /aws-cdk-lib@2.104.0(constructs@10.3.0):
+    resolution: {integrity: sha512-gD5KD2j8C5ff7j4RTA5ajFDNnpw4EvVhWMgWWrOyIEa9OkndEXwzhvCvwbEpwmgSUvnmsmbiHTBaLg8KVP+yKA==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       constructs: ^10.0.0
@@ -801,8 +801,8 @@ packages:
       - table
       - yaml
 
-  /aws-cdk@2.103.1:
-    resolution: {integrity: sha512-5DXPlMi8Gf/a6fMqwY6uVwuR21PDDNGkAGkMVTTuaiulc4RsMjQUGq8I4xaPIYQRvR+VHFU+JQ5j5PnI5/gBrA==}
+  /aws-cdk@2.104.0:
+    resolution: {integrity: sha512-JuCafR5D1lnMKA88JUYhvRYeguozAWneC/n6kR1FUG+kXtXxpEqOxP91118dfJZYRw7FMIkHW8ewddvLwaCy5g==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
     optionalDependencies:
@@ -813,14 +813,14 @@ packages:
     resolution: {integrity: sha512-9GNFMRrEMG5y3Jvv+V4azWvc+qNWdWLTjDdhf/zgMlz8haaaLWv0xeAIWxz9PuWUBawsVxy0zZotjCdR3Xq+2w==}
     hasBin: true
     dependencies:
-      aws-sdk: 2.1486.0
+      aws-sdk: 2.1487.0
       commander: 3.0.2
       js-yaml: 3.14.1
       watchpack: 2.4.0
     dev: false
 
-  /aws-sdk@2.1486.0:
-    resolution: {integrity: sha512-YVGhKGWP5mHWIla6/a7MXwHyKrjcy2xIo65Z6rCvG2uxVa3NxGz4Wo7yNRqA8QGCS6buYz9MmRJLv2KOtkb7JQ==}
+  /aws-sdk@2.1487.0:
+    resolution: {integrity: sha512-EqDn+beJU0pfANLdg8mh7OER5TH2W6DgZ78WWWgt9fOwczhJQYkQhqevSlCV700vtHtatRjYPG+Q47f5aurZVQ==}
     engines: {node: '>= 10.0.0'}
     dependencies:
       buffer: 4.9.2
