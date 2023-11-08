@@ -19,8 +19,8 @@
   "devDependencies": {
     "@middy/core": "^4.6.5",
     "@types/aws-lambda": "^8.10.126",
-    "@types/node": "^20.8.10",
-    "@types/pem-jwk": "^2.0.1",
+    "@types/node": "^20.9.0",
+    "@types/pem-jwk": "^2.0.2",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.10.0",
     "aws-cdk": "^2.104.0",
