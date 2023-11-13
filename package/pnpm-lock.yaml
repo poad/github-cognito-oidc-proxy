@@ -7,16 +7,16 @@ settings:
 dependencies:
   '@aws-cdk/aws-apigatewayv2-alpha':
     specifier: 2.95.0-alpha.0
-    version: 2.95.0-alpha.0(aws-cdk-lib@2.105.0)(constructs@10.3.0)
+    version: 2.95.0-alpha.0(aws-cdk-lib@2.106.1)(constructs@10.3.0)
   '@aws-cdk/aws-apigatewayv2-integrations-alpha':
     specifier: 2.95.0-alpha.0
-    version: 2.95.0-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.95.0-alpha.0)(aws-cdk-lib@2.105.0)(constructs@10.3.0)
+    version: 2.95.0-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.95.0-alpha.0)(aws-cdk-lib@2.106.1)(constructs@10.3.0)
   '@aws-lambda-powertools/logger':
     specifier: ^1.14.2
-    version: 1.14.2(@middy/core@4.6.6)
+    version: 1.14.2(@middy/core@4.7.0)
   aws-cdk-lib:
-    specifier: ^2.105.0
-    version: 2.105.0(constructs@10.3.0)
+    specifier: ^2.106.1
+    version: 2.106.1(constructs@10.3.0)
   aws-lambda:
     specifier: ^1.0.7
     version: 1.0.7
@@ -41,8 +41,8 @@ dependencies:
 
 devDependencies:
   '@middy/core':
-    specifier: ^4.6.6
-    version: 4.6.6
+    specifier: ^4.7.0
+    version: 4.7.0
   '@types/aws-lambda':
     specifier: ^8.10.126
     version: 8.10.126
@@ -59,8 +59,8 @@ devDependencies:
     specifier: ^6.10.0
     version: 6.10.0(eslint@8.53.0)(typescript@5.2.2)
   aws-cdk:
-    specifier: ^2.105.0
-    version: 2.105.0
+    specifier: ^2.106.1
+    version: 2.106.1
   create-keypair:
     specifier: ^0.1.2
     version: 0.1.2
@@ -111,18 +111,18 @@ packages:
     resolution: {integrity: sha512-DDt4SLdLOwWCjGtltH4VCST7hpOI5DzieuhGZsBpZ+AgJdSI2GCjklCXm0GCTwJG/SolkL5dtQXyUKgg9luBDg==}
     dev: false
 
-  /@aws-cdk/aws-apigatewayv2-alpha@2.95.0-alpha.0(aws-cdk-lib@2.105.0)(constructs@10.3.0):
+  /@aws-cdk/aws-apigatewayv2-alpha@2.95.0-alpha.0(aws-cdk-lib@2.106.1)(constructs@10.3.0):
     resolution: {integrity: sha512-9cGBbPziDGQKSIYhBvAOymX5W/mjWXoDK9Gbt8jP6c6N9MpI5S8E70jFqf0qD/kQxB8FSGvp+Uu99knn3RG8LA==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       aws-cdk-lib: 2.95.0
       constructs: ^10.0.0
     dependencies:
-      aws-cdk-lib: 2.105.0(constructs@10.3.0)
+      aws-cdk-lib: 2.106.1(constructs@10.3.0)
       constructs: 10.3.0
     dev: false
 
-  /@aws-cdk/aws-apigatewayv2-integrations-alpha@2.95.0-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.95.0-alpha.0)(aws-cdk-lib@2.105.0)(constructs@10.3.0):
+  /@aws-cdk/aws-apigatewayv2-integrations-alpha@2.95.0-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.95.0-alpha.0)(aws-cdk-lib@2.106.1)(constructs@10.3.0):
     resolution: {integrity: sha512-7JkYiX+R39lsaZT1EK5rIck3pYEe+MjhW6H8SamDnrejn8kXaE9QDV+tNztG6oHarmo/fEeDp+fFZZanktDLkw==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
@@ -130,8 +130,8 @@ packages:
       aws-cdk-lib: 2.95.0
       constructs: ^10.0.0
     dependencies:
-      '@aws-cdk/aws-apigatewayv2-alpha': 2.95.0-alpha.0(aws-cdk-lib@2.105.0)(constructs@10.3.0)
-      aws-cdk-lib: 2.105.0(constructs@10.3.0)
+      '@aws-cdk/aws-apigatewayv2-alpha': 2.95.0-alpha.0(aws-cdk-lib@2.106.1)(constructs@10.3.0)
+      aws-cdk-lib: 2.106.1(constructs@10.3.0)
       constructs: 10.3.0
     dev: false
 
@@ -139,7 +139,7 @@ packages:
     resolution: {integrity: sha512-pGW2RSeOEbU1e+mj+MlMkaiM4njO289glFjJA1V+H8bmjvHJXaItroH7lutZ8Gde1Iq+5WoRVQN8M/xmMNSxIA==}
     dev: false
 
-  /@aws-lambda-powertools/logger@1.14.2(@middy/core@4.6.6):
+  /@aws-lambda-powertools/logger@1.14.2(@middy/core@4.7.0):
     resolution: {integrity: sha512-eUu1qF/8S3H7SquaKjmIj/go/3UDYwsfiJ3My1gtqd9eKRlUPKpvktAeF/+yghcO0BmuA5q1i2hKr8rsJ+2lGg==}
     peerDependencies:
       '@middy/core': '>=3.x'
@@ -148,7 +148,7 @@ packages:
         optional: true
     dependencies:
       '@aws-lambda-powertools/commons': 1.14.2
-      '@middy/core': 4.6.6
+      '@middy/core': 4.7.0
       lodash.merge: 4.6.2
     dev: false
 
@@ -430,8 +430,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /@middy/core@4.6.6:
-    resolution: {integrity: sha512-ao3nP4yt0C9gc1F9KxSJ5vSJXQP87OhvyhB1UxEXGEOBk7ACZuNeZAU40/+Vk+EiQ4Em9H5R7RYUuPdiczRvoQ==}
+  /@middy/core@4.7.0:
+    resolution: {integrity: sha512-yI++DmhDQ8+ugvY7+GrEnb2PF0M/6Wzbgu4Tf7QhOlhwKGDd4j6or+Ab7qYPWx+jnKf8F0tqlmh0gV4JLi0yHw==}
     engines: {node: '>=16'}
 
   /@nodelib/fs.scandir@2.1.5:
@@ -778,8 +778,8 @@ packages:
     resolution: {integrity: sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==}
     engines: {node: '>= 0.4'}
 
-  /aws-cdk-lib@2.105.0(constructs@10.3.0):
-    resolution: {integrity: sha512-pByAPfRyOzF+AVz56aLUPLhYiRZzfIjyV9Bf2t0X3cpwVW21zVC+8GrQcQwy+zWgFGg3Gx6IVFNio3t8awHXHA==}
+  /aws-cdk-lib@2.106.1(constructs@10.3.0):
+    resolution: {integrity: sha512-D+ZNbrxoCzmJ8+1d66TU4zaevvMa8Acb2DA5sx5CYwt3zXPPw8fJ9WOd376EGG6Ahn9Bwvmm0A6DHFsDRxG2ng==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       constructs: ^10.0.0
@@ -801,8 +801,8 @@ packages:
       - table
       - yaml
 
-  /aws-cdk@2.105.0:
-    resolution: {integrity: sha512-3ji+HNlCJUJ3o9h430gdRhocmeQrpM49fibXpvj3rvzBwuyWSTe2t8uohMPScSMETv59sHOlZpOdAEd+WwkuHQ==}
+  /aws-cdk@2.106.1:
+    resolution: {integrity: sha512-RRkmXU7V6VPYGmmP/4Em+j8PQ06uecOetQVytyQISVzcYscrd+B+5ZXjFxy50Nvq0CUhOFWtDRbkQW06onmMzA==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
     optionalDependencies:
@@ -813,14 +813,14 @@ packages:
     resolution: {integrity: sha512-9GNFMRrEMG5y3Jvv+V4azWvc+qNWdWLTjDdhf/zgMlz8haaaLWv0xeAIWxz9PuWUBawsVxy0zZotjCdR3Xq+2w==}
     hasBin: true
     dependencies:
-      aws-sdk: 2.1493.0
+      aws-sdk: 2.1494.0
       commander: 3.0.2
       js-yaml: 3.14.1
       watchpack: 2.4.0
     dev: false
 
-  /aws-sdk@2.1493.0:
-    resolution: {integrity: sha512-fnOoakH7HUHWDPjnXuCoy3KR+4Fn+Z76ZZjLUbsljzOdy1aBiN5C+cnrEnV8wWKI1dUjU6C1nwEystzi50HHyA==}
+  /aws-sdk@2.1494.0:
+    resolution: {integrity: sha512-i7wIEBUzhIOuCeE8moB4rXUr7y+5rviiGJ6hsdQJdqwDxzStkmV7+cvKllNVx3+kuv0jdNbkVZ+wHBANi91Wxw==}
     engines: {node: '>= 10.0.0'}
     dependencies:
       buffer: 4.9.2
@@ -1475,7 +1475,7 @@ packages:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
     engines: {node: ^10.12.0 || >=12.0.0}
     dependencies:
-      flat-cache: 3.1.1
+      flat-cache: 3.2.0
     dev: true
 
   /fill-range@7.0.1:
@@ -1493,9 +1493,9 @@ packages:
       path-exists: 4.0.0
     dev: true
 
-  /flat-cache@3.1.1:
-    resolution: {integrity: sha512-/qM2b3LUIaIgviBQovTLvijfyOQXPtSRnRK26ksj2J7rzPIecePUIpJsZ4T02Qg+xiAEKIs5K8dsHEd+VaKa/Q==}
-    engines: {node: '>=12.0.0'}
+  /flat-cache@3.2.0:
+    resolution: {integrity: sha512-CYcENa+FtcUKLmhhqyctpclsq7QF38pKjZHsGNiSQF5r4FtoKDWabFDl3hzaEQMvT1LHEysw5twgLvpYYb4vbw==}
+    engines: {node: ^10.12.0 || >=12.0.0}
     dependencies:
       flatted: 3.2.9
       keyv: 4.5.4
