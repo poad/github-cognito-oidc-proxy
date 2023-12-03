@@ -5,15 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@aws-cdk/aws-apigatewayv2-alpha':
-    specifier: 2.95.0-alpha.0
-    version: 2.95.0-alpha.0(aws-cdk-lib@2.113.0)(constructs@10.3.0)
-  '@aws-cdk/aws-apigatewayv2-integrations-alpha':
-    specifier: 2.95.0-alpha.0
-    version: 2.95.0-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.95.0-alpha.0)(aws-cdk-lib@2.113.0)(constructs@10.3.0)
   '@aws-lambda-powertools/logger':
     specifier: ^1.17.0
-    version: 1.17.0(@middy/core@5.0.3)
+    version: 1.17.0(@middy/core@5.1.0)
   aws-cdk-lib:
     specifier: ^2.113.0
     version: 2.113.0(constructs@10.3.0)
@@ -41,8 +35,8 @@ dependencies:
 
 devDependencies:
   '@middy/core':
-    specifier: ^5.0.3
-    version: 5.0.3
+    specifier: ^5.1.0
+    version: 5.1.0
   '@types/aws-lambda':
     specifier: ^8.10.130
     version: 8.10.130
@@ -111,35 +105,11 @@ packages:
     resolution: {integrity: sha512-DDt4SLdLOwWCjGtltH4VCST7hpOI5DzieuhGZsBpZ+AgJdSI2GCjklCXm0GCTwJG/SolkL5dtQXyUKgg9luBDg==}
     dev: false
 
-  /@aws-cdk/aws-apigatewayv2-alpha@2.95.0-alpha.0(aws-cdk-lib@2.113.0)(constructs@10.3.0):
-    resolution: {integrity: sha512-9cGBbPziDGQKSIYhBvAOymX5W/mjWXoDK9Gbt8jP6c6N9MpI5S8E70jFqf0qD/kQxB8FSGvp+Uu99knn3RG8LA==}
-    engines: {node: '>= 14.15.0'}
-    peerDependencies:
-      aws-cdk-lib: 2.95.0
-      constructs: ^10.0.0
-    dependencies:
-      aws-cdk-lib: 2.113.0(constructs@10.3.0)
-      constructs: 10.3.0
-    dev: false
-
-  /@aws-cdk/aws-apigatewayv2-integrations-alpha@2.95.0-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.95.0-alpha.0)(aws-cdk-lib@2.113.0)(constructs@10.3.0):
-    resolution: {integrity: sha512-7JkYiX+R39lsaZT1EK5rIck3pYEe+MjhW6H8SamDnrejn8kXaE9QDV+tNztG6oHarmo/fEeDp+fFZZanktDLkw==}
-    engines: {node: '>= 14.15.0'}
-    peerDependencies:
-      '@aws-cdk/aws-apigatewayv2-alpha': 2.95.0-alpha.0
-      aws-cdk-lib: 2.95.0
-      constructs: ^10.0.0
-    dependencies:
-      '@aws-cdk/aws-apigatewayv2-alpha': 2.95.0-alpha.0(aws-cdk-lib@2.113.0)(constructs@10.3.0)
-      aws-cdk-lib: 2.113.0(constructs@10.3.0)
-      constructs: 10.3.0
-    dev: false
-
   /@aws-lambda-powertools/commons@1.17.0:
     resolution: {integrity: sha512-eZbOUGKH+oNG49oObXucffTdUyj0XmQTnddgDWmSWLgAQ4/L60n7x80hYOTCmDqATxPoA4ADa+fzAxGx0hyaxQ==}
     dev: false
 
-  /@aws-lambda-powertools/logger@1.17.0(@middy/core@5.0.3):
+  /@aws-lambda-powertools/logger@1.17.0(@middy/core@5.1.0):
     resolution: {integrity: sha512-HdesKvINDebLsxEyLzjEvn4ZiO3lYnl9Ol7GuRGgSTsB4byEeRbhAghCGCPZb0CA/NaDVQleaLTTjjsJjm6I7A==}
     peerDependencies:
       '@middy/core': '>=3.x'
@@ -148,7 +118,7 @@ packages:
         optional: true
     dependencies:
       '@aws-lambda-powertools/commons': 1.17.0
-      '@middy/core': 5.0.3
+      '@middy/core': 5.1.0
       lodash.merge: 4.6.2
     dev: false
 
@@ -436,8 +406,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /@middy/core@5.0.3:
-    resolution: {integrity: sha512-j/ONWgFw2ht2oK8B4gk5mlS4NbutpocF1BIEN0oWxmJ2rcT2zIlAYxTc6iRh2Tmwb5QgZ5SO9Pb9AoloTD0FBw==}
+  /@middy/core@5.1.0:
+    resolution: {integrity: sha512-JpQ5vEPvFBbmGtUyVeeMHlxFCqam2oHND7ZAti/xm80p9ioN5Ps7uNUIrb+cUH6PEc5y+uP3Opnjn5UkGLWiWg==}
     engines: {node: '>=18'}
     dependencies:
       '@datastream/core': 0.0.35
