@@ -19,7 +19,7 @@
   "devDependencies": {
     "@middy/core": "^5.1.0",
     "@types/aws-lambda": "^8.10.130",
-    "@types/node": "^20.10.3",
+    "@types/node": "^20.10.4",
     "@types/pem-jwk": "^2.0.2",
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "^6.13.2",
