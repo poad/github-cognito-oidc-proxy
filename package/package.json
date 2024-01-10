@@ -17,12 +17,12 @@
     "lint-fix": "pnpm eslint-fix && pnpm format"
   },
   "devDependencies": {
-    "@middy/core": "^5.2.1",
+    "@middy/core": "^5.2.2",
     "@types/aws-lambda": "^8.10.131",
-    "@types/node": "^20.10.7",
+    "@types/node": "^20.10.8",
     "@types/pem-jwk": "^2.0.2",
-    "@typescript-eslint/eslint-plugin": "^6.18.0",
-    "@typescript-eslint/parser": "^6.18.0",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
     "aws-cdk": "^2.118.0",
     "create-keypair": "^0.1.2",
     "eslint": "^8.56.0",
