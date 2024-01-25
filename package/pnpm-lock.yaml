@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@aws-lambda-powertools/logger':
-    specifier: ^1.17.0
-    version: 1.17.0(@middy/core@5.2.3)
+    specifier: ^1.18.0
+    version: 1.18.0(@middy/core@5.2.3)
   aws-cdk-lib:
     specifier: ^2.123.0
     version: 2.123.0(constructs@10.3.0)
@@ -105,19 +105,19 @@ packages:
     resolution: {integrity: sha512-DDt4SLdLOwWCjGtltH4VCST7hpOI5DzieuhGZsBpZ+AgJdSI2GCjklCXm0GCTwJG/SolkL5dtQXyUKgg9luBDg==}
     dev: false
 
-  /@aws-lambda-powertools/commons@1.17.0:
-    resolution: {integrity: sha512-eZbOUGKH+oNG49oObXucffTdUyj0XmQTnddgDWmSWLgAQ4/L60n7x80hYOTCmDqATxPoA4ADa+fzAxGx0hyaxQ==}
+  /@aws-lambda-powertools/commons@1.18.0:
+    resolution: {integrity: sha512-oSnST8Wr3WZcT/FgCUzZYUFB+qYHWMAKS0GhWbUqHZMr7I5F75jq/JbeUUF16ShOMGgnEzs5oJjizBYVTI6Oww==}
     dev: false
 
-  /@aws-lambda-powertools/logger@1.17.0(@middy/core@5.2.3):
-    resolution: {integrity: sha512-HdesKvINDebLsxEyLzjEvn4ZiO3lYnl9Ol7GuRGgSTsB4byEeRbhAghCGCPZb0CA/NaDVQleaLTTjjsJjm6I7A==}
+  /@aws-lambda-powertools/logger@1.18.0(@middy/core@5.2.3):
+    resolution: {integrity: sha512-oB4FPMYNPjME6xsDfm7rxRBHwaH0dQl+bmO9cDbRfiCsZfQxKtTiSvROGt6AvRo+5rhPZyCdn5eAHqCJ4f5tVQ==}
     peerDependencies:
       '@middy/core': '>=3.x'
     peerDependenciesMeta:
       '@middy/core':
         optional: true
     dependencies:
-      '@aws-lambda-powertools/commons': 1.17.0
+      '@aws-lambda-powertools/commons': 1.18.0
       '@middy/core': 5.2.3
       lodash.merge: 4.6.2
     dev: false
@@ -800,14 +800,14 @@ packages:
     resolution: {integrity: sha512-9GNFMRrEMG5y3Jvv+V4azWvc+qNWdWLTjDdhf/zgMlz8haaaLWv0xeAIWxz9PuWUBawsVxy0zZotjCdR3Xq+2w==}
     hasBin: true
     dependencies:
-      aws-sdk: 2.1543.0
+      aws-sdk: 2.1544.0
       commander: 3.0.2
       js-yaml: 3.14.1
       watchpack: 2.4.0
     dev: false
 
-  /aws-sdk@2.1543.0:
-    resolution: {integrity: sha512-sC8VwfdlauX7AYYm6Ed4SkONjt7cLr63AdkSL0MS+lwoy1fJwVRb2Kwylv+an1uAdQavRltWnEg2LVo2jzRQuA==}
+  /aws-sdk@2.1544.0:
+    resolution: {integrity: sha512-R0C9bonDL0IQ/j0tq6Xaq5weFiaiSOj6KGRseHy+78zdbP1tsG2LZSoN3J5RqjjLHA5/fTMwXO1IuW/4eCNLAg==}
     engines: {node: '>= 10.0.0'}
     dependencies:
       buffer: 4.9.2
