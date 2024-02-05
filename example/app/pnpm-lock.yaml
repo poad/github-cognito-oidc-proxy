@@ -1166,8 +1166,8 @@ packages:
     resolution: {integrity: sha512-wd6JXUmyHmt8T5a2xreUwKcGPq6f1f+WwIJkijUqiGcJz1qqnZgP6XIK+QyIWU5lT7imeNxUll48bziG+TSYcA==}
     dev: true
 
-  /es-errors@1.0.0:
-    resolution: {integrity: sha512-yHV74THqMJUyFKkHyN7hyENcEZM3Dj2a2IrdClY+IT4BFQHkIVwlh8s6uZfjsFydMdNHv0F5mWgAA3ajFbsvVQ==}
+  /es-errors@1.1.0:
+    resolution: {integrity: sha512-ka/z/Hxav2YGgkzSwOp1ugbUk6fgIX5gI69PfRHCvODD+LuVOnV1jHPBWXBNPZqX0O900p2I+IdM9sEbac0BNA==}
     engines: {node: '>= 0.4'}
     dev: true
 
@@ -1697,7 +1697,7 @@ packages:
     resolution: {integrity: sha512-JIcZczvcMVE7AUOP+X72bh8HqHBRxFdz5PDHYtNG/lE3yk9b3KZBJlwFcTyPYjg3L4RLLmZJzvjxhaZVapxFrQ==}
     engines: {node: '>= 0.4'}
     dependencies:
-      es-errors: 1.0.0
+      es-errors: 1.1.0
       function-bind: 1.1.2
       has-proto: 1.0.1
       has-symbols: 1.0.3
@@ -2326,7 +2326,7 @@ packages:
       call-bind: 1.0.5
       define-properties: 1.2.1
       es-abstract: 1.22.3
-      es-errors: 1.0.0
+      es-errors: 1.1.0
     dev: true
 
   /object.hasown@1.1.3:
@@ -2496,7 +2496,7 @@ packages:
       call-bind: 1.0.5
       define-properties: 1.2.1
       es-abstract: 1.22.3
-      es-errors: 1.0.0
+      es-errors: 1.1.0
       get-intrinsic: 1.2.3
       globalthis: 1.0.3
       which-builtin-type: 1.1.3
