@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@aws-lambda-powertools/logger':
     specifier: ^1.18.0
-    version: 1.18.0(@middy/core@5.2.3)
+    version: 1.18.0(@middy/core@5.2.4)
   aws-cdk-lib:
     specifier: ^2.126.0
     version: 2.126.0(constructs@10.3.0)
@@ -35,8 +35,8 @@ dependencies:
 
 devDependencies:
   '@middy/core':
-    specifier: ^5.2.3
-    version: 5.2.3
+    specifier: ^5.2.4
+    version: 5.2.4
   '@types/aws-lambda':
     specifier: ^8.10.133
     version: 8.10.133
@@ -109,7 +109,7 @@ packages:
     resolution: {integrity: sha512-oSnST8Wr3WZcT/FgCUzZYUFB+qYHWMAKS0GhWbUqHZMr7I5F75jq/JbeUUF16ShOMGgnEzs5oJjizBYVTI6Oww==}
     dev: false
 
-  /@aws-lambda-powertools/logger@1.18.0(@middy/core@5.2.3):
+  /@aws-lambda-powertools/logger@1.18.0(@middy/core@5.2.4):
     resolution: {integrity: sha512-oB4FPMYNPjME6xsDfm7rxRBHwaH0dQl+bmO9cDbRfiCsZfQxKtTiSvROGt6AvRo+5rhPZyCdn5eAHqCJ4f5tVQ==}
     peerDependencies:
       '@middy/core': '>=3.x'
@@ -118,7 +118,7 @@ packages:
         optional: true
     dependencies:
       '@aws-lambda-powertools/commons': 1.18.0
-      '@middy/core': 5.2.3
+      '@middy/core': 5.2.4
       lodash.merge: 4.6.2
     dev: false
 
@@ -415,8 +415,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /@middy/core@5.2.3:
-    resolution: {integrity: sha512-C/efwjqBCQhNAzLrzQtQWl9FSj4j3CBy0CCTlagmbiD7g/l6HPwieR6baN+Oc81+p91xy//dg2hR7sP9X0X6qA==}
+  /@middy/core@5.2.4:
+    resolution: {integrity: sha512-0FpwGAWFjGIgBrkc/7yWUaKsC+QA58IeVQWY5RJXLE+O5OOlXF2mYNgkgfRnlW7lg9I/chml3wt33yV4ZJJ8BA==}
     engines: {node: '>=18'}
     dependencies:
       '@datastream/core': 0.0.35
@@ -813,14 +813,14 @@ packages:
     resolution: {integrity: sha512-9GNFMRrEMG5y3Jvv+V4azWvc+qNWdWLTjDdhf/zgMlz8haaaLWv0xeAIWxz9PuWUBawsVxy0zZotjCdR3Xq+2w==}
     hasBin: true
     dependencies:
-      aws-sdk: 2.1554.0
+      aws-sdk: 2.1555.0
       commander: 3.0.2
       js-yaml: 3.14.1
       watchpack: 2.4.0
     dev: false
 
-  /aws-sdk@2.1554.0:
-    resolution: {integrity: sha512-MmCfg80CKCOFeC8K6UMSmDLPPGVesAglOzmO2IMEugHt10UsK2szOa+C31IHO2PEnjhn+l4WoVlaBAN/YQX+tQ==}
+  /aws-sdk@2.1555.0:
+    resolution: {integrity: sha512-hjYs1MQkJxdHnoZm8hypqGy4PQKWVUs19McdXRXWNXr97V0il4xcUpIfvjHQ9x9EjP0p/jyIx9/BtyrR68jnUQ==}
     engines: {node: '>= 10.0.0'}
     dependencies:
       buffer: 4.9.2
