@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@aws-lambda-powertools/logger':
-    specifier: ^1.18.0
-    version: 1.18.0(@middy/core@5.2.4)
+    specifier: ^1.18.1
+    version: 1.18.1(@middy/core@5.2.4)
   aws-cdk-lib:
     specifier: ^2.128.0
     version: 2.128.0(constructs@10.3.0)
@@ -105,19 +105,19 @@ packages:
     resolution: {integrity: sha512-DDt4SLdLOwWCjGtltH4VCST7hpOI5DzieuhGZsBpZ+AgJdSI2GCjklCXm0GCTwJG/SolkL5dtQXyUKgg9luBDg==}
     dev: false
 
-  /@aws-lambda-powertools/commons@1.18.0:
-    resolution: {integrity: sha512-oSnST8Wr3WZcT/FgCUzZYUFB+qYHWMAKS0GhWbUqHZMr7I5F75jq/JbeUUF16ShOMGgnEzs5oJjizBYVTI6Oww==}
+  /@aws-lambda-powertools/commons@1.18.1:
+    resolution: {integrity: sha512-gFRgQ2GJDghKvf+fXvT0kQVftgOT05W+hCa7RkfZj6HSjVAO+9DZZeJL3JK1HcsLAjWRj7W9ra0/MqB3Abf+PQ==}
     dev: false
 
-  /@aws-lambda-powertools/logger@1.18.0(@middy/core@5.2.4):
-    resolution: {integrity: sha512-oB4FPMYNPjME6xsDfm7rxRBHwaH0dQl+bmO9cDbRfiCsZfQxKtTiSvROGt6AvRo+5rhPZyCdn5eAHqCJ4f5tVQ==}
+  /@aws-lambda-powertools/logger@1.18.1(@middy/core@5.2.4):
+    resolution: {integrity: sha512-GsSMqaFXCSz+llSOn2CVNMoN+j/jNsS6JP2Opy9myU0tvg7PeuU3+rN24vKyibUwpxM466IzWFBSJkYdm0bqVw==}
     peerDependencies:
       '@middy/core': '>=3.x'
     peerDependenciesMeta:
       '@middy/core':
         optional: true
     dependencies:
-      '@aws-lambda-powertools/commons': 1.18.0
+      '@aws-lambda-powertools/commons': 1.18.1
       '@middy/core': 5.2.4
       lodash.merge: 4.6.2
     dev: false
@@ -762,7 +762,7 @@ packages:
       es-errors: 1.3.0
       get-intrinsic: 1.2.4
       is-array-buffer: 3.0.4
-      is-shared-array-buffer: 1.0.2
+      is-shared-array-buffer: 1.0.3
     dev: true
 
   /asn1.js@5.4.1:
@@ -815,14 +815,14 @@ packages:
     resolution: {integrity: sha512-9GNFMRrEMG5y3Jvv+V4azWvc+qNWdWLTjDdhf/zgMlz8haaaLWv0xeAIWxz9PuWUBawsVxy0zZotjCdR3Xq+2w==}
     hasBin: true
     dependencies:
-      aws-sdk: 2.1561.0
+      aws-sdk: 2.1562.0
       commander: 3.0.2
       js-yaml: 3.14.1
       watchpack: 2.4.0
     dev: false
 
-  /aws-sdk@2.1561.0:
-    resolution: {integrity: sha512-YbYQOyvy9mfEGRI4JDZjw6J0zW6bjyV7H3WMWeq69qETvZlkq8koy5CTPMCjnL8i7boDjyW9FuhQzICBbeNgLg==}
+  /aws-sdk@2.1562.0:
+    resolution: {integrity: sha512-HsdlDRfVamH4tv+M+d0lnEYdtx+yEpqWA4T2XuJCjtV5JjjHDUQTKm+9C+EoTxLWtuw+SYSVWyuclwETv6CmHQ==}
     engines: {node: '>= 10.0.0'}
     dependencies:
       buffer: 4.9.2
@@ -1055,7 +1055,7 @@ packages:
       call-bind: 1.0.7
       es-define-property: 1.0.0
       es-errors: 1.3.0
-      es-set-tostringtag: 2.0.2
+      es-set-tostringtag: 2.0.3
       es-to-primitive: 1.2.1
       function.prototype.name: 1.1.6
       get-intrinsic: 1.2.4
@@ -1071,7 +1071,7 @@ packages:
       is-callable: 1.2.7
       is-negative-zero: 2.0.3
       is-regex: 1.1.4
-      is-shared-array-buffer: 1.0.2
+      is-shared-array-buffer: 1.0.3
       is-string: 1.0.7
       is-typed-array: 1.1.13
       is-weakref: 1.0.2
@@ -1085,9 +1085,9 @@ packages:
       string.prototype.trimend: 1.0.7
       string.prototype.trimstart: 1.0.7
       typed-array-buffer: 1.0.2
-      typed-array-byte-length: 1.0.0
-      typed-array-byte-offset: 1.0.1
-      typed-array-length: 1.0.4
+      typed-array-byte-length: 1.0.1
+      typed-array-byte-offset: 1.0.2
+      typed-array-length: 1.0.5
       unbox-primitive: 1.0.2
       which-typed-array: 1.1.14
     dev: true
@@ -1106,8 +1106,8 @@ packages:
     resolution: {integrity: sha512-Zf5H2Kxt2xjTvbJvP2ZWLEICxA6j+hAmMzIlypy4xcBg1vKVnx89Wy0GbS+kf5cwCVFFzdCFh2XSCFNULS6csw==}
     engines: {node: '>= 0.4'}
 
-  /es-set-tostringtag@2.0.2:
-    resolution: {integrity: sha512-BuDyupZt65P9D2D2vA/zqcI3G5xRsklm5N3xCwuiy+/vKy8i0ifdsQP1sLgO4tZDSCaQUSnmC48khknGMV3D2Q==}
+  /es-set-tostringtag@2.0.3:
+    resolution: {integrity: sha512-3T8uNMC3OQTHkFUsFq8r/BwAXLHvU/9O9mE0fBc/MY5iq/8H7ncvO947LmYA6ldWw9Uh8Yhf25zu6n7nML5QWQ==}
     engines: {node: '>= 0.4'}
     dependencies:
       get-intrinsic: 1.2.4
@@ -1779,8 +1779,9 @@ packages:
       has-tostringtag: 1.0.2
     dev: true
 
-  /is-shared-array-buffer@1.0.2:
-    resolution: {integrity: sha512-sqN2UDu1/0y6uvXyStCOzyhAjCSlHceFoMKJW8W9EU9cvic/QdsZ0kEU93HEy3IUEFZIiH/3w+AH/UQbPHNdhA==}
+  /is-shared-array-buffer@1.0.3:
+    resolution: {integrity: sha512-nA2hv5XIhLR3uVzDDfCIknerhx8XUKnstuOERPNNIinXG7v9u+ohXF67vxm4TPTEPU6lm61ZkwP3c9PCB97rhg==}
+    engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.7
     dev: true
@@ -2452,18 +2453,19 @@ packages:
       is-typed-array: 1.1.13
     dev: true
 
-  /typed-array-byte-length@1.0.0:
-    resolution: {integrity: sha512-Or/+kvLxNpeQ9DtSydonMxCx+9ZXOswtwJn17SNLvhptaXYDJvkFFP5zbfU/uLmvnBJlI4yrnXRxpdWH/M5tNA==}
+  /typed-array-byte-length@1.0.1:
+    resolution: {integrity: sha512-3iMJ9q0ao7WE9tWcaYKIptkNBuOIcZCCT0d4MRvuuH88fEoEH62IuQe0OtraD3ebQEoTRk8XCBoknUNc1Y67pw==}
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.7
       for-each: 0.3.3
+      gopd: 1.0.1
       has-proto: 1.0.3
       is-typed-array: 1.1.13
     dev: true
 
-  /typed-array-byte-offset@1.0.1:
-    resolution: {integrity: sha512-tcqKMrTRXjqvHN9S3553NPCaGL0VPgFI92lXszmrE8DMhiDPLBYLlvo8Uu4WZAAX/aGqp/T1sbA4ph8EWjDF9Q==}
+  /typed-array-byte-offset@1.0.2:
+    resolution: {integrity: sha512-Ous0vodHa56FviZucS2E63zkgtgrACj7omjwd/8lTEMEPFFyjfixMZ1ZXenpgCFBBt4EC1J2XsyVS2gkG0eTFA==}
     engines: {node: '>= 0.4'}
     dependencies:
       available-typed-arrays: 1.0.7
@@ -2474,12 +2476,16 @@ packages:
       is-typed-array: 1.1.13
     dev: true
 
-  /typed-array-length@1.0.4:
-    resolution: {integrity: sha512-KjZypGq+I/H7HI5HlOoGHkWUUGq+Q0TPhQurLbyrVrvnKTBgzLhIJ7j6J/XTQOi0d1RjyZ0wdas8bKs2p0x3Ng==}
+  /typed-array-length@1.0.5:
+    resolution: {integrity: sha512-yMi0PlwuznKHxKmcpoOdeLwxBoVPkqZxd7q2FgMkmD3bNwvF5VW0+UlUQ1k1vmktTu4Yu13Q0RIxEP8+B+wloA==}
+    engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.7
       for-each: 0.3.3
+      gopd: 1.0.1
+      has-proto: 1.0.3
       is-typed-array: 1.1.13
+      possible-typed-array-names: 1.0.0
     dev: true
 
   /typescript@5.3.3:
