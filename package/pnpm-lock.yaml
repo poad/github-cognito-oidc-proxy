@@ -7,10 +7,10 @@ settings:
 dependencies:
   '@aws-lambda-powertools/logger':
     specifier: ^1.18.1
-    version: 1.18.1(@middy/core@5.2.4)
+    version: 1.18.1(@middy/core@5.2.6)
   aws-cdk-lib:
-    specifier: ^2.130.0
-    version: 2.130.0(constructs@10.3.0)
+    specifier: ^2.131.0
+    version: 2.131.0(constructs@10.3.0)
   aws-lambda:
     specifier: ^1.0.7
     version: 1.0.7
@@ -35,8 +35,8 @@ dependencies:
 
 devDependencies:
   '@middy/core':
-    specifier: ^5.2.4
-    version: 5.2.4
+    specifier: ^5.2.6
+    version: 5.2.6
   '@types/aws-lambda':
     specifier: ^8.10.134
     version: 8.10.134
@@ -53,8 +53,8 @@ devDependencies:
     specifier: ^7.1.0
     version: 7.1.0(eslint@8.57.0)(typescript@5.3.3)
   aws-cdk:
-    specifier: ^2.130.0
-    version: 2.130.0
+    specifier: ^2.131.0
+    version: 2.131.0
   create-keypair:
     specifier: ^0.1.2
     version: 0.1.2
@@ -109,7 +109,7 @@ packages:
     resolution: {integrity: sha512-gFRgQ2GJDghKvf+fXvT0kQVftgOT05W+hCa7RkfZj6HSjVAO+9DZZeJL3JK1HcsLAjWRj7W9ra0/MqB3Abf+PQ==}
     dev: false
 
-  /@aws-lambda-powertools/logger@1.18.1(@middy/core@5.2.4):
+  /@aws-lambda-powertools/logger@1.18.1(@middy/core@5.2.6):
     resolution: {integrity: sha512-GsSMqaFXCSz+llSOn2CVNMoN+j/jNsS6JP2Opy9myU0tvg7PeuU3+rN24vKyibUwpxM466IzWFBSJkYdm0bqVw==}
     peerDependencies:
       '@middy/core': '>=3.x'
@@ -118,7 +118,7 @@ packages:
         optional: true
     dependencies:
       '@aws-lambda-powertools/commons': 1.18.1
-      '@middy/core': 5.2.4
+      '@middy/core': 5.2.6
       lodash.merge: 4.6.2
     dev: false
 
@@ -415,8 +415,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /@middy/core@5.2.4:
-    resolution: {integrity: sha512-0FpwGAWFjGIgBrkc/7yWUaKsC+QA58IeVQWY5RJXLE+O5OOlXF2mYNgkgfRnlW7lg9I/chml3wt33yV4ZJJ8BA==}
+  /@middy/core@5.2.6:
+    resolution: {integrity: sha512-FDbI52lKd4/Ba2GZ0JZoezJ4ImqI4rs16DzCSixeislzXpd457rG5E6cT3KUeKEvFGLGYNC8Gq1WU0Swlbvbyg==}
     engines: {node: '>=18'}
     dependencies:
       '@datastream/core': 0.0.35
@@ -780,8 +780,8 @@ packages:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  /aws-cdk-lib@2.130.0(constructs@10.3.0):
-    resolution: {integrity: sha512-yK7ibePipdjlI4AFM94fwwtsCkmpWJ0JFZTMPahahC/3Pxe/BA/nnI/4Namvl5QPxW5QlU0xQYU7cywioq3RQg==}
+  /aws-cdk-lib@2.131.0(constructs@10.3.0):
+    resolution: {integrity: sha512-9XLgiTgY+q0S3K93VPeJO0chIN8BZwZ3aSrILvF868Dz+0NTNrD2m5M0xGK5Rw0uoJS+N+DvGaz/2hLAiVqcBw==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       constructs: ^10.0.0
@@ -804,8 +804,8 @@ packages:
       - yaml
       - mime-types
 
-  /aws-cdk@2.130.0:
-    resolution: {integrity: sha512-MsjGzQ2kZv0FEfXvpW7FTJRnefew0GrYt9M2SMN2Yn45+yjugGl2X8to416kABeFz1OFqW56hq8Y5BiLuFDVLQ==}
+  /aws-cdk@2.131.0:
+    resolution: {integrity: sha512-ji+MwGFGC88HE/EqV6/VARBp5mu3nXIDa/GYwtGycJqu6WqXhNZXWeDH0JsWaY6+BSUdpY6pr6KWpV+MDyVkDg==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
     optionalDependencies:
