@@ -9,8 +9,8 @@ dependencies:
     specifier: ^2.0.2
     version: 2.0.2(@middy/core@5.2.6)
   aws-cdk-lib:
-    specifier: ^2.131.0
-    version: 2.131.0(constructs@10.3.0)
+    specifier: ^2.132.0
+    version: 2.132.0(constructs@10.3.0)
   aws-lambda:
     specifier: ^1.0.7
     version: 1.0.7
@@ -53,8 +53,8 @@ devDependencies:
     specifier: ^7.1.1
     version: 7.1.1(eslint@8.57.0)(typescript@5.4.2)
   aws-cdk:
-    specifier: ^2.131.0
-    version: 2.131.0
+    specifier: ^2.132.0
+    version: 2.132.0
   create-keypair:
     specifier: ^0.1.2
     version: 0.1.2
@@ -780,8 +780,8 @@ packages:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  /aws-cdk-lib@2.131.0(constructs@10.3.0):
-    resolution: {integrity: sha512-9XLgiTgY+q0S3K93VPeJO0chIN8BZwZ3aSrILvF868Dz+0NTNrD2m5M0xGK5Rw0uoJS+N+DvGaz/2hLAiVqcBw==}
+  /aws-cdk-lib@2.132.0(constructs@10.3.0):
+    resolution: {integrity: sha512-auztTTYy8j62MmRZNdM7Vd8eQ5eP3xLMhrrILhDZf3DiSDD0lyYL0hv98VD4XPkWGMQ8yOmo5nZ3s/zD7cnKlw==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       constructs: ^10.0.0
@@ -804,8 +804,8 @@ packages:
       - yaml
       - mime-types
 
-  /aws-cdk@2.131.0:
-    resolution: {integrity: sha512-ji+MwGFGC88HE/EqV6/VARBp5mu3nXIDa/GYwtGycJqu6WqXhNZXWeDH0JsWaY6+BSUdpY6pr6KWpV+MDyVkDg==}
+  /aws-cdk@2.132.0:
+    resolution: {integrity: sha512-C2j9iQqpl21YGuip02tIAAkgkDZNDDWeEoWfPcdXCJlQ9DVpYTJG24QxtY0rWflJ7Xkn+iAozdjlCrXSxYeAfA==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
     optionalDependencies:
@@ -816,14 +816,14 @@ packages:
     resolution: {integrity: sha512-9GNFMRrEMG5y3Jvv+V4azWvc+qNWdWLTjDdhf/zgMlz8haaaLWv0xeAIWxz9PuWUBawsVxy0zZotjCdR3Xq+2w==}
     hasBin: true
     dependencies:
-      aws-sdk: 2.1573.0
+      aws-sdk: 2.1574.0
       commander: 3.0.2
       js-yaml: 3.14.1
       watchpack: 2.4.0
     dev: false
 
-  /aws-sdk@2.1573.0:
-    resolution: {integrity: sha512-Bl+rTEnjKdJrd0NfrLRVQq4AbSgK1+7yoWQTnreZTHCbYhzndP/3HLxA/8x0a8NZSb9oPC+7paFaWW00Xz/Gtw==}
+  /aws-sdk@2.1574.0:
+    resolution: {integrity: sha512-AC3VptGeggp7AFGj66PIt9GrnLyDBo7Owb5TmbGDe2OIvgeHH3nBD4S3wRZQ9u3Ea6iREnalXxQ2n5rflCeG9g==}
     engines: {node: '>= 10.0.0'}
     requiresBuild: true
     dependencies:
