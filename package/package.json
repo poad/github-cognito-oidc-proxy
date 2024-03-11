@@ -21,8 +21,8 @@
     "@types/aws-lambda": "^8.10.136",
     "@types/node": "^20.11.25",
     "@types/pem-jwk": "^2.0.2",
-    "@typescript-eslint/eslint-plugin": "^7.1.1",
-    "@typescript-eslint/parser": "^7.1.1",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
     "aws-cdk": "^2.132.0",
     "create-keypair": "^0.1.2",
     "eslint": "^8.57.0",
@@ -42,7 +42,7 @@
     "constructs": "^10.3.0",
     "email-validator": "^2.0.4",
     "esbuild": "^0.20.1",
-    "fp-ts": "^2.16.2",
+    "fp-ts": "^2.16.3",
     "pem-jwk": "^2.0.0",
     "source-map-support": "^0.5.21"
   }
