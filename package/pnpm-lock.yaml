@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@aws-lambda-powertools/logger':
     specifier: ^2.0.3
-    version: 2.0.3(@middy/core@5.3.1)
+    version: 2.0.3(@middy/core@5.3.2)
   aws-cdk-lib:
     specifier: ^2.133.0
     version: 2.133.0(constructs@10.3.0)
@@ -35,8 +35,8 @@ dependencies:
 
 devDependencies:
   '@middy/core':
-    specifier: ^5.3.1
-    version: 5.3.1
+    specifier: ^5.3.2
+    version: 5.3.2
   '@types/aws-lambda':
     specifier: ^8.10.136
     version: 8.10.136
@@ -109,7 +109,7 @@ packages:
     resolution: {integrity: sha512-ZuVYhzCkqlMFjAe0mgtNzgIFIJnnd9kZtWO50+YWXhtYK5o9LPHb2drKh8y4mSCIbbaJnbGxMUwas+j1UZl2Uw==}
     dev: false
 
-  /@aws-lambda-powertools/logger@2.0.3(@middy/core@5.3.1):
+  /@aws-lambda-powertools/logger@2.0.3(@middy/core@5.3.2):
     resolution: {integrity: sha512-puEtjm5oYIEUlXx4+5kLazFDR9fD5qUSo3vNQQs+Bk3GkzlB6eqlgc0l/BpTXXRMxhLwHQdQgMUJgLhc5hydpw==}
     peerDependencies:
       '@middy/core': '>=3.x'
@@ -118,7 +118,7 @@ packages:
         optional: true
     dependencies:
       '@aws-lambda-powertools/commons': 2.0.3
-      '@middy/core': 5.3.1
+      '@middy/core': 5.3.2
       lodash.merge: 4.6.2
     dev: false
 
@@ -415,8 +415,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /@middy/core@5.3.1:
-    resolution: {integrity: sha512-00bCQL8Tsh7taByXWCKPTOum+Sd+7ZzVc9IOq3viQkC6ZXVzhSYXRXCEfOTL3jXrGBt2xVu38Xue7rY/sHQY7g==}
+  /@middy/core@5.3.2:
+    resolution: {integrity: sha512-g1PonDsJI/t6DldRD/MijnE9kQBWYDZRfGkqJv/Dy+TXyTJmsmk6k/znx+RgqZYlpz1QodWi+6gzRsjPuvM8ew==}
     engines: {node: '>=18'}
     dependencies:
       '@datastream/core': 0.0.35

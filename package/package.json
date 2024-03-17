@@ -17,7 +17,7 @@
     "lint-fix": "pnpm eslint-fix && pnpm format"
   },
   "devDependencies": {
-    "@middy/core": "^5.3.1",
+    "@middy/core": "^5.3.2",
     "@types/aws-lambda": "^8.10.136",
     "@types/node": "^20.11.28",
     "@types/pem-jwk": "^2.0.2",
