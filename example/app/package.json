@@ -43,6 +43,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "next-transpile-modules": "^10.0.1",
     "prettier": "^3.2.5",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.3"
   }
 }
