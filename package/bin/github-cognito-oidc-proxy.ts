@@ -8,7 +8,6 @@ const env = app.node.tryGetContext('env');
 
 const envPrefix = env ? `${env}-` : '';
 
- 
 new GithubCognitoOidcProxyStack(
   app,
   `${envPrefix}github-cognito-oidc-proxy-stack`,
