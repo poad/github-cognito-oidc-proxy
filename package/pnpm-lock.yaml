@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   '@aws-lambda-powertools/logger':
-    specifier: ^2.0.4
-    version: 2.0.4(@middy/core@5.3.2)
+    specifier: ^2.1.0
+    version: 2.1.0(@middy/core@5.3.2)
   aws-cdk-lib:
-    specifier: ^2.137.0
-    version: 2.137.0(constructs@10.3.0)
+    specifier: ^2.138.0
+    version: 2.138.0(constructs@10.3.0)
   aws-lambda:
     specifier: ^1.0.7
     version: 1.0.7
@@ -53,8 +53,8 @@ devDependencies:
     specifier: ^7.7.0
     version: 7.7.0(eslint@9.0.0)(typescript@5.4.5)
   aws-cdk:
-    specifier: ^2.137.0
-    version: 2.137.0
+    specifier: ^2.138.0
+    version: 2.138.0
   create-keypair:
     specifier: ^0.1.2
     version: 0.1.2
@@ -105,19 +105,19 @@ packages:
     resolution: {integrity: sha512-twhuEG+JPOYCYPx/xy5uH2+VUsIEhPTzDY0F1KuB+ocjWWB/KEDiOVL19nHvbPCB6fhWnkykXEMJ4HHcKvjtvg==}
     dev: false
 
-  /@aws-lambda-powertools/commons@2.0.4:
-    resolution: {integrity: sha512-6tH27airGDbK+hNltrb33qdsbbrql34KcSBLmKnZYGZam7nWc5giTEtDh1Zyw2N3bQ0BnZ6SahgO9eY46WaiRA==}
+  /@aws-lambda-powertools/commons@2.1.0:
+    resolution: {integrity: sha512-pFIlGa2IreeQ8elvuWlqxp6q/R4Zx7EqzCAlj0yXg12XpQprF4BhuE3NpeF09MA/QkyCot5Hxu3kG95E35XETA==}
     dev: false
 
-  /@aws-lambda-powertools/logger@2.0.4(@middy/core@5.3.2):
-    resolution: {integrity: sha512-KzBw7oUtSTKxY5Ulck4ZKelr4jX3erhlcuscvihZvu4OJv5TdZ1GrIT+wkySaLp8nKidOHjhTJAlNXCFjNiINQ==}
+  /@aws-lambda-powertools/logger@2.1.0(@middy/core@5.3.2):
+    resolution: {integrity: sha512-vsxB2ESJYm4hXCC3rrClzjBXNdGJI1qr6wQATuvS6Is0UcbqWbN7N3lnA4hYSknDmh+HKxAn9E4bcelMmuSBew==}
     peerDependencies:
       '@middy/core': '>=3.x'
     peerDependenciesMeta:
       '@middy/core':
         optional: true
     dependencies:
-      '@aws-lambda-powertools/commons': 2.0.4
+      '@aws-lambda-powertools/commons': 2.1.0
       '@middy/core': 5.3.2
       lodash.merge: 4.6.2
     dev: false
@@ -767,8 +767,8 @@ packages:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  /aws-cdk-lib@2.137.0(constructs@10.3.0):
-    resolution: {integrity: sha512-pD3AGdKBa8q1+vVWRabiDHuecVMlP8ERGPHc9Pb0dVlpbC/ODC6XXC1S0TAMsr0JI5Lh6pk4vL5cC+spsMeotw==}
+  /aws-cdk-lib@2.138.0(constructs@10.3.0):
+    resolution: {integrity: sha512-BdLOd6Fkl/7PH8RahRbhYQf3zRFCxVtOdkKOAZHHqtaNkmTyfkUGMXyzyQ4rIHvR8EOy1C1x5CAufqoZuJM0gA==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       constructs: ^10.0.0
@@ -791,8 +791,8 @@ packages:
       - yaml
       - mime-types
 
-  /aws-cdk@2.137.0:
-    resolution: {integrity: sha512-3pf3SVDwNZvo3EfhO3yl1B+KbRHz7T4UmPifUEKfOwk7ABAFLRSNddZuUlF560XSBTFLkrZoeBDa0/MLJT6F4g==}
+  /aws-cdk@2.138.0:
+    resolution: {integrity: sha512-48xvfEaiM07RB+p05RHqRAVtKcxkGzXnwdTo765Ba0rUFK2ZQ9leykVeBDvdCj9u0eMv2fCRspP/wQxPOU2H/g==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
     optionalDependencies:
@@ -803,14 +803,14 @@ packages:
     resolution: {integrity: sha512-9GNFMRrEMG5y3Jvv+V4azWvc+qNWdWLTjDdhf/zgMlz8haaaLWv0xeAIWxz9PuWUBawsVxy0zZotjCdR3Xq+2w==}
     hasBin: true
     dependencies:
-      aws-sdk: 2.1601.0
+      aws-sdk: 2.1602.0
       commander: 3.0.2
       js-yaml: 3.14.1
       watchpack: 2.4.1
     dev: false
 
-  /aws-sdk@2.1601.0:
-    resolution: {integrity: sha512-znwVdKs3g0j1cAFfi+PGPSmBxXjiekJXp1nnOUq4rxXYvN7av8gxptXaQz+vqB4uhNFsD+OXNQh+6bd9eQxZmw==}
+  /aws-sdk@2.1602.0:
+    resolution: {integrity: sha512-DJ3JOqa8PHmwrZirIFbzpa4hlBvL/jz3RulNQL4FmzNX6IANiUKUTR4zw6tU9Sdt48YpsL0+xIyuBuxKmcLz7Q==}
     engines: {node: '>= 10.0.0'}
     requiresBuild: true
     dependencies:
