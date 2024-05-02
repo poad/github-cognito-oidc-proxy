@@ -23,7 +23,7 @@
     "web-vitals": "^3.5.2"
   },
   "devDependencies": {
-    "@types/node": "^20.12.7",
+    "@types/node": "^20.12.8",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.8.0",
@@ -44,5 +44,6 @@
     "next-transpile-modules": "^10.0.1",
     "prettier": "^3.2.5",
     "typescript": "^5.4.5"
-  }
+  },
+  "packageManager": "pnpm@9.0.6+sha512.f6d863130973207cb7a336d6b439a242a26ac8068077df530d6a86069419853dc1ffe64029ec594a9c505a3a410d19643c870aba6776330f5cfddcf10a9c1617"
 }
