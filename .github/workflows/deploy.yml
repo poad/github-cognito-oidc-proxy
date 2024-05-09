@@ -51,7 +51,7 @@ jobs:
             cwd: ./package
             args: [--no-frozen-lockfile]
           - args: [--global, aws-cdk]  
-          package_json_file: package/package.json
+        package_json_file: package/package.json
       
     - name: Install AWS CLI
       run: |
@@ -75,7 +75,7 @@ jobs:
           - recursive: true
             cwd: ./example/cdk
             args: [--no-frozen-lockfile]
-          package_json_file: example/cdk/package.json
+        package_json_file: example/cdk/package.json
       
     - name: Build (example/cdk)
       working-directory: example/cdk
