@@ -48,7 +48,7 @@ jobs:
       with:
         run_install: |
           - recursive: true
-            cwd: package
+            cwd: ./package
             args: [--no-frozen-lockfile]
           - args: [--global, aws-cdk]  
       
@@ -72,7 +72,7 @@ jobs:
       with:
         run_install: |
           - recursive: true
-            cwd: example/cdk
+            cwd: ./example/cdk
             args: [--no-frozen-lockfile]
       
     - name: Build (example/cdk)
