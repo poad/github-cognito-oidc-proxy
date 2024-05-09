@@ -33,7 +33,7 @@ jobs:
           - recursive: true
             cwd: ./example/app
             args: [--no-frozen-lockfile]
-            package_json_file: example/app/package.json
+          package_json_file: example/app/package.json
         
     - name: Build (example/app)
       working-directory: example/app
@@ -61,7 +61,7 @@ jobs:
           - recursive: true
             cwd: ./package
             args: [--no-frozen-lockfile]
-            package_json_file: package/package.json
+          package_json_file: package/package.json
         
     - name: Build (package)
       working-directory: package
@@ -74,7 +74,7 @@ jobs:
           - recursive: true
             cwd: ./example/app
             args: [--no-frozen-lockfile]
-            package_json_file: example/app/package.json
+          package_json_file: example/app/package.json
 
     - uses: pnpm/action-setup@v4
       name: Install pnpm (example/cdk)
