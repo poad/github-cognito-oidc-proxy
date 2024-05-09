@@ -48,6 +48,7 @@ jobs:
       with:
         run_install: |
           - recursive: true
+            cwd: package
             args: [--no-frozen-lockfile]
           - args: [--global, aws-cdk]  
       
@@ -68,7 +69,7 @@ jobs:
 
     - name: Build (example/cdk)
       working-directory: example/cdk
-      run: pnpm lint && pnpm build
+      run: pnpm install && pnpm lint && pnpm build
 
     - name: Generate API Gateway endpoint URL
       run: |

@@ -52,34 +52,34 @@ jobs:
         node-version: ${{ matrix.node-version }}
         check-latest: true
 
-    - uses: pnpm/action-setup@v4
-      name: Install pnpm
-      with:
-        run_install: |
-          - recursive: true
-            cwd: package
-            args: [--no-frozen-lockfile]
+    # - uses: pnpm/action-setup@v4
+    #   name: Install pnpm
+    #   with:
+    #     run_install: |
+    #       - recursive: true
+    #         cwd: package
+    #         args: [--no-frozen-lockfile]
         
     - name: Build (package)
       working-directory: package
-      run: pnpm lint && pnpm build
+      run: pnpm install && pnpm lint && pnpm build
 
-    - uses: pnpm/action-setup@v4
-      name: Install pnpm (example/app)
-      with:
-        run_install: |
-          - recursive: true
-            cwd: example/app
-            args: [--no-frozen-lockfile]
-        
-    - uses: pnpm/action-setup@v4
-      name: Install pnpm (example/cdk)
-      with:
-        run_install: |
-          - recursive: true
-            cwd: example/cdk
-            args: [--no-frozen-lockfile]
+    # - uses: pnpm/action-setup@v4
+    #   name: Install pnpm (example/app)
+    #   with:
+    #     run_install: |
+    #       - recursive: true
+    #         cwd: example/app
+    #         args: [--no-frozen-lockfile]
+    
+    # - uses: pnpm/action-setup@v4
+    #   name: Install pnpm (example/cdk)
+    #   with:
+    #     run_install: |
+    #       - recursive: true
+    #         cwd: example/cdk
+    #         args: [--no-frozen-lockfile]
         
     - name: Build (example)
       working-directory: example/cdk
-      run: pnpm lint && pnpm build
+      run: pnpm install && pnpm lint && pnpm build
