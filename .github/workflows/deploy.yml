@@ -50,6 +50,7 @@ jobs:
           - recursive: true
             cwd: ./package
             args: [--no-frozen-lockfile]
+          - args: [--global, aws-cdk]  
         package_json_file: package/package.json
       
     - name: Install AWS CLI
