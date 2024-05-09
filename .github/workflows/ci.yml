@@ -83,7 +83,8 @@ jobs:
           - recursive: true
             cwd: ./example/cdk
             args: [--no-frozen-lockfile]
-        
+        package_json_file: example/cdk/package.json
+
     - name: Build (example)
       working-directory: example/cdk
       run: pnpm lint && pnpm build
