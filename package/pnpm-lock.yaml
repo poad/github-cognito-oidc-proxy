@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@aws-lambda-powertools/logger':
         specifier: ^2.1.0
-        version: 2.1.0(@middy/core@5.3.2)
+        version: 2.1.0(@middy/core@5.3.3)
       aws-cdk-lib:
         specifier: ^2.141.0
         version: 2.141.0(constructs@10.3.0)
@@ -37,8 +37,8 @@ importers:
         version: 0.5.21
     devDependencies:
       '@middy/core':
-        specifier: ^5.3.2
-        version: 5.3.2
+        specifier: ^5.3.3
+        version: 5.3.3
       '@types/aws-lambda':
         specifier: ^8.10.137
         version: 8.10.137
@@ -299,8 +299,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
-  '@middy/core@5.3.2':
-    resolution: {integrity: sha512-g1PonDsJI/t6DldRD/MijnE9kQBWYDZRfGkqJv/Dy+TXyTJmsmk6k/znx+RgqZYlpz1QodWi+6gzRsjPuvM8ew==}
+  '@middy/core@5.3.3':
+    resolution: {integrity: sha512-/Gq0jS4q+W+4/P+m3GxSVX083GDeBesLebSrubyFlJ9RL75ucGn4gtIPr7OVeUNXyexNCM0r9u0tP8YkAvFvZw==}
     engines: {node: '>=18'}
 
   '@nodelib/fs.scandir@2.1.5':
@@ -507,8 +507,8 @@ packages:
     resolution: {integrity: sha512-9GNFMRrEMG5y3Jvv+V4azWvc+qNWdWLTjDdhf/zgMlz8haaaLWv0xeAIWxz9PuWUBawsVxy0zZotjCdR3Xq+2w==}
     hasBin: true
 
-  aws-sdk@2.1616.0:
-    resolution: {integrity: sha512-Wes2FOJn/5Bo35ku+KYvn/H+xnuPuI97mQKxhU+d3TczAY56rFH/qw7Bff8HI0Gi6m6lDEhhq76qvG4gfdPexg==}
+  aws-sdk@2.1617.0:
+    resolution: {integrity: sha512-lIZtMv/0H0OJG/0sMscXB8e96M03AcqpfIEyuuNES4ZkytjyiTaLYCfviYudrRn7gcLbX/b3/TPphymBng4tHw==}
     engines: {node: '>= 10.0.0'}
 
   balanced-match@1.0.2:
@@ -1272,8 +1272,8 @@ packages:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
 
-  semver@7.6.1:
-    resolution: {integrity: sha512-f/vbBsu+fOiYt+lmwZV0rVwJScl46HppnOA1ZvIuBWKOTlllpyJ3bfVax76/OrhCH38dyxoDIA8K7uB963IYgA==}
+  semver@7.6.2:
+    resolution: {integrity: sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -1479,12 +1479,12 @@ snapshots:
 
   '@aws-lambda-powertools/commons@2.1.0': {}
 
-  '@aws-lambda-powertools/logger@2.1.0(@middy/core@5.3.2)':
+  '@aws-lambda-powertools/logger@2.1.0(@middy/core@5.3.3)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.1.0
       lodash.merge: 4.6.2
     optionalDependencies:
-      '@middy/core': 5.3.2
+      '@middy/core': 5.3.3
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -1609,7 +1609,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  '@middy/core@5.3.2':
+  '@middy/core@5.3.3':
     dependencies:
       '@datastream/core': 0.0.35
 
@@ -1662,7 +1662,7 @@ snapshots:
       graphemer: 1.4.0
       ignore: 5.3.1
       natural-compare: 1.4.0
-      semver: 7.6.1
+      semver: 7.6.2
       ts-api-utils: 1.3.0(typescript@5.4.5)
     optionalDependencies:
       typescript: 5.4.5
@@ -1709,7 +1709,7 @@ snapshots:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.4
-      semver: 7.6.1
+      semver: 7.6.2
       ts-api-utils: 1.3.0(typescript@5.4.5)
     optionalDependencies:
       typescript: 5.4.5
@@ -1725,7 +1725,7 @@ snapshots:
       '@typescript-eslint/types': 7.8.0
       '@typescript-eslint/typescript-estree': 7.8.0(typescript@5.4.5)
       eslint: 9.2.0
-      semver: 7.6.1
+      semver: 7.6.2
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -1842,12 +1842,12 @@ snapshots:
 
   aws-lambda@1.0.7:
     dependencies:
-      aws-sdk: 2.1616.0
+      aws-sdk: 2.1617.0
       commander: 3.0.2
       js-yaml: 3.14.1
       watchpack: 2.4.1
 
-  aws-sdk@2.1616.0:
+  aws-sdk@2.1617.0:
     dependencies:
       buffer: 4.9.2
       events: 1.1.1
@@ -2693,7 +2693,7 @@ snapshots:
 
   semver@6.3.1: {}
 
-  semver@7.6.1: {}
+  semver@7.6.2: {}
 
   set-function-length@1.2.2:
     dependencies:
