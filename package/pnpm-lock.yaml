@@ -9,8 +9,8 @@ dependencies:
     specifier: ^2.1.0
     version: 2.1.0(@middy/core@5.3.2)
   aws-cdk-lib:
-    specifier: ^2.140.0
-    version: 2.140.0(constructs@10.3.0)
+    specifier: ^2.141.0
+    version: 2.141.0(constructs@10.3.0)
   aws-lambda:
     specifier: ^1.0.7
     version: 1.0.7
@@ -41,8 +41,8 @@ devDependencies:
     specifier: ^8.10.137
     version: 8.10.137
   '@types/node':
-    specifier: ^20.12.10
-    version: 20.12.10
+    specifier: ^20.12.11
+    version: 20.12.11
   '@types/pem-jwk':
     specifier: ^2.0.2
     version: 2.0.2
@@ -53,8 +53,8 @@ devDependencies:
     specifier: ^7.8.0
     version: 7.8.0(eslint@9.2.0)(typescript@5.4.5)
   aws-cdk:
-    specifier: ^2.140.0
-    version: 2.140.0
+    specifier: ^2.141.0
+    version: 2.141.0
   create-keypair:
     specifier: ^0.1.2
     version: 0.1.2
@@ -81,7 +81,7 @@ devDependencies:
     version: 3.2.5
   ts-node:
     specifier: ^10.9.2
-    version: 10.9.2(@types/node@20.12.10)(typescript@5.4.5)
+    version: 10.9.2(@types/node@20.12.11)(typescript@5.4.5)
   typescript:
     specifier: ^5.4.5
     version: 5.4.5
@@ -475,8 +475,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/node@20.12.10:
-    resolution: {integrity: sha512-Eem5pH9pmWBHoGAT8Dr5fdc5rYA+4NAovdM4EktRPVAAiJhmWWfQrA0cFhAbOsQdSfIHjAud6YdkbL69+zSKjw==}
+  /@types/node@20.12.11:
+    resolution: {integrity: sha512-vDg9PZ/zi+Nqp6boSOT7plNuthRugEKixDv5sFTIpkE89MmNtEArAShI4mxuX2+UrLEe9pxC1vm2cjm9YlWbJw==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -767,8 +767,8 @@ packages:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  /aws-cdk-lib@2.140.0(constructs@10.3.0):
-    resolution: {integrity: sha512-wepu+u63LTxnIfW/IPr+V5Mx1T9jq8HRxhPynYPQKFYaKfOV+6HtJGxkuAEg2CWXk0rx2Btal/BCLjYQovI92Q==}
+  /aws-cdk-lib@2.141.0(constructs@10.3.0):
+    resolution: {integrity: sha512-xda56Lfwpdqg9MssnFdXrAKTmeeNjfrfFCaWwqGqToG6cfGY2W+6wyyoObX60/MeZGhhs3Lhdb/K94ulLJ4X/A==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       constructs: ^10.0.0
@@ -791,8 +791,8 @@ packages:
       - yaml
       - mime-types
 
-  /aws-cdk@2.140.0:
-    resolution: {integrity: sha512-5NzmXFqjGYiTFZ+jgWBQJvrjhMIlYMoNTOwgvzHj2YnP9LhEsr60IdRGiXYD9CZyR79Hr3VQNbjcgO35bvW9/w==}
+  /aws-cdk@2.141.0:
+    resolution: {integrity: sha512-RM9uDiETBEKCHemItaRGVjOLwoZ5iqXnejpyXY7+YF75c2c0Ui7HSZI8QD0stDg3S/2UbLcKv2RA9dBsjrWUGA==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
     optionalDependencies:
@@ -803,14 +803,14 @@ packages:
     resolution: {integrity: sha512-9GNFMRrEMG5y3Jvv+V4azWvc+qNWdWLTjDdhf/zgMlz8haaaLWv0xeAIWxz9PuWUBawsVxy0zZotjCdR3Xq+2w==}
     hasBin: true
     dependencies:
-      aws-sdk: 2.1615.0
+      aws-sdk: 2.1616.0
       commander: 3.0.2
       js-yaml: 3.14.1
       watchpack: 2.4.1
     dev: false
 
-  /aws-sdk@2.1615.0:
-    resolution: {integrity: sha512-07xIbWiO8/3gdcTGk4u/gBsts+zLmaXSNjOLHjOyMiLpzyeRJGH269vIYwnl7SymZT89Xl3D17cMbHgoKgeXOw==}
+  /aws-sdk@2.1616.0:
+    resolution: {integrity: sha512-Wes2FOJn/5Bo35ku+KYvn/H+xnuPuI97mQKxhU+d3TczAY56rFH/qw7Bff8HI0Gi6m6lDEhhq76qvG4gfdPexg==}
     engines: {node: '>= 10.0.0'}
     requiresBuild: true
     dependencies:
@@ -2374,7 +2374,7 @@ packages:
       typescript: 5.4.5
     dev: true
 
-  /ts-node@10.9.2(@types/node@20.12.10)(typescript@5.4.5):
+  /ts-node@10.9.2(@types/node@20.12.11)(typescript@5.4.5):
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
     hasBin: true
     peerDependencies:
@@ -2393,7 +2393,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.12.10
+      '@types/node': 20.12.11
       acorn: 8.11.3
       acorn-walk: 8.3.2
       arg: 4.1.3
