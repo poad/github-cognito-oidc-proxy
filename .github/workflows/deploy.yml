@@ -67,9 +67,17 @@ jobs:
       working-directory: package
       run: cdk deploy -c env=dev
 
+    - uses: pnpm/action-setup@v4
+      name: Install pnpm (example/cdk)
+      with:
+        run_install: |
+          - recursive: true
+            cwd: example/cdk
+            args: [--no-frozen-lockfile]
+      
     - name: Build (example/cdk)
       working-directory: example/cdk
-      run: pnpm install && pnpm lint && pnpm build
+      run: pnpm lint && pnpm build
 
     - name: Generate API Gateway endpoint URL
       run: |
