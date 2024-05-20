@@ -27,8 +27,8 @@ importers:
         specifier: ^0.21.3
         version: 0.21.3
       fp-ts:
-        specifier: ^2.16.5
-        version: 2.16.5
+        specifier: ^2.16.6
+        version: 2.16.6
       pem-jwk:
         specifier: ^2.0.0
         version: 2.0.0
@@ -839,8 +839,8 @@ packages:
   for-each@0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
 
-  fp-ts@2.16.5:
-    resolution: {integrity: sha512-N8T8PwMSeTKKtkm9lkj/zSTAnPC/aJIIrQhnHxxkL0KLsRCNUPANksJOlMXxcKKCo7H1ORP3No9EMD+fP0tsdA==}
+  fp-ts@2.16.6:
+    resolution: {integrity: sha512-v7w209VPj4L6pPn/ftFRJu31Oa8QagwcVw7BZmLCUWU4AQoc954rX9ogSIahDf67Pg+GjPbkW/Kn9XWnlWJG0g==}
 
   fsevents@2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
@@ -2275,7 +2275,7 @@ snapshots:
     dependencies:
       is-callable: 1.2.7
 
-  fp-ts@2.16.5: {}
+  fp-ts@2.16.6: {}
 
   fsevents@2.3.2:
     optional: true
