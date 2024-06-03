@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@aws-lambda-powertools/logger':
         specifier: ^2.1.1
-        version: 2.1.1(@middy/core@5.3.5)
+        version: 2.1.1(@middy/core@5.4.0)
       aws-cdk-lib:
         specifier: ^2.144.0
         version: 2.144.0(constructs@10.3.0)
@@ -37,14 +37,14 @@ importers:
         version: 0.5.21
     devDependencies:
       '@middy/core':
-        specifier: ^5.3.5
-        version: 5.3.5
+        specifier: ^5.4.0
+        version: 5.4.0
       '@types/aws-lambda':
         specifier: ^8.10.138
         version: 8.10.138
       '@types/node':
-        specifier: ^20.13.0
-        version: 20.13.0
+        specifier: ^20.14.0
+        version: 20.14.0
       '@types/pem-jwk':
         specifier: ^2.0.2
         version: 2.0.2
@@ -77,13 +77,13 @@ importers:
         version: 2.29.1(@typescript-eslint/parser@7.11.0(eslint@9.4.0)(typescript@5.4.5))(eslint@9.4.0)
       eslint-plugin-prettier:
         specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0(eslint@9.4.0))(eslint@9.4.0)(prettier@3.2.5)
+        version: 5.1.3(eslint-config-prettier@9.1.0(eslint@9.4.0))(eslint@9.4.0)(prettier@3.3.0)
       prettier:
-        specifier: ^3.2.5
-        version: 3.2.5
+        specifier: ^3.3.0
+        version: 3.3.0
       ts-node:
         specifier: ^10.9.2
-        version: 10.9.2(@types/node@20.13.0)(typescript@5.4.5)
+        version: 10.9.2(@types/node@20.14.0)(typescript@5.4.5)
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -300,8 +300,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
-  '@middy/core@5.3.5':
-    resolution: {integrity: sha512-kMjnRPC30KA52fR/Vb9sBOqYNCvOPwo0hKMtKZ9QfjB+hnaSg0y+hTTX6EArJm+6iFd+0Y6tEwT//qXpCvhTMQ==}
+  '@middy/core@5.4.0':
+    resolution: {integrity: sha512-jwEGesbVDmhVQesEQbegU9+Y9Kd1FXEQ9OtP3jY8tmrFqWju5k0fJpN16y1LOQqb4ykxi8R/bzb6J4yMRN0B7A==}
     engines: {node: '>=18'}
 
   '@nodelib/fs.scandir@2.1.5':
@@ -338,8 +338,8 @@ packages:
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
-  '@types/node@20.13.0':
-    resolution: {integrity: sha512-FM6AOb3khNkNIXPnHFDYaHerSv8uN22C91z098AnGccVu+Pcdhi+pNUFDi0iLmPIsVE0JBD0KVS7mzUYt4nRzQ==}
+  '@types/node@20.14.0':
+    resolution: {integrity: sha512-5cHBxFGJx6L4s56Bubp4fglrEpmyJypsqI6RgzMfBHWUJQGWAAi8cWcgetEbZXHYXo9C2Fa4EEds/uSyS4cxmA==}
 
   '@types/pem-jwk@2.0.2':
     resolution: {integrity: sha512-wkdQZtXBObWNxv8Uo1N6SiNU/ZkhvK7UkrBPr0yNvEUlI6/zx2FuQJ95njlw/1jmlKE+cHAFDVB26Z9vNuebfg==}
@@ -1196,8 +1196,8 @@ packages:
     resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
     engines: {node: '>=6.0.0'}
 
-  prettier@3.2.5:
-    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+  prettier@3.3.0:
+    resolution: {integrity: sha512-J9odKxERhCQ10OC2yb93583f6UnYutOeiV5i0zEDS7UGTdUt0u+y8erxl3lBKvwo/JHyyoEdXjwp4dke9oyZ/g==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -1474,12 +1474,12 @@ snapshots:
 
   '@aws-lambda-powertools/commons@2.1.1': {}
 
-  '@aws-lambda-powertools/logger@2.1.1(@middy/core@5.3.5)':
+  '@aws-lambda-powertools/logger@2.1.1(@middy/core@5.4.0)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.1.1
       lodash.merge: 4.6.2
     optionalDependencies:
-      '@middy/core': 5.3.5
+      '@middy/core': 5.4.0
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -1604,7 +1604,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  '@middy/core@5.3.5':
+  '@middy/core@5.4.0':
     dependencies:
       '@datastream/core': 0.0.35
 
@@ -1634,7 +1634,7 @@ snapshots:
 
   '@types/json5@0.0.29': {}
 
-  '@types/node@20.13.0':
+  '@types/node@20.14.0':
     dependencies:
       undici-types: 5.26.5
 
@@ -2149,10 +2149,10 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-prettier@5.1.3(eslint-config-prettier@9.1.0(eslint@9.4.0))(eslint@9.4.0)(prettier@3.2.5):
+  eslint-plugin-prettier@5.1.3(eslint-config-prettier@9.1.0(eslint@9.4.0))(eslint@9.4.0)(prettier@3.3.0):
     dependencies:
       eslint: 9.4.0
-      prettier: 3.2.5
+      prettier: 3.3.0
       prettier-linter-helpers: 1.0.0
       synckit: 0.8.8
     optionalDependencies:
@@ -2613,7 +2613,7 @@ snapshots:
     dependencies:
       fast-diff: 1.3.0
 
-  prettier@3.2.5: {}
+  prettier@3.3.0: {}
 
   process@0.11.10: {}
 
@@ -2775,14 +2775,14 @@ snapshots:
     dependencies:
       typescript: 5.4.5
 
-  ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5):
+  ts-node@10.9.2(@types/node@20.14.0)(typescript@5.4.5):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.13.0
+      '@types/node': 20.14.0
       acorn: 8.11.3
       acorn-walk: 8.3.2
       arg: 4.1.3
