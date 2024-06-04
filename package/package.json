@@ -19,10 +19,10 @@
   "devDependencies": {
     "@middy/core": "^5.4.0",
     "@types/aws-lambda": "^8.10.138",
-    "@types/node": "^20.14.0",
+    "@types/node": "^20.14.1",
     "@types/pem-jwk": "^2.0.2",
-    "@typescript-eslint/eslint-plugin": "^7.11.0",
-    "@typescript-eslint/parser": "^7.11.0",
+    "@typescript-eslint/eslint-plugin": "^7.12.0",
+    "@typescript-eslint/parser": "^7.12.0",
     "aws-cdk": "^2.144.0",
     "create-keypair": "^0.1.2",
     "eslint": "^9.4.0",
