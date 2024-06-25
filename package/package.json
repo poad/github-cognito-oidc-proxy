@@ -17,11 +17,11 @@
     "lint-fix": "pnpm run /^.*:fix/"
   },
   "devDependencies": {
-    "@middy/core": "^5.4.1",
+    "@middy/core": "^5.4.2",
     "@types/aws-lambda": "^8.10.140",
     "@types/node": "^20.14.8",
     "@types/pem-jwk": "^2.0.2",
-    "aws-cdk": "^2.147.0",
+    "aws-cdk": "^2.147.1",
     "create-keypair": "^0.1.2",
     "eslint": "^9.5.0",
     "eslint-config-prettier": "^9.1.0",
@@ -30,11 +30,11 @@
     "prettier": "^3.3.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.2",
-    "typescript-eslint": "^7.13.1"
+    "typescript-eslint": "^7.14.1"
   },
   "dependencies": {
     "@aws-lambda-powertools/logger": "^2.2.0",
-    "aws-cdk-lib": "^2.147.0",
+    "aws-cdk-lib": "^2.147.1",
     "aws-lambda": "^1.0.7",
     "constructs": "^10.3.0",
     "email-validator": "^2.0.4",
