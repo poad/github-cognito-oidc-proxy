@@ -159,7 +159,7 @@ export class GithubCognitoOidcProxyStack extends cdk.Stack {
       this,
       'GithubCognitoOidcProxyUserInfoFunction',
       {
-        runtime: Runtime.NODEJS_18_X,
+        runtime: Runtime.NODEJS_20_X,
         entry: './lambda/userinfo/index.ts',
         architecture: Architecture.ARM_64,
         functionName: userInfoFunctionName,
@@ -209,7 +209,7 @@ export class GithubCognitoOidcProxyStack extends cdk.Stack {
       this,
       'GithubCognitoOidcProxyAuthorizeFunction',
       {
-        runtime: Runtime.NODEJS_18_X,
+        runtime: Runtime.NODEJS_20_X,
         entry: './lambda/authorize/index.ts',
         architecture: Architecture.ARM_64,
         functionName: authorizeFunctionName,
@@ -259,7 +259,7 @@ export class GithubCognitoOidcProxyStack extends cdk.Stack {
       this,
       'GithubCognitoOidcProxyTokenFunction',
       {
-        runtime: Runtime.NODEJS_18_X,
+        runtime: Runtime.NODEJS_20_X,
         entry: './lambda/token/index.ts',
         architecture: Architecture.ARM_64,
         functionName: tokenFunctionName,
