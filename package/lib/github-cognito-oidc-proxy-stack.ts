@@ -93,7 +93,7 @@ export class GithubCognitoOidcProxyStack extends cdk.Stack {
       this,
       'GithubCognitoOidcProxyJwksFunction',
       {
-        runtime: Runtime.NODEJS_18_X,
+        runtime: Runtime.NODEJS_20_X,
         entry: './lambda/jwks/index.ts',
         architecture: Architecture.ARM_64,
         functionName: jwksFunctionName,
