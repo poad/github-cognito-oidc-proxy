@@ -19,9 +19,9 @@
   "devDependencies": {
     "@middy/core": "^5.4.3",
     "@types/aws-lambda": "^8.10.140",
-    "@types/node": "^20.14.9",
+    "@types/node": "^20.14.10",
     "@types/pem-jwk": "^2.0.2",
-    "aws-cdk": "^2.147.3",
+    "aws-cdk": "^2.148.0",
     "create-keypair": "^0.1.2",
     "eslint": "^9.6.0",
     "eslint-config-prettier": "^9.1.0",
@@ -34,14 +34,14 @@
   },
   "dependencies": {
     "@aws-lambda-powertools/logger": "^2.3.0",
-    "aws-cdk-lib": "^2.147.3",
+    "aws-cdk-lib": "^2.148.0",
     "aws-lambda": "^1.0.7",
     "constructs": "^10.3.0",
     "email-validator": "^2.0.4",
     "esbuild": "^0.23.0",
-    "fp-ts": "^2.16.7",
+    "fp-ts": "^2.16.8",
     "pem-jwk": "^2.0.0",
     "source-map-support": "^0.5.21"
   },
-  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
+  "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903"
 }
