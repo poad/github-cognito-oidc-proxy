@@ -19,11 +19,11 @@
   "devDependencies": {
     "@middy/core": "^5.4.5",
     "@types/aws-lambda": "^8.10.143",
-    "@types/node": "^22.1.0",
+    "@types/node": "^22.2.0",
     "@types/pem-jwk": "^2.0.2",
     "aws-cdk": "^2.151.0",
     "create-keypair": "^0.1.2",
-    "eslint": "^9.8.0",
+    "eslint": "^9.9.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.2.1",
