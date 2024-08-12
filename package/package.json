@@ -17,7 +17,7 @@
     "lint-fix": "pnpm run /^.*:fix/"
   },
   "devDependencies": {
-    "@middy/core": "^5.4.5",
+    "@middy/core": "^5.4.6",
     "@types/aws-lambda": "^8.10.143",
     "@types/node": "^22.2.0",
     "@types/pem-jwk": "^2.0.2",
