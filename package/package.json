@@ -19,7 +19,7 @@
   "devDependencies": {
     "@middy/core": "^5.4.6",
     "@types/aws-lambda": "^8.10.143",
-    "@types/node": "^22.4.0",
+    "@types/node": "^22.4.1",
     "@types/pem-jwk": "^2.0.2",
     "aws-cdk": "^2.152.0",
     "create-keypair": "^0.1.2",
@@ -30,7 +30,7 @@
     "prettier": "^3.3.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.1.0"
+    "typescript-eslint": "^8.2.0"
   },
   "dependencies": {
     "@aws-lambda-powertools/logger": "^2.7.0",
