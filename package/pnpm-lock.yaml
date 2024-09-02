@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@aws-lambda-powertools/logger':
         specifier: ^2.7.0
-        version: 2.7.0(@middy/core@5.4.6)
+        version: 2.7.0(@middy/core@5.4.7)
       aws-cdk-lib:
         specifier: ^2.155.0
         version: 2.155.0(constructs@10.3.0)
@@ -37,14 +37,14 @@ importers:
         version: 0.5.21
     devDependencies:
       '@middy/core':
-        specifier: ^5.4.6
-        version: 5.4.6
+        specifier: ^5.4.7
+        version: 5.4.7
       '@types/aws-lambda':
         specifier: ^8.10.145
         version: 8.10.145
       '@types/node':
-        specifier: ^22.5.1
-        version: 22.5.1
+        specifier: ^22.5.2
+        version: 22.5.2
       '@types/pem-jwk':
         specifier: ^2.0.2
         version: 2.0.2
@@ -71,7 +71,7 @@ importers:
         version: 3.3.3
       ts-node:
         specifier: ^10.9.2
-        version: 10.9.2(@types/node@22.5.1)(typescript@5.5.4)
+        version: 10.9.2(@types/node@22.5.2)(typescript@5.5.4)
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
@@ -90,8 +90,8 @@ packages:
   '@aws-cdk/asset-node-proxy-agent-v6@2.0.3':
     resolution: {integrity: sha512-twhuEG+JPOYCYPx/xy5uH2+VUsIEhPTzDY0F1KuB+ocjWWB/KEDiOVL19nHvbPCB6fhWnkykXEMJ4HHcKvjtvg==}
 
-  '@aws-cdk/cloud-assembly-schema@36.0.21':
-    resolution: {integrity: sha512-MuuzRxWfrrIw2D2s5p5axwDiH7BrKsDBCKS8OCmVGe8yKAtF2Y9cNo1Z0q4wySMfbaa6hgqTXnigO6YTzLru1w==}
+  '@aws-cdk/cloud-assembly-schema@36.0.24':
+    resolution: {integrity: sha512-dHyb4lvd6nbNHLVvdyxVPgwc0MyzN3VzIJnWwGJWKOIwVqL7hvU2NkQQrktY9T2MtdhzUdDFm9qluxuLRV5Cfw==}
     engines: {node: '>= 18.18.0'}
     bundledDependencies:
       - jsonschema
@@ -112,8 +112,8 @@ packages:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
     engines: {node: '>=12'}
 
-  '@datastream/core@0.0.36':
-    resolution: {integrity: sha512-qec5ckpnhrLL04sFkN4lOZVyYCLSUYjxmODEaEmO7qNzDwXF9laX6brgD2bd2+vXostv63yQ29yhsBNZQU6QsQ==}
+  '@datastream/core@0.0.38':
+    resolution: {integrity: sha512-9rFyIg+dlEhrFqf2IxkMm+nSEptOdBB/soXxvU0ynnkIhBW4CZk5jkDubiaeygOxXzN9sm6pAWdWdmkQohQVxg==}
     engines: {node: '>=18'}
 
   '@esbuild/aix-ppc64@0.23.1':
@@ -304,8 +304,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
-  '@middy/core@5.4.6':
-    resolution: {integrity: sha512-N/SAyXh01nV+UBnmYzbDmJbElVRvd82kf6ImRwoFZTxyv3CSSDizUuooCfzyrVXLsX1mex6EzW3RaPTmBGU3VA==}
+  '@middy/core@5.4.7':
+    resolution: {integrity: sha512-JBbpRat5x7c0tOXyIMrCWRvQG3VDEFPG7Av0Wbr4rP57mg/MSH9pnB8pMtY5COi2HDn6Y2g2pnorJhNq1X2ghg==}
     engines: {node: '>=18'}
 
   '@nodelib/fs.scandir@2.1.5':
@@ -342,8 +342,8 @@ packages:
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
-  '@types/node@22.5.1':
-    resolution: {integrity: sha512-KkHsxej0j9IW1KKOOAA/XBA0z08UFSrRQHErzEfA3Vgq57eXIMYboIlHJuYIfd+lwCQjtKqUu3UnmKbtUc9yRw==}
+  '@types/node@22.5.2':
+    resolution: {integrity: sha512-acJsPTEqYqulZS/Yp/S3GgeE6GZ0qYODUR8aVr/DkhHQ8l9nd4j5x1/ZJy9/gHrRlFMqkO6i0I3E27Alu4jjPg==}
 
   '@types/pem-jwk@2.0.2':
     resolution: {integrity: sha512-wkdQZtXBObWNxv8Uo1N6SiNU/ZkhvK7UkrBPr0yNvEUlI6/zx2FuQJ95njlw/1jmlKE+cHAFDVB26Z9vNuebfg==}
@@ -1450,22 +1450,22 @@ snapshots:
 
   '@aws-cdk/asset-node-proxy-agent-v6@2.0.3': {}
 
-  '@aws-cdk/cloud-assembly-schema@36.0.21': {}
+  '@aws-cdk/cloud-assembly-schema@36.0.24': {}
 
   '@aws-lambda-powertools/commons@2.7.0': {}
 
-  '@aws-lambda-powertools/logger@2.7.0(@middy/core@5.4.6)':
+  '@aws-lambda-powertools/logger@2.7.0(@middy/core@5.4.7)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.7.0
       lodash.merge: 4.6.2
     optionalDependencies:
-      '@middy/core': 5.4.6
+      '@middy/core': 5.4.7
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
 
-  '@datastream/core@0.0.36':
+  '@datastream/core@0.0.38':
     dependencies:
       cloneable-readable: 3.0.0
 
@@ -1587,9 +1587,9 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@middy/core@5.4.6':
+  '@middy/core@5.4.7':
     dependencies:
-      '@datastream/core': 0.0.36
+      '@datastream/core': 0.0.38
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -1617,7 +1617,7 @@ snapshots:
 
   '@types/json5@0.0.29': {}
 
-  '@types/node@22.5.1':
+  '@types/node@22.5.2':
     dependencies:
       undici-types: 6.19.8
 
@@ -1803,7 +1803,7 @@ snapshots:
       '@aws-cdk/asset-awscli-v1': 2.2.202
       '@aws-cdk/asset-kubectl-v20': 2.1.2
       '@aws-cdk/asset-node-proxy-agent-v6': 2.0.3
-      '@aws-cdk/cloud-assembly-schema': 36.0.21
+      '@aws-cdk/cloud-assembly-schema': 36.0.24
       constructs: 10.3.0
 
   aws-cdk@2.155.0:
@@ -2717,14 +2717,14 @@ snapshots:
     dependencies:
       typescript: 5.5.4
 
-  ts-node@10.9.2(@types/node@22.5.1)(typescript@5.5.4):
+  ts-node@10.9.2(@types/node@22.5.2)(typescript@5.5.4):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 22.5.1
+      '@types/node': 22.5.2
       acorn: 8.12.1
       acorn-walk: 8.3.3
       arg: 4.1.3
