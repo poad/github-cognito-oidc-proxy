@@ -10,24 +10,16 @@ updates:
     rebase-strategy: auto
     assignees:
       - poad
-
-  - package-ecosystem: npm
-    directory: '/package/'
-    schedule:
-      interval: daily
-      timezone: Asia/Tokyo
-    allow:
-      - dependency-type: all
-    rebase-strategy: auto
-    assignees:
-      - poad
     groups:
-      package:
+      actions:
         patterns:
           - '*'
 
   - package-ecosystem: npm
-    directory: '/example/cdk/'
+    directories: 
+      - '/package/'
+      - '/example/cdk/'
+      - '/example/app/'
     schedule:
       interval: daily
       timezone: Asia/Tokyo
@@ -37,21 +29,6 @@ updates:
     assignees:
       - poad
     groups:
-      cdk:
-        patterns:
-          - '*'
-
-  - package-ecosystem: npm
-    directory: '/example/app/'
-    schedule:
-      interval: daily
-      timezone: Asia/Tokyo
-    allow:
-      - dependency-type: all
-    rebase-strategy: auto
-    assignees:
-      - poad
-    groups:
-      nextjs:
+      npm:
         patterns:
           - '*'
