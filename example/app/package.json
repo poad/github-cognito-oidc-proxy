@@ -17,7 +17,7 @@
     "prestart": "pnpm build"
   },
   "dependencies": {
-    "next": "^14.2.10",
+    "next": "^14.2.11",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "web-vitals": "^4.2.3"
@@ -32,14 +32,14 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-import": "^0.13.0",
-    "eslint-config-next": "^14.2.10",
+    "eslint-config-next": "^14.2.11",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.3",
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-import": "^2.30.0",
     "eslint-plugin-jsx-a11y": "^6.10.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-react": "^7.36.0",
+    "eslint-plugin-react": "^7.36.1",
     "eslint-plugin-react-hooks": "^4.6.2",
     "next-transpile-modules": "^10.0.1",
     "prettier": "^3.3.3",
