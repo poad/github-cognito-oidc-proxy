@@ -19,7 +19,7 @@
   "devDependencies": {
     "@middy/core": "^5.4.7",
     "@types/aws-lambda": "^8.10.145",
-    "@types/node": "^22.5.4",
+    "@types/node": "^22.5.5",
     "@types/pem-jwk": "^2.0.2",
     "aws-cdk": "^2.158.0",
     "create-keypair": "^0.1.2",
