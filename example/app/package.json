@@ -17,14 +17,14 @@
     "prestart": "pnpm build"
   },
   "dependencies": {
-    "next": "^14.2.12",
+    "next": "^14.2.13",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "web-vitals": "^4.2.3"
   },
   "devDependencies": {
     "@types/node": "^22.5.5",
-    "@types/react": "^18.3.7",
+    "@types/react": "^18.3.8",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^8.6.0",
     "@typescript-eslint/parser": "^8.6.0",
@@ -32,7 +32,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-import": "^0.13.0",
-    "eslint-config-next": "^14.2.12",
+    "eslint-config-next": "^14.2.13",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.3",
     "eslint-plugin-flowtype": "^8.0.3",
