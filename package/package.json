@@ -19,18 +19,18 @@
   "devDependencies": {
     "@middy/core": "^5.5.0",
     "@types/aws-lambda": "^8.10.145",
-    "@types/node": "^22.5.5",
+    "@types/node": "^22.6.1",
     "@types/pem-jwk": "^2.0.2",
     "aws-cdk": "^2.159.1",
     "create-keypair": "^0.1.2",
-    "eslint": "^9.11.0",
+    "eslint": "^9.11.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.30.0",
     "eslint-plugin-prettier": "^5.2.1",
     "prettier": "^3.3.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2",
-    "typescript-eslint": "^8.6.0"
+    "typescript-eslint": "^8.7.0"
   },
   "dependencies": {
     "@aws-lambda-powertools/logger": "^2.8.0",
