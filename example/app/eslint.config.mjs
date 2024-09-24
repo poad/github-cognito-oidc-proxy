@@ -1,14 +1,19 @@
 import nextPlugin from '@next/eslint-plugin-next';
 import reactPlugin from 'eslint-plugin-react';
 import hooksPlugin from 'eslint-plugin-react-hooks';
-import typescriptParser from '@typescript-eslint/parser';
+import importPlugin from 'eslint-plugin-import';
+import tseslint from 'typescript-eslint';
 
-export default [
+export default tseslint.config(
+  ...tseslint.configs.strict,
+  ...tseslint.configs.stylistic,
   {
     languageOptions: {
-      parser: typescriptParser,
+      parser: tseslint.parser,
     },
     files: ['**/*.ts', '**/*.tsx'],
+    ...importPlugin.flatConfigs.recommended,
+    ...importPlugin.flatConfigs.typescript,
     ignores: [
       '**/*.d.ts',
       '*.js',
@@ -36,4 +41,4 @@ export default [
   {
     ignores: ['./.next/*'],
   },
-];
+);
