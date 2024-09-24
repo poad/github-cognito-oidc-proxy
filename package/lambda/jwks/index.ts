@@ -8,6 +8,7 @@ import { pem2jwk } from 'pem-jwk';
 
 export const handler: Handler<
   APIGatewayProxyEventV2,
+  // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
   APIGatewayProxyResultV2 | void
 > = async (_event, _context, callback) => {
   const pem = fs.readFileSync('/var/task/jwtRS256.private.pem', 'ascii');

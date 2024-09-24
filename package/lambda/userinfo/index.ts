@@ -100,6 +100,7 @@ const getValidEmail = async (token: string): Promise<Either<Email, string>> => {
 
 export const handler: Handler<
   APIGatewayProxyEventV2,
+  // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
   APIGatewayProxyResultV2 | void
 > = async (event, _context, callback) => {
   const { headers } = event;

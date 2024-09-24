@@ -9,12 +9,13 @@ const logger = new Logger();
 
 export const handler: Handler<
   APIGatewayProxyEventV2,
+  // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
   APIGatewayProxyResultV2 | void
 > = async (event, _context, callback) => {
   const { client_id, scope, state, response_type, redirect_uri } =
     event.queryStringParameters || {};
   const redirectUri = `https://github.com/login/oauth/authorize?client_id=${client_id}&scope=${encodeURIComponent(
-    scope!,
+    scope ?? '',
   )}${state ? `&state=${state}` : ''}&response_type=${response_type}${
     redirect_uri ? `&redirect_uri=${encodeURIComponent(redirect_uri)}` : ''
   }`;

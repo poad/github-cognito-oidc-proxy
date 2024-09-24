@@ -1,4 +1,4 @@
-/* eslint-disable no-new */
+ 
 import * as crypto from 'crypto';
 import * as cdk from 'aws-cdk-lib';
 import * as cognito from 'aws-cdk-lib/aws-cognito';

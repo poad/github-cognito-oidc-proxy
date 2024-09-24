@@ -30,16 +30,17 @@ const eventToRequest = (bodyString: string) => {
 
   return left(() => ({
     // grant_type: body.get('grant_type')!,
-    redirect_uri: body.get('redirect_uri')!,
-    client_id: body.get('client_id')!,
-    client_secret: body.get('client_secret')!,
-    code: body.get('code')!,
+    redirect_uri: body.get('redirect_uri') ?? '',
+    client_id: body.get('client_id') ?? '',
+    client_secret: body.get('client_secret') ?? '',
+    code: body.get('code') ?? '',
     ...(body.has('state') ? { state: body.get('state') } : {}),
   }));
 };
 
 export const handler: Handler<
   APIGatewayProxyEventV2,
+  // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
   APIGatewayProxyResultV2 | void
 > = async (event, _context, callback) => {
   if (!event.body) {

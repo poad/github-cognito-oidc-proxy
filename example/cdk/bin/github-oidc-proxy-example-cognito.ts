@@ -19,7 +19,7 @@ nextJsExport({
   endpoint: `https://${config.domainPrefix}.auth.us-west-2.amazoncognito.com/`,
 });
 
-// eslint-disable-next-line no-new
+ 
 new GitHubOidcProxyExampleCognitoStack(
   app,
   `${env}-github-oidc-proxy-example-stack`,

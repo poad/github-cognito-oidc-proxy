@@ -1,9 +1,16 @@
-import typescriptParser from '@typescript-eslint/parser';
+import eslint from '@eslint/js';
+import plugin from '@stylistic/eslint-plugin';
+import stylistic from '@stylistic/eslint-plugin';
+import stylisticTs from '@stylistic/eslint-plugin-ts';
+import tseslint from 'typescript-eslint';
 
-export default [
+export default tseslint.config(
+  eslint.configs.recommended,
+  ...tseslint.configs.strict,
+  ...tseslint.configs.stylistic,
   {
     languageOptions: {
-      parser: typescriptParser,
+      parser: tseslint.parser,
     },
     files: ['**/*.ts'],
     ignores: [
@@ -14,7 +21,11 @@ export default [
       'src/stories',
       'node_modules/**/*',
     ],
+    plugins: {
+      '@stylistic': stylistic,
+      '@stylistic/ts': stylisticTs,
+    },
     rules: {
     },
   },
-];
+);

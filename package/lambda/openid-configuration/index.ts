@@ -9,9 +9,10 @@ const logger = new Logger();
 
 export const handler: Handler<
   APIGatewayProxyEventV2,
+  // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
   APIGatewayProxyResultV2 | void
 > = async (event, _context, callback) => {
-  const host = event.headers.Host!;
+  const host = event.headers.Host ?? '';
   const stage = event.requestContext && event.requestContext.stage;
   const issuer = `https://${host}/${stage}`;
   const body = JSON.stringify({

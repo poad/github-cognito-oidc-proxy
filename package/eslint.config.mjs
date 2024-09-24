@@ -2,9 +2,10 @@
 
 import eslint from '@eslint/js';
 
-import prettier from 'eslint-config-prettier';
+import stylistic from '@stylistic/eslint-plugin';
+import stylisticTs from '@stylistic/eslint-plugin-ts';
 import tseslint from 'typescript-eslint';
-// @ts-ignore
+// @ts-expect-error ignore type error
 import importPlugin from 'eslint-plugin-import';
 
 import { FlatCompat } from '@eslint/eslintrc';
@@ -12,29 +13,19 @@ import { FlatCompat } from '@eslint/eslintrc';
 const compat = new FlatCompat();
 
 export default tseslint.config(
+  eslint.configs.recommended,
+  ...tseslint.configs.strict,
+  ...tseslint.configs.stylistic,
   {
+    files: ['{bin,lib}/*.ts'],
     ignores: [
       '*.d.ts',
-      '*.{js,jsx}',
-      'src/tsconfig.json',
-      'src/stories',
-      '*.css',
       'node_modules/**/*',
-      '.next',
       'out',
-      '.storybook',
       'cdk.out',
     ],
-  },
-  {
-    files: ['src/**/*.{ts,tsx}', '{bin,lib}/*.ts'],
-  },
-  eslint.configs.recommended,
-  ...tseslint.configs.recommended,
-  {
-    extends: [
-      ...tseslint.configs.recommended,
-    ],
+    ...importPlugin.flatConfigs.recommended,
+    ...importPlugin.flatConfigs.typescript,
     settings: {
       'import/internal-regex': '^~/',
       'import/resolver': {
@@ -46,33 +37,9 @@ export default tseslint.config(
         },
       },
     },
-  },
-  {
-    // @ts-ignore
-    rules: {
-      ...prettier.rules,
-    },
-  },
-  {
-    files: ['src/**/*.{ts,tsx}'],
     plugins: {
-      import: importPlugin,
-    },
-    extends: [
-      ...tseslint.configs.recommended,
-      ...compat.config(importPlugin.configs.recommended),
-      ...compat.config(importPlugin.configs.typescript),
-    ],
-    settings: {
-      'import/internal-regex': '^~/',
-      'import/resolver': {
-        node: {
-          extensions: ['.ts', '.tsx'],
-        },
-        typescript: {
-          alwaysTryTypes: true,
-        },
-      },
+      '@stylistic': stylistic,
+      '@stylistic/ts': stylisticTs,
     },
   },
 );
