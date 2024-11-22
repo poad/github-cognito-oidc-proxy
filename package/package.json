@@ -11,7 +11,9 @@
     "cdk": "cdk",
     "lint": "eslint './{lambda,bin,lib}/**/*.ts'",
     "lint-fix": "eslint './{lambda,bin,lib}/**/*.ts' --fix",
-    "prebuild": "pnpm lint-fix"
+    "prebuild": "pnpm lint-fix",
+    "prelint": "pnpm clean",
+    "prelint-fix": "pnpm clean"
   },
   "devDependencies": {
     "@middy/core": "^5.5.1",
@@ -22,7 +24,7 @@
     "@types/aws-lambda": "^8.10.145",
     "@types/node": "^22.9.1",
     "@types/pem-jwk": "^2.0.2",
-    "aws-cdk": "^2.168.0",
+    "aws-cdk": "^2.169.0",
     "create-keypair": "^0.1.2",
     "eslint": "^9.15.0",
     "eslint-plugin-import": "^2.31.0",
@@ -33,7 +35,7 @@
   },
   "dependencies": {
     "@aws-lambda-powertools/logger": "^2.11.0",
-    "aws-cdk-lib": "^2.168.0",
+    "aws-cdk-lib": "^2.169.0",
     "aws-lambda": "^1.0.7",
     "constructs": "^10.4.2",
     "email-validator": "^2.0.4",
@@ -42,5 +44,5 @@
     "pem-jwk": "^2.0.0",
     "source-map-support": "^0.5.21"
   },
-  "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228"
+  "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387"
 }
