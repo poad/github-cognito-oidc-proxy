@@ -24,7 +24,7 @@
     "@types/aws-lambda": "^8.10.146",
     "@types/node": "^22.10.0",
     "@types/pem-jwk": "^2.0.2",
-    "aws-cdk": "^2.171.0",
+    "aws-cdk": "^2.171.1",
     "create-keypair": "^0.1.2",
     "eslint": "^9.15.0",
     "eslint-plugin-import": "^2.31.0",
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@aws-lambda-powertools/logger": "^2.11.0",
-    "aws-cdk-lib": "^2.171.0",
+    "aws-cdk-lib": "^2.171.1",
     "aws-lambda": "^1.0.7",
     "constructs": "^10.4.2",
     "email-validator": "^2.0.4",
