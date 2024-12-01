@@ -26,7 +26,7 @@
     "@types/pem-jwk": "^2.0.2",
     "aws-cdk": "^2.171.1",
     "create-keypair": "^0.1.2",
-    "eslint": "^9.15.0",
+    "eslint": "^9.16.0",
     "eslint-plugin-import": "^2.31.0",
     "prettier": "^3.4.1",
     "ts-node": "^10.9.2",
@@ -44,5 +44,5 @@
     "pem-jwk": "^2.0.0",
     "source-map-support": "^0.5.21"
   },
-  "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387"
+  "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab"
 }
