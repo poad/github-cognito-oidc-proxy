@@ -1,5 +1,5 @@
 {
-  "app": "pnpx ts-node --prefer-ts-exts bin/github-oidc-proxy-example-cognito.ts",
+  "app": "pnpm dlx tsx bin/github-oidc-proxy-example-cognito.ts",
   "watch": {
     "include": [
       "**"

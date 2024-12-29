@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "commonjs",
+    "target": "esnext",
+    "module": "esnext",
     "lib": [
-      "es2022",
+      "esnext",
       "dom"
     ],
     "declaration": true,
@@ -20,6 +20,7 @@
     "inlineSources": true,
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
+    "moduleResolution": "node",
     "typeRoots": [
       "./node_modules/@types",
       "../node_modules/@types"

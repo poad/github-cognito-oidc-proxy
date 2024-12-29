@@ -1,6 +1,7 @@
 {
   "name": "github-oidc-proxy-example-cognito",
   "version": "0.1.0",
+  "type": "module",
   "bin": {
     "cognito": "bin/github-oidc-proxy-example-cognito.js"
   },
@@ -10,10 +11,10 @@
     "test": "jest",
     "cdk": "cdk",
     "lint": "eslint './{bin,lib}/**/*.ts'",
-    "lint-fix": "eslint './{bin,lib}/**/*.ts' --fix",
-    "prebuild": "pnpm lint-fix"
+    "lint-fix": "eslint './{bin,lib}/**/*.ts' --fix"
   },
   "devDependencies": {
+    "@eslint/compat": "^1.2.4",
     "@stylistic/eslint-plugin": "^2.12.1",
     "@stylistic/eslint-plugin-js": "^2.12.1",
     "@stylistic/eslint-plugin-plus": "^2.12.1",

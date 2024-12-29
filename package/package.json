@@ -1,6 +1,7 @@
 {
   "name": "@github-cognito-oidc-proxy/package",
   "version": "0.1.0",
+  "type": "module",
   "bin": {
     "github-cognito-oidc-proxy": "bin/github-cognito-oidc-proxy.js"
   },
@@ -9,13 +10,11 @@
     "clean": "tsc --build --clean",
     "watch": "tsc -w",
     "cdk": "cdk",
-    "lint": "eslint './{lambda,bin,lib}/**/*.ts'",
-    "lint-fix": "eslint './{lambda,bin,lib}/**/*.ts' --fix",
-    "prebuild": "pnpm lint-fix",
-    "prelint": "pnpm clean",
-    "prelint-fix": "pnpm clean"
+    "lint": "eslint",
+    "lint-fix": "eslint --fix"
   },
   "devDependencies": {
+    "@eslint/compat": "^1.2.4",
     "@middy/core": "^6.0.0",
     "@stylistic/eslint-plugin": "^2.12.1",
     "@stylistic/eslint-plugin-js": "^2.12.1",

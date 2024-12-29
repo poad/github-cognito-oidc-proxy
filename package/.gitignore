@@ -8,3 +8,4 @@ yarn-error.log
 .cdk.staging
 cdk.out
 *.pem
+!eslint.config.js

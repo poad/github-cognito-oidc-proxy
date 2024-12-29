@@ -1,25 +1,29 @@
+// @ts-check
+
+import { includeIgnoreFile } from '@eslint/compat';
+
 import nextPlugin from '@next/eslint-plugin-next';
 import reactPlugin from 'eslint-plugin-react';
 import hooksPlugin from 'eslint-plugin-react-hooks';
+// @ts-expect-error ignore type error
 import importPlugin from 'eslint-plugin-import';
 import stylistic from '@stylistic/eslint-plugin';
 import stylisticTs from '@stylistic/eslint-plugin-ts';
 import stylisticJsx from '@stylistic/eslint-plugin-jsx';
 import tseslint from 'typescript-eslint';
 
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const gitignorePath = path.resolve(__dirname, "./.gitignore");
+
 export default tseslint.config(
+  includeIgnoreFile(gitignorePath),
   ...tseslint.configs.strict,
   ...tseslint.configs.stylistic,
   {
-    ignores: [
-      './.next/*',
-      '**/*.d.ts',
-      '*.js',
-      'src/tsconfig.json',
-      'src/next-env.d.ts',
-      'src/stories',
-      'node_modules/**/*',
-    ],
     languageOptions: {
       parser: tseslint.parser,
     },
