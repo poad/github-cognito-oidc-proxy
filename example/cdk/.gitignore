@@ -8,3 +8,4 @@ node_modules
 cdk.out
 cdk.json
 !next.config.js
+!eslint.config.js

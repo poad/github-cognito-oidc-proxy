@@ -1,10 +1,20 @@
+// @ts-check
+
+import { includeIgnoreFile } from '@eslint/compat';
+
 import eslint from '@eslint/js';
-import plugin from '@stylistic/eslint-plugin';
 import stylistic from '@stylistic/eslint-plugin';
 import stylisticTs from '@stylistic/eslint-plugin-ts';
 import tseslint from 'typescript-eslint';
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const gitignorePath = path.resolve(__dirname, "./.gitignore");
 
 export default tseslint.config(
+  includeIgnoreFile(gitignorePath),
   eslint.configs.recommended,
   ...tseslint.configs.strict,
   ...tseslint.configs.stylistic,
@@ -13,14 +23,6 @@ export default tseslint.config(
       parser: tseslint.parser,
     },
     files: ['**/*.ts'],
-    ignores: [
-      '**/*.d.ts',
-      '*.js',
-      'src/tsconfig.json',
-      'src/next-env.d.ts',
-      'src/stories',
-      'node_modules/**/*',
-    ],
     plugins: {
       '@stylistic': stylistic,
       '@stylistic/ts': stylisticTs,

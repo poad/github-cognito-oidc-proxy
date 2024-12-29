@@ -24,7 +24,7 @@ jobs:
   test:
     strategy:
       matrix:
-        node-version: [20.x]
+        node-version: [22.x]
 
     runs-on: ubuntu-latest
     steps:
@@ -60,9 +60,11 @@ jobs:
         sudo ./aws/install --update
         rm -rf awscliv2.zip aws
 
+    - uses: oven-sh/setup-bun@v2
+
     - name: Build (package)
       working-directory: package
-      run: pnpm lint && pnpm build
+      run: bun run --bun lint && bun run --bun build
 
     - name: deploy (package)
       working-directory: package
@@ -80,7 +82,7 @@ jobs:
       
     - name: Build (example/cdk)
       working-directory: example/cdk
-      run: pnpm lint && pnpm build
+      run: bun run --bun lint && bun run --bun build
 
     - name: Generate API Gateway endpoint URL
       run: |
@@ -164,7 +166,7 @@ jobs:
 
     - name: Build (example/app)
       working-directory: example/app
-      run: pnpm lint && pnpm build
+      run: bun run --bun lint && bun run --bun build
 
     - name: deploy (example) upload next.js app
       working-directory: example/cdk
