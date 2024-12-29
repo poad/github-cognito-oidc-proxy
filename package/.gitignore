@@ -1,5 +1,4 @@
 *.js
-!jest.config.js
 *.d.ts
 node_modules
 yarn-error.log
@@ -8,3 +7,4 @@ yarn-error.log
 .cdk.staging
 cdk.out
 *.pem
+!eslint.config.js

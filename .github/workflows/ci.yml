@@ -14,7 +14,7 @@ jobs:
   build:
     strategy:
       matrix:
-        node-version: [20.x]
+        node-version: [22.x]
 
     runs-on: ubuntu-latest
     steps:
@@ -34,15 +34,17 @@ jobs:
             cwd: ./example/app
             args: [--no-frozen-lockfile]
         package_json_file: example/app/package.json
-        
+
+    - uses: oven-sh/setup-bun@v2
+
     - name: Build (example/app)
       working-directory: example/app
-      run: pnpm lint && pnpm build
+      run: bun run --bun lint && bun run --bun build
 
   build-backend:
     strategy:
       matrix:
-        node-version: [20.x]
+        node-version: [22.x]
 
     runs-on: ubuntu-latest
     steps:
@@ -62,10 +64,12 @@ jobs:
             cwd: ./package
             args: [--no-frozen-lockfile]
         package_json_file: package/package.json
-        
+
+    - uses: oven-sh/setup-bun@v2
+
     - name: Build (package)
       working-directory: package
-      run: pnpm lint && pnpm build
+      run: bun run --bun lint && bun run --bun build
 
     - uses: pnpm/action-setup@v4
       name: Install pnpm (example/app)
@@ -87,4 +91,4 @@ jobs:
 
     - name: Build (example)
       working-directory: example/cdk
-      run: pnpm lint && pnpm build
+      run: bun run --bun lint && bun run --bun build
