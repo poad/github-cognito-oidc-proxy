@@ -20,7 +20,7 @@
     "@stylistic/eslint-plugin-plus": "^2.12.1",
     "@stylistic/eslint-plugin-ts": "^2.12.1",
     "@types/aws-lambda": "^8.10.146",
-    "@types/node": "^22.10.2",
+    "@types/node": "^22.10.3",
     "@types/pem-jwk": "^2.0.2",
     "aws-cdk": "^2.173.4",
     "create-keypair": "^0.1.2",
