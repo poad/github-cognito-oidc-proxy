@@ -13,7 +13,7 @@
     "lint-fix": "eslint --fix"
   },
   "devDependencies": {
-    "@eslint/compat": "^1.2.4",
+    "@eslint/compat": "^1.2.5",
     "@middy/core": "^6.0.0",
     "@stylistic/eslint-plugin": "^2.12.1",
     "@stylistic/eslint-plugin-js": "^2.12.1",
@@ -22,9 +22,9 @@
     "@types/aws-lambda": "^8.10.147",
     "@types/node": "^22.10.5",
     "@types/pem-jwk": "^2.0.2",
-    "aws-cdk": "^2.175.0",
+    "aws-cdk": "^2.175.1",
     "create-keypair": "^0.1.2",
-    "eslint": "^9.17.0",
+    "eslint": "^9.18.0",
     "eslint-plugin-import": "^2.31.0",
     "prettier": "^3.4.2",
     "ts-node": "^10.9.2",
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@aws-lambda-powertools/logger": "^2.12.0",
-    "aws-cdk-lib": "^2.175.0",
+    "aws-cdk-lib": "^2.175.1",
     "aws-lambda": "^1.0.7",
     "constructs": "^10.4.2",
     "email-validator": "^2.0.4",
