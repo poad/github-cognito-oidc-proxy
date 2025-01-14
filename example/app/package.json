@@ -18,13 +18,13 @@
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.5",
-    "@stylistic/eslint-plugin": "^2.12.1",
-    "@stylistic/eslint-plugin-js": "^2.12.1",
-    "@stylistic/eslint-plugin-jsx": "^2.12.1",
-    "@stylistic/eslint-plugin-plus": "^2.12.1",
-    "@stylistic/eslint-plugin-ts": "^2.12.1",
-    "@types/node": "^22.10.5",
-    "@types/react": "^19.0.5",
+    "@stylistic/eslint-plugin": "^2.13.0",
+    "@stylistic/eslint-plugin-js": "^2.13.0",
+    "@stylistic/eslint-plugin-jsx": "^2.13.0",
+    "@stylistic/eslint-plugin-plus": "^2.13.0",
+    "@stylistic/eslint-plugin-ts": "^2.13.0",
+    "@types/node": "^22.10.6",
+    "@types/react": "^19.0.6",
     "@types/react-dom": "^19.0.3",
     "eslint": "^9.18.0",
     "eslint-config-import": "^0.13.0",
@@ -37,7 +37,7 @@
     "next-transpile-modules": "^10.0.1",
     "prettier": "^3.4.2",
     "typescript": "^5.7.3",
-    "typescript-eslint": "^8.19.1"
+    "typescript-eslint": "^8.20.0"
   },
   "packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321"
 }
