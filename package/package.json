@@ -32,7 +32,7 @@
     "typescript-eslint": "^8.20.0"
   },
   "dependencies": {
-    "@aws-lambda-powertools/logger": "^2.12.0",
+    "@aws-lambda-powertools/logger": "^2.13.0",
     "aws-cdk-lib": "^2.175.1",
     "aws-lambda": "^1.0.7",
     "constructs": "^10.4.2",
