@@ -1,6 +1,7 @@
 {
   "name": "@github-cognito-oidc-proxy/package",
   "version": "0.1.0",
+  "type": "module",
   "bin": {
     "github-cognito-oidc-proxy": "bin/github-cognito-oidc-proxy.js"
   },
@@ -14,6 +15,8 @@
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.5",
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.18.0",
     "@middy/core": "^6.0.0",
     "@stylistic/eslint-plugin": "^2.13.0",
     "@stylistic/eslint-plugin-js": "^2.13.0",

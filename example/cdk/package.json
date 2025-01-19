@@ -1,6 +1,7 @@
 {
   "name": "github-oidc-proxy-example-cognito",
   "version": "0.1.0",
+  "type": "module",
   "bin": {
     "cognito": "bin/github-oidc-proxy-example-cognito.js"
   },

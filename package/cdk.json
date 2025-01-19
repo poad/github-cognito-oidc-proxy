@@ -1,5 +1,5 @@
 {
-  "app": "test -e jwtRS256.private.pem || pnpm create-keypair --bits 4096 jwtRS256 && pnpm dlx ts-node --prefer-ts-exts bin/github-cognito-oidc-proxy.ts",
+  "app": "test -e jwtRS256.private.pem || pnpm create-keypair --bits 4096 jwtRS256 && pnpm dlx tsx bin/github-cognito-oidc-proxy.ts",
   "watch": {
     "include": [
       "**"
