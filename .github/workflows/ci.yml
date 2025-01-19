@@ -39,7 +39,7 @@ jobs:
 
     - name: Build (example/app)
       working-directory: example/app
-      run: bun run --bun lint && bun run --bun build
+      run: bun run lint && bun run --bun build
 
   build-backend:
     strategy:
@@ -69,7 +69,7 @@ jobs:
 
     - name: Build (package)
       working-directory: package
-      run: bun run --bun lint && bun run --bun build
+      run: bun run lint && bun run --bun build
 
     - uses: pnpm/action-setup@v4
       name: Install pnpm (example/app)
@@ -91,4 +91,4 @@ jobs:
 
     - name: Build (example)
       working-directory: example/cdk
-      run: bun run --bun lint && bun run --bun build
+      run: bun run lint && bun run --bun build
