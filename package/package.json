@@ -14,7 +14,7 @@
     "lint-fix": "eslint --fix"
   },
   "devDependencies": {
-    "@eslint/compat": "^1.2.5",
+    "@eslint/compat": "^1.2.6",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.19.0",
     "@middy/core": "^6.0.0",
@@ -23,7 +23,7 @@
     "@stylistic/eslint-plugin-plus": "^3.0.1",
     "@stylistic/eslint-plugin-ts": "^3.0.1",
     "@types/aws-lambda": "^8.10.147",
-    "@types/node": "^22.12.0",
+    "@types/node": "^22.13.0",
     "@types/pem-jwk": "^2.0.2",
     "aws-cdk": "^2.177.0",
     "create-keypair": "^0.1.2",
