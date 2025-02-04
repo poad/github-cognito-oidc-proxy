@@ -23,17 +23,17 @@
     "@stylistic/eslint-plugin-plus": "^3.0.1",
     "@stylistic/eslint-plugin-ts": "^3.0.1",
     "@types/aws-lambda": "^8.10.147",
-    "@types/node": "^22.13.0",
+    "@types/node": "^22.13.1",
     "@types/pem-jwk": "^2.0.2",
     "aws-cdk": "^2.177.0",
     "create-keypair": "^0.1.2",
     "eslint": "^9.19.0",
     "eslint-plugin-import": "^2.31.0",
-    "pnpm": "^10.1.0",
+    "pnpm": "^10.2.0",
     "prettier": "^3.4.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3",
-    "typescript-eslint": "^8.22.0"
+    "typescript-eslint": "^8.23.0"
   },
   "dependencies": {
     "@aws-lambda-powertools/logger": "^2.13.1",
