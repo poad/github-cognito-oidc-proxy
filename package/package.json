@@ -16,18 +16,18 @@
   "devDependencies": {
     "@eslint/compat": "^1.2.6",
     "@eslint/eslintrc": "^3.2.0",
-    "@eslint/js": "^9.19.0",
+    "@eslint/js": "^9.20.0",
     "@middy/core": "^6.0.0",
-    "@stylistic/eslint-plugin": "^3.0.1",
-    "@stylistic/eslint-plugin-js": "^3.0.1",
-    "@stylistic/eslint-plugin-plus": "^3.0.1",
-    "@stylistic/eslint-plugin-ts": "^3.0.1",
+    "@stylistic/eslint-plugin": "^3.1.0",
+    "@stylistic/eslint-plugin-js": "^3.1.0",
+    "@stylistic/eslint-plugin-plus": "^3.1.0",
+    "@stylistic/eslint-plugin-ts": "^3.1.0",
     "@types/aws-lambda": "^8.10.147",
     "@types/node": "^22.13.1",
     "@types/pem-jwk": "^2.0.2",
-    "aws-cdk": "^2.178.0",
+    "aws-cdk": "^2.178.1",
     "create-keypair": "^0.1.2",
-    "eslint": "^9.19.0",
+    "eslint": "^9.20.0",
     "eslint-plugin-import": "^2.31.0",
     "pnpm": "^10.2.1",
     "prettier": "^3.4.2",
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@aws-lambda-powertools/logger": "^2.13.1",
-    "aws-cdk-lib": "^2.178.0",
+    "aws-cdk-lib": "^2.178.1",
     "aws-lambda": "^1.0.7",
     "constructs": "^10.4.2",
     "email-validator": "^2.0.4",
@@ -46,5 +46,5 @@
     "pem-jwk": "^2.0.0",
     "source-map-support": "^0.5.21"
   },
-  "packageManager": "pnpm@10.2.0+sha512.0d27364e0139c6aadeed65ada153135e0ca96c8da42123bd50047f961339dc7a758fc2e944b428f52be570d1bd3372455c1c65fa2e7aa0bfbf931190f9552001"
+  "packageManager": "pnpm@10.2.1+sha512.398035c7bd696d0ba0b10a688ed558285329d27ea994804a52bad9167d8e3a72bcb993f9699585d3ca25779ac64949ef422757a6c31102c12ab932e5cbe5cc92"
 }

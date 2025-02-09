@@ -20,17 +20,17 @@
   "devDependencies": {
     "@eslint/compat": "^1.2.6",
     "@eslint/eslintrc": "^3.2.0",
-    "@eslint/js": "^9.19.0",
+    "@eslint/js": "^9.20.0",
     "@next/eslint-plugin-next": "^15.1.6",
-    "@stylistic/eslint-plugin": "^3.0.1",
-    "@stylistic/eslint-plugin-js": "^3.0.1",
-    "@stylistic/eslint-plugin-jsx": "^3.0.1",
-    "@stylistic/eslint-plugin-plus": "^3.0.1",
-    "@stylistic/eslint-plugin-ts": "^3.0.1",
+    "@stylistic/eslint-plugin": "^3.1.0",
+    "@stylistic/eslint-plugin-js": "^3.1.0",
+    "@stylistic/eslint-plugin-jsx": "^3.1.0",
+    "@stylistic/eslint-plugin-plus": "^3.1.0",
+    "@stylistic/eslint-plugin-ts": "^3.1.0",
     "@types/node": "^22.13.1",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
-    "eslint": "^9.19.0",
+    "eslint": "^9.20.0",
     "eslint-config-import": "^0.13.0",
     "eslint-config-next": "^15.1.6",
     "eslint-import-resolver-typescript": "^3.7.0",
@@ -45,5 +45,5 @@
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.23.0"
   },
-  "packageManager": "pnpm@10.2.0+sha512.0d27364e0139c6aadeed65ada153135e0ca96c8da42123bd50047f961339dc7a758fc2e944b428f52be570d1bd3372455c1c65fa2e7aa0bfbf931190f9552001"
+  "packageManager": "pnpm@10.2.1+sha512.398035c7bd696d0ba0b10a688ed558285329d27ea994804a52bad9167d8e3a72bcb993f9699585d3ca25779ac64949ef422757a6c31102c12ab932e5cbe5cc92"
 }
