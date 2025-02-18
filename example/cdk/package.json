@@ -22,18 +22,18 @@
     "@stylistic/eslint-plugin-plus": "^3.1.0",
     "@stylistic/eslint-plugin-ts": "^3.1.0",
     "@types/node": "^22.13.4",
-    "aws-cdk": "^2.178.2",
+    "aws-cdk": "^2.179.0",
     "eslint": "^9.20.1",
-    "eslint-import-resolver-typescript": "^3.8.0",
+    "eslint-import-resolver-typescript": "^3.8.1",
     "eslint-plugin-import": "^2.31.0",
     "pnpm": "^10.4.1",
     "prettier": "^3.5.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3",
-    "typescript-eslint": "^8.24.0"
+    "typescript-eslint": "^8.24.1"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.178.2",
+    "aws-cdk-lib": "^2.179.0",
     "constructs": "^10.4.2",
     "esbuild": "^0.25.0",
     "source-map-support": "^0.5.21"
