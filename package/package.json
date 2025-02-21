@@ -14,7 +14,7 @@
     "lint-fix": "eslint --fix"
   },
   "devDependencies": {
-    "@eslint/compat": "^1.2.6",
+    "@eslint/compat": "^1.2.7",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.20.0",
     "@middy/core": "^6.0.0",
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@aws-lambda-powertools/logger": "^2.14.0",
-    "aws-cdk-lib": "^2.179.0",
+    "aws-cdk-lib": "^2.180.0",
     "aws-lambda": "^1.0.7",
     "constructs": "^10.4.2",
     "email-validator": "^2.0.4",
