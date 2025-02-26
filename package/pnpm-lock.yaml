@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@aws-lambda-powertools/logger':
         specifier: ^2.15.0
-        version: 2.15.0(@middy/core@6.0.0)
+        version: 2.15.0(@middy/core@6.1.2)
       aws-cdk-lib:
         specifier: ^2.180.0
         version: 2.180.0(constructs@10.4.2)
@@ -46,8 +46,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0
       '@middy/core':
-        specifier: ^6.0.0
-        version: 6.0.0
+        specifier: ^6.1.2
+        version: 6.1.2
       '@stylistic/eslint-plugin':
         specifier: ^4.0.1
         version: 4.0.1(eslint@9.21.0)(typescript@5.7.3)
@@ -349,8 +349,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
-  '@middy/core@6.0.0':
-    resolution: {integrity: sha512-EFsvMkyFfaIu3Uzye26w2NzycwMAbh/99XlhRH9p240y/YKA0nlQ7itE8y7lBJOJ/clj1qu9evQeLfaiWhJAFg==}
+  '@middy/core@6.1.2':
+    resolution: {integrity: sha512-EcmCPXA+NWsZ8LCIQ4eezdqBkHp4WPChEYHINyYzgX/R6+YvjYQh+gLyJzPWEyoBQ1QM3sE6d2vkSxJjvhPC2A==}
     engines: {node: '>=20'}
 
   '@nodelib/fs.scandir@2.1.5':
@@ -1272,8 +1272,8 @@ packages:
     engines: {node: '>= 0.4'}
     hasBin: true
 
-  reusify@1.0.4:
-    resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
+  reusify@1.1.0:
+    resolution: {integrity: sha512-g6QUff04oZpHs0eG5p83rFLhHeV00ug/Yf9nZM6fLeUrPguBTkTQOdpAWWspMh55TZfVQDPaN3NQJfbVRAxdIw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
 
   rollup-plugin-preserve-shebang@1.0.1:
@@ -1524,12 +1524,12 @@ snapshots:
 
   '@aws-lambda-powertools/commons@2.15.0': {}
 
-  '@aws-lambda-powertools/logger@2.15.0(@middy/core@6.0.0)':
+  '@aws-lambda-powertools/logger@2.15.0(@middy/core@6.1.2)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.15.0
       lodash.merge: 4.6.2
     optionalDependencies:
-      '@middy/core': 6.0.0
+      '@middy/core': 6.1.2
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -1678,7 +1678,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@middy/core@6.0.0': {}
+  '@middy/core@6.1.2': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -2322,7 +2322,7 @@ snapshots:
 
   fastq@1.19.0:
     dependencies:
-      reusify: 1.0.4
+      reusify: 1.1.0
 
   file-entry-cache@8.0.0:
     dependencies:
@@ -2757,7 +2757,7 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  reusify@1.0.4: {}
+  reusify@1.1.0: {}
 
   rollup-plugin-preserve-shebang@1.0.1:
     dependencies:
