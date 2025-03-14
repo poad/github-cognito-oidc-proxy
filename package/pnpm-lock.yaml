@@ -12,8 +12,8 @@ importers:
         specifier: ^2.16.0
         version: 2.16.0(@middy/core@6.1.5)
       aws-cdk-lib:
-        specifier: ^2.183.0
-        version: 2.183.0(constructs@10.4.2)
+        specifier: ^2.184.0
+        version: 2.184.0(constructs@10.4.2)
       aws-lambda:
         specifier: ^1.0.7
         version: 1.0.7
@@ -70,8 +70,8 @@ importers:
         specifier: ^2.0.2
         version: 2.0.2
       aws-cdk:
-        specifier: ^2.1003.0
-        version: 2.1003.0
+        specifier: ^2.1004.0
+        version: 2.1004.0
       create-keypair:
         specifier: ^0.1.2
         version: 0.1.2
@@ -82,8 +82,8 @@ importers:
         specifier: ^2.31.0
         version: 2.31.0(@typescript-eslint/parser@8.26.1(eslint@9.22.0)(typescript@5.8.2))(eslint@9.22.0)
       pnpm:
-        specifier: ^10.6.2
-        version: 10.6.2
+        specifier: ^10.6.3
+        version: 10.6.3
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
@@ -277,8 +277,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@eslint-community/eslint-utils@4.5.0':
-    resolution: {integrity: sha512-RoV8Xs9eNwiDvhv7M+xcL4PWyRyIXRY/FLp3buU4h1EYfdF7unWUy3dOjPqb3C7rMUewIcqwW850PgS8h1o1yg==}
+  '@eslint-community/eslint-utils@4.5.1':
+    resolution: {integrity: sha512-soEIOALTfTK6EjmKMMoLugwaP0rzkad90iIWd1hMO9ARkSAyjfMfkRRhLvD5qH7vvM0Cg72pieUfR6yh6XxC4w==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
@@ -538,8 +538,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  aws-cdk-lib@2.183.0:
-    resolution: {integrity: sha512-xwdDMm7qKBgN+dRjn8XxwS0YDRFM9JnUavFWM2bzaOzFeaBCiwFMrG0xLZaZs6GBImV804/jj8PnjmbOCsDZdw==}
+  aws-cdk-lib@2.184.0:
+    resolution: {integrity: sha512-IC/38376PVCJ9cEsfklH0eBd5uwT7SKZxQJlfAd51TquZ7skpo7dt9oetrkUk4H+tsg4VcTF5B0ZbVZdDDP2yg==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       constructs: ^10.0.0
@@ -556,8 +556,8 @@ packages:
       - yaml
       - mime-types
 
-  aws-cdk@2.1003.0:
-    resolution: {integrity: sha512-FORPDGW8oUg4tXFlhX+lv/j+152LO9wwi3/CwNr1WY3c3HwJUtc0fZGb2B3+Fzy6NhLWGHJclUsJPEhjEt8Nhg==}
+  aws-cdk@2.1004.0:
+    resolution: {integrity: sha512-3E5ICmSc7ZCZCwLX7NY+HFmmdUYgRaL+67h/BDoDQmkhx9StC8wG4xgzHFY9k8WQS0+ib/MP28f2d9yzHtQLlQ==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
 
@@ -1227,8 +1227,8 @@ packages:
     resolution: {integrity: sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg==}
     engines: {node: '>=12'}
 
-  pnpm@10.6.2:
-    resolution: {integrity: sha512-R4cHFr6hVytT3zSthke0KWK8eQziv0Viug9kMjfXMCo9ao7O+eS9/AHSOvGWmqkEhdTOuwuWOPpe8drvZW9sGw==}
+  pnpm@10.6.3:
+    resolution: {integrity: sha512-u0XjTVCpp26FipWDcwG/tr1tNa6ixdUglPpJekZ8Q/XEQBA84lEengovicPWBxuqwzWPxorG+3XizrPSc2Bl5g==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -1615,7 +1615,7 @@ snapshots:
   '@esbuild/win32-x64@0.25.1':
     optional: true
 
-  '@eslint-community/eslint-utils@4.5.0(eslint@9.22.0)':
+  '@eslint-community/eslint-utils@4.5.1(eslint@9.22.0)':
     dependencies:
       eslint: 9.22.0
       eslint-visitor-keys: 3.4.3
@@ -1820,7 +1820,7 @@ snapshots:
 
   '@typescript-eslint/utils@8.26.1(eslint@9.22.0)(typescript@5.8.2)':
     dependencies:
-      '@eslint-community/eslint-utils': 4.5.0(eslint@9.22.0)
+      '@eslint-community/eslint-utils': 4.5.1(eslint@9.22.0)
       '@typescript-eslint/scope-manager': 8.26.1
       '@typescript-eslint/types': 8.26.1
       '@typescript-eslint/typescript-estree': 8.26.1(typescript@5.8.2)
@@ -1923,14 +1923,14 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.1.0
 
-  aws-cdk-lib@2.183.0(constructs@10.4.2):
+  aws-cdk-lib@2.184.0(constructs@10.4.2):
     dependencies:
       '@aws-cdk/asset-awscli-v1': 2.2.227
       '@aws-cdk/asset-node-proxy-agent-v6': 2.1.0
       '@aws-cdk/cloud-assembly-schema': 40.7.0
       constructs: 10.4.2
 
-  aws-cdk@2.1003.0:
+  aws-cdk@2.1004.0:
     optionalDependencies:
       fsevents: 2.3.2
 
@@ -2254,7 +2254,7 @@ snapshots:
 
   eslint@9.22.0:
     dependencies:
-      '@eslint-community/eslint-utils': 4.5.0(eslint@9.22.0)
+      '@eslint-community/eslint-utils': 4.5.1(eslint@9.22.0)
       '@eslint-community/regexpp': 4.12.1
       '@eslint/config-array': 0.19.2
       '@eslint/config-helpers': 0.1.0
@@ -2721,7 +2721,7 @@ snapshots:
 
   picomatch@4.0.2: {}
 
-  pnpm@10.6.2: {}
+  pnpm@10.6.3: {}
 
   possible-typed-array-names@1.1.0: {}
 
