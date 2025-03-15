@@ -24,7 +24,7 @@
     "@types/node": "^22.13.10",
     "aws-cdk": "^2.1004.0",
     "eslint": "^9.22.0",
-    "eslint-import-resolver-typescript": "^3.8.7",
+    "eslint-import-resolver-typescript": "^3.9.0",
     "eslint-plugin-import": "^2.31.0",
     "pnpm": "^10.6.3",
     "prettier": "^3.5.3",
@@ -33,10 +33,10 @@
     "typescript-eslint": "^8.26.1"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.184.0",
+    "aws-cdk-lib": "^2.184.1",
     "constructs": "^10.4.2",
     "esbuild": "^0.25.1",
     "source-map-support": "^0.5.21"
   },
-  "packageManager": "pnpm@10.6.2+sha512.47870716bea1572b53df34ad8647b42962bc790ce2bf4562ba0f643237d7302a3d6a8ecef9e4bdfc01d23af1969aa90485d4cebb0b9638fa5ef1daef656f6c1b"
+  "packageManager": "pnpm@10.6.3+sha512.bb45e34d50a9a76e858a95837301bfb6bd6d35aea2c5d52094fa497a467c43f5c440103ce2511e9e0a2f89c3d6071baac3358fc68ac6fb75e2ceb3d2736065e6"
 }
