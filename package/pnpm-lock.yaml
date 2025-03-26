@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@aws-lambda-powertools/logger':
-        specifier: ^2.16.0
-        version: 2.16.0(@middy/core@6.1.6)
+        specifier: ^2.17.0
+        version: 2.17.0(@middy/core@6.1.6)
       aws-cdk-lib:
         specifier: ^2.185.0
         version: 2.185.0(constructs@10.4.2)
@@ -70,8 +70,8 @@ importers:
         specifier: ^2.0.2
         version: 2.0.2
       aws-cdk:
-        specifier: ^2.1005.0
-        version: 2.1005.0
+        specifier: ^2.1006.0
+        version: 2.1006.0
       create-keypair:
         specifier: ^0.1.2
         version: 0.1.2
@@ -112,14 +112,17 @@ packages:
       - jsonschema
       - semver
 
-  '@aws-lambda-powertools/commons@2.16.0':
-    resolution: {integrity: sha512-HtVibLx8yCHvfRhOwI85ghJJqF3pYr49rZP+kRyath0ZnIEWfklFmv9ehcohPzlIgaiOijKV4vyGCKiXBOnigw==}
+  '@aws-lambda-powertools/commons@2.17.0':
+    resolution: {integrity: sha512-NeBZxDem23RoAnQruEB/Y6WJdqn43pC42y+dyGuJOg2u/oMQsClFF4332gReVUiajItItA2vTZ2ZS5wNBkZfbg==}
 
-  '@aws-lambda-powertools/logger@2.16.0':
-    resolution: {integrity: sha512-k7Xpjx1VAd/52p3Wssq83OwUFOeus6Mx9JnsXBAdAA/aUON7srbv2pPRFMGuoK9Qv5nYvADaBcL9hYtK/XknaA==}
+  '@aws-lambda-powertools/logger@2.17.0':
+    resolution: {integrity: sha512-cSD1SmHo/dZbivbxgX8zDrJNDQC3F2J7bU/Nxaers8mIW7KRYra21Q5YmIFFqX2HQApGc64msHM4ei1aaunMfw==}
     peerDependencies:
+      '@aws-lambda-powertools/jmespath': 2.x
       '@middy/core': 4.x || 5.x || 6.x
     peerDependenciesMeta:
+      '@aws-lambda-powertools/jmespath':
+        optional: true
       '@middy/core':
         optional: true
 
@@ -556,8 +559,8 @@ packages:
       - yaml
       - mime-types
 
-  aws-cdk@2.1005.0:
-    resolution: {integrity: sha512-4ejfGGrGCEl0pg1xcqkxK0lpBEZqNI48wtrXhk6dYOFYPYMZtqn1kdla29ONN+eO2unewkNF4nLP1lPYhlf9Pg==}
+  aws-cdk@2.1006.0:
+    resolution: {integrity: sha512-6qYnCt4mBN+3i/5F+FC2yMETkDHY/IL7gt3EuqKVPcaAO4jU7oXfVSlR60CYRkZWL4fnAurUV14RkJuJyVG/IA==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
 
@@ -1527,11 +1530,11 @@ snapshots:
 
   '@aws-cdk/cloud-assembly-schema@40.7.0': {}
 
-  '@aws-lambda-powertools/commons@2.16.0': {}
+  '@aws-lambda-powertools/commons@2.17.0': {}
 
-  '@aws-lambda-powertools/logger@2.16.0(@middy/core@6.1.6)':
+  '@aws-lambda-powertools/logger@2.17.0(@middy/core@6.1.6)':
     dependencies:
-      '@aws-lambda-powertools/commons': 2.16.0
+      '@aws-lambda-powertools/commons': 2.17.0
       lodash.merge: 4.6.2
     optionalDependencies:
       '@middy/core': 6.1.6
@@ -1931,7 +1934,7 @@ snapshots:
       '@aws-cdk/cloud-assembly-schema': 40.7.0
       constructs: 10.4.2
 
-  aws-cdk@2.1005.0:
+  aws-cdk@2.1006.0:
     optionalDependencies:
       fsevents: 2.3.2
 
