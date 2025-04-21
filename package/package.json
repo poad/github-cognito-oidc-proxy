@@ -16,7 +16,7 @@
   "devDependencies": {
     "@eslint/compat": "^1.2.8",
     "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.24.0",
+    "@eslint/js": "^9.25.0",
     "@middy/core": "^6.1.6",
     "@stylistic/eslint-plugin": "^4.2.0",
     "@stylistic/eslint-plugin-js": "^4.2.0",
@@ -27,7 +27,7 @@
     "@types/pem-jwk": "^2.0.2",
     "aws-cdk": "^2.1010.0",
     "create-keypair": "^0.1.2",
-    "eslint": "^9.24.0",
+    "eslint": "^9.25.0",
     "eslint-plugin-import": "^2.31.0",
     "pnpm": "^10.8.1",
     "prettier": "^3.5.3",
