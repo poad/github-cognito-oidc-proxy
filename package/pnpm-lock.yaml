@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@aws-lambda-powertools/logger':
         specifier: ^2.19.0
-        version: 2.19.0(@middy/core@6.2.1)
+        version: 2.19.0(@middy/core@6.2.2)
       aws-cdk-lib:
         specifier: ^2.193.0
         version: 2.193.0(constructs@10.4.2)
@@ -37,8 +37,8 @@ importers:
         version: 0.5.21
     devDependencies:
       '@eslint/compat':
-        specifier: ^1.2.8
-        version: 1.2.8(eslint@9.25.1)
+        specifier: ^1.2.9
+        version: 1.2.9(eslint@9.25.1)
       '@eslint/eslintrc':
         specifier: ^3.3.1
         version: 3.3.1
@@ -47,7 +47,7 @@ importers:
         version: 9.25.1
       '@middy/core':
         specifier: ^6.1.6
-        version: 6.2.1
+        version: 6.2.2
       '@stylistic/eslint-plugin':
         specifier: ^4.2.0
         version: 4.2.0(eslint@9.25.1)(typescript@5.8.3)
@@ -290,8 +290,8 @@ packages:
     resolution: {integrity: sha512-CCZCDJuduB9OUkFkY2IgppNZMi2lBQgD2qzwXkEia16cge2pijY/aXi96CJMquDMn3nJdlPV1A5KrJEXwfLNzQ==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
 
-  '@eslint/compat@1.2.8':
-    resolution: {integrity: sha512-LqCYHdWL/QqKIJuZ/ucMAv8d4luKGs4oCPgpt8mWztQAtPrHfXKQ/XAUc8ljCHAfJCn6SvkpTcGt5Tsh8saowA==}
+  '@eslint/compat@1.2.9':
+    resolution: {integrity: sha512-gCdSY54n7k+driCadyMNv8JSPzYLeDVM/ikZRtvtROBpRdFSkS8W9A82MqsaY7lZuwL0wiapgD0NT1xT0hyJsA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: ^9.10.0
@@ -303,8 +303,8 @@ packages:
     resolution: {integrity: sha512-fxlS1kkIjx8+vy2SjuCB94q3htSNrufYTXubwiBFeaQHbH6Ipi43gFJq2zCMt6PHhImH3Xmr0NksKDvchWlpQQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@eslint/config-helpers@0.2.1':
-    resolution: {integrity: sha512-RI17tsD2frtDu/3dmI7QRrD4bedNKPM08ziRYaC5AhkGrzIAJelm9kJU1TznK+apx6V+cqRz8tfpEeG3oIyjxw==}
+  '@eslint/config-helpers@0.2.2':
+    resolution: {integrity: sha512-+GPzk8PlG0sPpzdU5ZvIRMPidzAnZDl/s9L+y13iodqvb8leL53bTannOrQ/Im7UkpsmFU5Ily5U60LWixnmLg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/core@0.13.0':
@@ -357,8 +357,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
-  '@middy/core@6.2.1':
-    resolution: {integrity: sha512-MN6YgiPpwGSlVXRTygocaa4qCe7SIO+fhExGf+xFmOtig8VbJK7h30EjNupBwwHSBxByYNNEXL++qZhF/V/U7g==}
+  '@middy/core@6.2.2':
+    resolution: {integrity: sha512-oLo3KGQ2mh3r87C9mP606lpMVjfV+75xKR4WBQtNgIb0Gui2qx2UuTmmvNp/9EK4+XR8RX/iZL6qE4IBMwIgYg==}
     engines: {node: '>=20'}
 
   '@nodelib/fs.scandir@2.1.5':
@@ -1532,12 +1532,12 @@ snapshots:
 
   '@aws-lambda-powertools/commons@2.19.0': {}
 
-  '@aws-lambda-powertools/logger@2.19.0(@middy/core@6.2.1)':
+  '@aws-lambda-powertools/logger@2.19.0(@middy/core@6.2.2)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.19.0
       lodash.merge: 4.6.2
     optionalDependencies:
-      '@middy/core': 6.2.1
+      '@middy/core': 6.2.2
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -1625,7 +1625,7 @@ snapshots:
 
   '@eslint-community/regexpp@4.12.1': {}
 
-  '@eslint/compat@1.2.8(eslint@9.25.1)':
+  '@eslint/compat@1.2.9(eslint@9.25.1)':
     optionalDependencies:
       eslint: 9.25.1
 
@@ -1637,7 +1637,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@eslint/config-helpers@0.2.1': {}
+  '@eslint/config-helpers@0.2.2': {}
 
   '@eslint/core@0.13.0':
     dependencies:
@@ -1688,7 +1688,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@middy/core@6.2.1': {}
+  '@middy/core@6.2.2': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -2261,7 +2261,7 @@ snapshots:
       '@eslint-community/eslint-utils': 4.6.1(eslint@9.25.1)
       '@eslint-community/regexpp': 4.12.1
       '@eslint/config-array': 0.20.0
-      '@eslint/config-helpers': 0.2.1
+      '@eslint/config-helpers': 0.2.2
       '@eslint/core': 0.13.0
       '@eslint/eslintrc': 3.3.1
       '@eslint/js': 9.25.1
