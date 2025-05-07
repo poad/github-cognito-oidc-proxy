@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@aws-lambda-powertools/logger':
         specifier: ^2.19.0
-        version: 2.19.0(@middy/core@6.2.2)
+        version: 2.19.1(@middy/core@6.2.2)
       aws-cdk-lib:
         specifier: ^2.193.0
         version: 2.194.0(constructs@10.4.2)
@@ -64,8 +64,8 @@ importers:
         specifier: ^8.10.149
         version: 8.10.149
       '@types/node':
-        specifier: ^22.15.9
-        version: 22.15.9
+        specifier: ^22.15.14
+        version: 22.15.14
       '@types/pem-jwk':
         specifier: ^2.0.2
         version: 2.0.2
@@ -89,7 +89,7 @@ importers:
         version: 3.5.3
       ts-node:
         specifier: ^10.9.2
-        version: 10.9.2(@types/node@22.15.9)(typescript@5.8.3)
+        version: 10.9.2(@types/node@22.15.14)(typescript@5.8.3)
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -112,11 +112,11 @@ packages:
       - jsonschema
       - semver
 
-  '@aws-lambda-powertools/commons@2.19.0':
-    resolution: {integrity: sha512-WVCkcacvGX7+o/oTFs4MbFveONBOcQBmyG6MXsauSwpf3+YM5sf9MnC9oFmvA8OdQmm3yJhAAkYVFRf4tHK+aA==}
+  '@aws-lambda-powertools/commons@2.19.1':
+    resolution: {integrity: sha512-fSoyiCRigGbIgk2XJlWPOgnIiRM1nxHhwxAHtGp7AgnLK/EAoh8G2kpImmlt1AcfEZNkI0HO/EsbaITYwpRzHw==}
 
-  '@aws-lambda-powertools/logger@2.19.0':
-    resolution: {integrity: sha512-8Na6F6/SXUiNWH8jxoWC0VQp5TfUi/kID200yBwql6jCIm0928kHqswsWrXLv8O6W74HCdpDoXXWoyMWULR+xw==}
+  '@aws-lambda-powertools/logger@2.19.1':
+    resolution: {integrity: sha512-iMtgT/pvjnPXwwvEb2VNODu0Wl7mIdcHQ4VpRvLKZo4K4BijwyN1enne29+EFeIbACv3UAkvX511KbQSbdF6OQ==}
     peerDependencies:
       '@aws-lambda-powertools/jmespath': 2.x
       '@middy/core': 4.x || 5.x || 6.x
@@ -427,8 +427,8 @@ packages:
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
-  '@types/node@22.15.9':
-    resolution: {integrity: sha512-l6QaCgJSJQ0HngL1TjvEY2DlefKggyGeXP1KYvYLBX41ZDPM1FsgDMAr5c+T673NMy7VCptMOzXOuJqf5uB0bA==}
+  '@types/node@22.15.14':
+    resolution: {integrity: sha512-BL1eyu/XWsFGTtDWOYULQEs4KR0qdtYfCxYAUYRoB7JP7h9ETYLgQTww6kH8Sj2C0pFGgrpM0XKv6/kbIzYJ1g==}
 
   '@types/pem-jwk@2.0.2':
     resolution: {integrity: sha512-wkdQZtXBObWNxv8Uo1N6SiNU/ZkhvK7UkrBPr0yNvEUlI6/zx2FuQJ95njlw/1jmlKE+cHAFDVB26Z9vNuebfg==}
@@ -1737,11 +1737,11 @@ snapshots:
 
   '@aws-cdk/cloud-assembly-schema@41.2.0': {}
 
-  '@aws-lambda-powertools/commons@2.19.0': {}
+  '@aws-lambda-powertools/commons@2.19.1': {}
 
-  '@aws-lambda-powertools/logger@2.19.0(@middy/core@6.2.2)':
+  '@aws-lambda-powertools/logger@2.19.1(@middy/core@6.2.2)':
     dependencies:
-      '@aws-lambda-powertools/commons': 2.19.0
+      '@aws-lambda-powertools/commons': 2.19.1
       lodash.merge: 4.6.2
     optionalDependencies:
       '@middy/core': 6.2.2
@@ -1976,7 +1976,7 @@ snapshots:
 
   '@types/json5@0.0.29': {}
 
-  '@types/node@22.15.9':
+  '@types/node@22.15.14':
     dependencies:
       undici-types: 6.21.0
 
@@ -3346,14 +3346,14 @@ snapshots:
     dependencies:
       typescript: 5.8.3
 
-  ts-node@10.9.2(@types/node@22.15.9)(typescript@5.8.3):
+  ts-node@10.9.2(@types/node@22.15.14)(typescript@5.8.3):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 22.15.9
+      '@types/node': 22.15.14
       acorn: 8.14.1
       acorn-walk: 8.3.4
       arg: 4.1.3
