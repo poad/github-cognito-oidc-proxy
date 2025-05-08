@@ -10,7 +10,7 @@ importers:
     dependencies:
       aws-cdk-lib:
         specifier: ^2.193.0
-        version: 2.194.0(constructs@10.4.2)
+        version: 2.195.0(constructs@10.4.2)
       constructs:
         specifier: ^10.4.2
         version: 10.4.2
@@ -43,8 +43,8 @@ importers:
         specifier: ^4.2.0
         version: 4.2.0(eslint@9.26.0)(typescript@5.8.3)
       '@types/node':
-        specifier: ^22.15.14
-        version: 22.15.14
+        specifier: ^22.15.15
+        version: 22.15.15
       aws-cdk:
         specifier: ^2.1012.0
         version: 2.1013.0
@@ -65,7 +65,7 @@ importers:
         version: 3.5.3
       ts-node:
         specifier: ^10.9.2
-        version: 10.9.2(@types/node@22.15.14)(typescript@5.8.3)
+        version: 10.9.2(@types/node@22.15.15)(typescript@5.8.3)
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -397,8 +397,8 @@ packages:
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
-  '@types/node@22.15.14':
-    resolution: {integrity: sha512-BL1eyu/XWsFGTtDWOYULQEs4KR0qdtYfCxYAUYRoB7JP7h9ETYLgQTww6kH8Sj2C0pFGgrpM0XKv6/kbIzYJ1g==}
+  '@types/node@22.15.15':
+    resolution: {integrity: sha512-R5muMcZob3/Jjchn5LcO8jdKwSCbzqmPB6ruBxMcf9kbxtniZHP327s6C37iOfuw8mbKK3cAQa7sEl7afLrQ8A==}
 
   '@typescript-eslint/eslint-plugin@8.32.0':
     resolution: {integrity: sha512-/jU9ettcntkBFmWUzzGgsClEi2ZFiikMX5eEQsmxIAWMOn4H3D4rvHssstmAHGVvrYnaMqdWWWg0b5M6IN/MTQ==}
@@ -595,8 +595,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  aws-cdk-lib@2.194.0:
-    resolution: {integrity: sha512-v12l31Rx/BDjXEyMsfSmDRsjZu0AzHMoRHDqbcSzDcvSYHjnEW/nuFR0R1+tat9nEX8h54GDctduL6pFcJ8xUg==}
+  aws-cdk-lib@2.195.0:
+    resolution: {integrity: sha512-AYLysgSjSnSjkal/AmR86DqvOVqy0VjeWmXR+ucIIGSOzJsevsYuNWCeVnf4v9x+vd2ysVcO8fXndG426vGZ/w==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       constructs: ^10.0.0
@@ -1959,7 +1959,7 @@ snapshots:
 
   '@types/json5@0.0.29': {}
 
-  '@types/node@22.15.14':
+  '@types/node@22.15.15':
     dependencies:
       undici-types: 6.21.0
 
@@ -2177,7 +2177,7 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.1.0
 
-  aws-cdk-lib@2.194.0(constructs@10.4.2):
+  aws-cdk-lib@2.195.0(constructs@10.4.2):
     dependencies:
       '@aws-cdk/asset-awscli-v1': 2.2.235
       '@aws-cdk/asset-node-proxy-agent-v6': 2.1.0
@@ -3313,14 +3313,14 @@ snapshots:
     dependencies:
       typescript: 5.8.3
 
-  ts-node@10.9.2(@types/node@22.15.14)(typescript@5.8.3):
+  ts-node@10.9.2(@types/node@22.15.15)(typescript@5.8.3):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 22.15.14
+      '@types/node': 22.15.15
       acorn: 8.14.1
       acorn-walk: 8.3.4
       arg: 4.1.3
