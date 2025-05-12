@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@aws-lambda-powertools/logger':
         specifier: ^2.19.0
-        version: 2.19.1(@middy/core@6.2.3)
+        version: 2.19.1(@middy/core@6.2.4)
       aws-cdk-lib:
         specifier: ^2.193.0
         version: 2.195.0(constructs@10.4.2)
@@ -47,7 +47,7 @@ importers:
         version: 9.26.0
       '@middy/core':
         specifier: ^6.1.6
-        version: 6.2.3
+        version: 6.2.4
       '@stylistic/eslint-plugin':
         specifier: ^4.2.0
         version: 4.2.0(eslint@9.26.0)(typescript@5.8.3)
@@ -357,8 +357,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
-  '@middy/core@6.2.3':
-    resolution: {integrity: sha512-ubWGbAW2wlgee7XvhRNfML/HUyKLJsUiZIYtml2R0cVtgUmx7nSsoPBa6H3FaDLhW8/XlwYrYMoa0plrdsqeTQ==}
+  '@middy/core@6.2.4':
+    resolution: {integrity: sha512-PQRkW3xnaI1Trh9Vkffn2U/KTKL5lI3Cm/YHuGNqr8TR0R2SlazFV7X+k4KbmD2sAgESd1YGPOCDOTLWhuNuIw==}
     engines: {node: '>=20'}
 
   '@modelcontextprotocol/sdk@1.11.1':
@@ -885,8 +885,8 @@ packages:
     resolution: {integrity: sha512-VARTJ9CYeuQYb0pZEPbzi740OWFgpHe7AYJ2WFZVnUDUQp5Dk2yJUgF36YsZ81cOyxT0QxmXD2EQpapAouzWVA==}
     engines: {node: '>=18.0.0'}
 
-  eventsource@3.0.6:
-    resolution: {integrity: sha512-l19WpE2m9hSuyP06+FbuUUf1G+R0SFLrtQfbRb9PRr+oimOfxQhgGCbVaXg5IvZyyTThJsxh6L/srkMiCeBPDA==}
+  eventsource@3.0.7:
+    resolution: {integrity: sha512-CRT1WTyuQoD771GW56XEZFQ/ZoSfWid1alKGDYMmkt2yl8UXrVR4pspqWNEcqKvVIzg6PAltWjxcSSPrboA4iA==}
     engines: {node: '>=18.0.0'}
 
   express-rate-limit@7.5.0:
@@ -1739,12 +1739,12 @@ snapshots:
 
   '@aws-lambda-powertools/commons@2.19.1': {}
 
-  '@aws-lambda-powertools/logger@2.19.1(@middy/core@6.2.3)':
+  '@aws-lambda-powertools/logger@2.19.1(@middy/core@6.2.4)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.19.1
       lodash.merge: 4.6.2
     optionalDependencies:
-      '@middy/core': 6.2.3
+      '@middy/core': 6.2.4
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -1895,14 +1895,14 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@middy/core@6.2.3': {}
+  '@middy/core@6.2.4': {}
 
   '@modelcontextprotocol/sdk@1.11.1':
     dependencies:
       content-type: 1.0.5
       cors: 2.8.5
       cross-spawn: 7.0.6
-      eventsource: 3.0.6
+      eventsource: 3.0.7
       express: 5.1.0
       express-rate-limit: 7.5.0(express@5.1.0)
       pkce-challenge: 5.0.0
@@ -2590,7 +2590,7 @@ snapshots:
 
   eventsource-parser@3.0.1: {}
 
-  eventsource@3.0.6:
+  eventsource@3.0.7:
     dependencies:
       eventsource-parser: 3.0.1
 
