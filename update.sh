@@ -21,7 +21,7 @@ if [ $result -ne 0 ]; then
 fi
 echo ""
 pwd
-npx pnpm@latest self-update && pnpm install && pnpm up && pnpm build
+npx -y pnpm@latest self-update && pnpm install && pnpm up && pnpm build
 result=$?
 if [ $result -ne 0 ]; then
   cd "${CUR}" || exit
@@ -36,7 +36,7 @@ if [ $result -ne 0 ]; then
 fi
 echo ""
 pwd
-npx pnpm@latest self-update && pnpm install && pnpm up
+npx -y pnpm@latest self-update && pnpm install && pnpm up
 result=$?
 if [ $result -ne 0 ]; then
   cd "${CUR}" || exit
@@ -51,7 +51,7 @@ if [ $result -ne 0 ]; then
 fi
 echo ""
 pwd
-npx pnpm@latest self-update && pnpm install && pnpm up
+npx -y pnpm@latest self-update && pnpm install && pnpm up
 result=$?
 if [ $result -ne 0 ]; then
   cd "${CUR}" || exit
