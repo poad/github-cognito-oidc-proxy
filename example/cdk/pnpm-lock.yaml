@@ -58,8 +58,8 @@ importers:
         specifier: ^2.32.0
         version: 2.32.0(@typescript-eslint/parser@8.35.0(eslint@9.29.0)(typescript@5.8.3))(eslint-import-resolver-typescript@4.4.4)(eslint@9.29.0)
       pnpm:
-        specifier: ^10.12.3
-        version: 10.12.3
+        specifier: ^10.12.4
+        version: 10.12.4
       prettier:
         specifier: ^3.6.1
         version: 3.6.1
@@ -781,8 +781,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-import-context@0.1.8:
-    resolution: {integrity: sha512-bq+F7nyc65sKpZGT09dY0S0QrOnQtuDVIfyTGQ8uuvtMIF7oHp6CEP3mouN0rrnYF3Jqo6Ke0BfU/5wASZue1w==}
+  eslint-import-context@0.1.9:
+    resolution: {integrity: sha512-K9Hb+yRaGAGUbwjhFNHvSmmkZs9+zbuoe3kFQ4V1wYjrepUFYM2dZAfNtjbbj3qsPfUfsA68Bx/ICWQMi+C8Eg==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
     peerDependencies:
       unrs-resolver: ^1.0.0
@@ -1265,8 +1265,8 @@ packages:
     resolution: {integrity: sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg==}
     engines: {node: '>=12'}
 
-  pnpm@10.12.3:
-    resolution: {integrity: sha512-Rn3yxYYFYWVYCtbftUzqrZTFow+AiT697FpExapzwgWuSlu51e1ruE6nwkns54ZkK7tJ0GowffIY0D2kHDF0Fw==}
+  pnpm@10.12.4:
+    resolution: {integrity: sha512-Xqiw3u2U7WhpHJutTJVUknBcXuuKh++GvGLHSiawN7CP+VcPEIsuTb0d0akYb+qSXlJ/FBxkjoWvRWMQdGgBhA==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -1380,10 +1380,6 @@ packages:
   source-map@0.6.1:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
-
-  stable-hash-x@0.1.1:
-    resolution: {integrity: sha512-l0x1D6vhnsNUGPFVDx45eif0y6eedVC8nm5uACTrVFJFtl2mLRW17aWtVyxFCpn5t94VUPkjU8vSLwIuwwqtJQ==}
-    engines: {node: '>=12.0.0'}
 
   stable-hash-x@0.2.0:
     resolution: {integrity: sha512-o3yWv49B/o4QZk5ZcsALc6t0+eCelPc44zZsLtCQnZPDwFpDYSWcDnrv2TtMmMbQ7uKo3J0HTURCqckw23czNQ==}
@@ -2255,10 +2251,10 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-import-context@0.1.8(unrs-resolver@1.9.2):
+  eslint-import-context@0.1.9(unrs-resolver@1.9.2):
     dependencies:
       get-tsconfig: 4.10.1
-      stable-hash-x: 0.1.1
+      stable-hash-x: 0.2.0
     optionalDependencies:
       unrs-resolver: 1.9.2
 
@@ -2274,7 +2270,7 @@ snapshots:
     dependencies:
       debug: 4.4.1
       eslint: 9.29.0
-      eslint-import-context: 0.1.8(unrs-resolver@1.9.2)
+      eslint-import-context: 0.1.9(unrs-resolver@1.9.2)
       get-tsconfig: 4.10.1
       is-bun-module: 2.0.0
       stable-hash-x: 0.2.0
@@ -2781,7 +2777,7 @@ snapshots:
 
   picomatch@4.0.2: {}
 
-  pnpm@10.12.3: {}
+  pnpm@10.12.4: {}
 
   possible-typed-array-names@1.1.0: {}
 
@@ -2914,8 +2910,6 @@ snapshots:
       source-map: 0.6.1
 
   source-map@0.6.1: {}
-
-  stable-hash-x@0.1.1: {}
 
   stable-hash-x@0.2.0: {}
 
