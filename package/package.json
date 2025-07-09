@@ -29,7 +29,7 @@
     "create-keypair": "^0.1.2",
     "eslint": "^9.30.1",
     "eslint-plugin-import": "^2.32.0",
-    "pnpm": "^10.12.4",
+    "pnpm": "^10.13.1",
     "prettier": "^3.6.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
@@ -46,5 +46,5 @@
     "pem-jwk": "^2.0.0",
     "source-map-support": "^0.5.21"
   },
-  "packageManager": "pnpm@10.12.4"
+  "packageManager": "pnpm@10.13.1"
 }
