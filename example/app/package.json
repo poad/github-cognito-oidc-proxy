@@ -22,7 +22,7 @@
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.31.0",
     "@next/eslint-plugin-next": "^15.4.1",
-    "@stylistic/eslint-plugin": "^5.1.0",
+    "@stylistic/eslint-plugin": "^5.2.0",
     "@stylistic/eslint-plugin-js": "^4.4.1",
     "@stylistic/eslint-plugin-jsx": "^4.4.1",
     "@stylistic/eslint-plugin-plus": "^4.4.1",
