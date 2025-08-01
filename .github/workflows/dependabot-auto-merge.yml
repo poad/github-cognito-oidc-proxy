@@ -1,4 +1,4 @@
-name: pill-request-auto-merge
+name: pull-request-auto-merge
 
 on:
   pull_request:
