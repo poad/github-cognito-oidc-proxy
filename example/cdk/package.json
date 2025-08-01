@@ -18,18 +18,15 @@
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.32.0",
     "@stylistic/eslint-plugin": "^5.2.2",
-    "@stylistic/eslint-plugin-js": "^4.4.1",
-    "@stylistic/eslint-plugin-plus": "^4.4.1",
-    "@stylistic/eslint-plugin-ts": "^4.4.1",
     "@types/node": "^24.1.0",
     "aws-cdk": "^2.1023.0",
     "eslint": "^9.32.0",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import": "^2.32.0",
-    "pnpm": "^10.13.1",
+    "pnpm": "^10.14.0",
     "prettier": "^3.6.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3",
+    "typescript": "^5.9.2",
     "typescript-eslint": "^8.38.0"
   },
   "dependencies": {
@@ -38,5 +35,5 @@
     "esbuild": "^0.25.8",
     "source-map-support": "^0.5.21"
   },
-  "packageManager": "pnpm@10.13.1"
+  "packageManager": "pnpm@10.14.0"
 }

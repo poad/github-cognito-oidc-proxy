@@ -1,0 +1,7 @@
+onlyBuiltDependencies:
+  - esbuild
+
+enablePrePostScripts: true
+legacyPeerDeps: true
+autoInstallPeers: true
+strictPeerDependencies: false
