@@ -4,7 +4,6 @@ import { includeIgnoreFile } from '@eslint/compat';
 
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
-import stylisticTs from '@stylistic/eslint-plugin-ts';
 import tseslint from 'typescript-eslint';
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -25,7 +24,7 @@ export default tseslint.config(
     files: ['**/*.ts'],
     plugins: {
       '@stylistic': stylistic,
-      '@stylistic/ts': stylisticTs,
+      '@stylistic/ts': stylistic,
     },
     rules: {
     },

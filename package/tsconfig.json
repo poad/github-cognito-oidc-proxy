@@ -13,7 +13,7 @@
     "noImplicitThis": true,
     "alwaysStrict": true,
     "noUnusedLocals": false,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "noUnusedParameters": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": false,
