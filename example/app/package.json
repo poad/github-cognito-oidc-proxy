@@ -24,7 +24,7 @@
     "@next/eslint-plugin-next": "^15.4.6",
     "@stylistic/eslint-plugin": "^5.2.3",
     "@types/node": "^24.2.1",
-    "@types/react": "^19.1.9",
+    "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "eslint": "^9.33.0",
     "eslint-config-import": "^0.13.0",
@@ -39,7 +39,7 @@
     "pnpm": "^10.14.0",
     "prettier": "^3.6.2",
     "typescript": "^5.9.2",
-    "typescript-eslint": "^8.39.0"
+    "typescript-eslint": "^8.39.1"
   },
   "packageManager": "pnpm@10.14.0"
 }
