@@ -166,7 +166,7 @@ jobs:
 
     - name: Build (example/app)
       working-directory: example/app
-      run: bun run --bun lint && bun run --bun build
+      run: bun run lint && bun run --bun build
 
     - name: deploy (example) upload next.js app
       working-directory: example/cdk

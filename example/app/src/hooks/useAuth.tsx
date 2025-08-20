@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Buffer } from 'buffer';
 
 const endpoint = process.env.NEXT_PUBLIC_COGNITO_ENDPOINT;
@@ -25,7 +25,7 @@ const useAuth = () => {
   const [token, setToken] = useState<AccessToken>();
 
   const location =
-    typeof window !== 'undefined' ? new URL(window.location.href) : undefined;
+    useMemo(() =>typeof window !== 'undefined' ? new URL(window.location.href) : undefined, []);
   const params = location?.searchParams;
   const code = params?.has('code') ? params.get('code') : undefined;
 
@@ -67,7 +67,7 @@ const useAuth = () => {
       }
     };
     fetchToken();
-  }, [code]);
+  }, [location, code]);
 
   return { code, token };
 };
