@@ -1,3 +1,9 @@
-enablePrePostScripts: true
 autoInstallPeers: true
+
+enablePrePostScripts: true
+
+onlyBuiltDependencies:
+  - sharp
+  - unrs-resolver
+
 strictPeerDependencies: false

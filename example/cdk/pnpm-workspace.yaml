@@ -1,3 +1,9 @@
-enablePrePostScripts: true
 autoInstallPeers: true
+
+enablePrePostScripts: true
+
+onlyBuiltDependencies:
+  - esbuild
+  - unrs-resolver
+
 strictPeerDependencies: false
