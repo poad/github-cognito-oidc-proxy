@@ -30,11 +30,11 @@
     "prettier": "^3.6.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
-    "typescript-eslint": "^8.41.0"
+    "typescript-eslint": "^8.42.0"
   },
   "dependencies": {
     "@aws-lambda-powertools/logger": "^2.25.2",
-    "aws-cdk-lib": "^2.213.0",
+    "aws-cdk-lib": "^2.214.0",
     "aws-lambda": "^1.0.7",
     "constructs": "^10.4.2",
     "email-validator": "^2.0.4",
