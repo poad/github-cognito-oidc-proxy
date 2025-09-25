@@ -22,7 +22,7 @@
     "@types/aws-lambda": "^8.10.152",
     "@types/node": "^24.5.2",
     "@types/pem-jwk": "^2.0.2",
-    "aws-cdk": "^2.1029.2",
+    "aws-cdk": "^2.1029.3",
     "create-keypair": "^0.1.2",
     "eslint": "^9.36.0",
     "eslint-plugin-import": "^2.32.0",
