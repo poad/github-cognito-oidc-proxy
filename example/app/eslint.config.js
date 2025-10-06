@@ -1,5 +1,6 @@
 // @ts-check
 
+import { defineConfig } from 'eslint/config';
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import react from 'eslint-plugin-react';
@@ -24,7 +25,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const gitignorePath = path.resolve(__dirname, '.gitignore');
 
-export default tseslint.config(
+export default defineConfig(
   includeIgnoreFile(gitignorePath),
   {
     ignores: [
@@ -42,6 +43,7 @@ export default tseslint.config(
   ...compat.config({
     extends: ['next/core-web-vitals'],
   }),
+  // @ts-expect-error ignore type error
   pluginPromise.configs['flat/recommended'],
   {
     files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
@@ -75,11 +77,9 @@ export default tseslint.config(
     },
     plugins: {
       '@stylistic': stylistic,
-      '@stylistic/ts': stylistic,
-      '@stylistic/js': stylistic,
-      '@stylistic/jsx': stylistic,
       react,
       'jsx-a11y': jsxA11yPlugin,
+      // @ts-expect-error ignore type error
       '@next/next': nextPlugin,
       'flow-type': flowtypePlugin,
       'react-hooks': reactHooksPlugin,
