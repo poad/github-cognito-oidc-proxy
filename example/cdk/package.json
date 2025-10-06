@@ -35,5 +35,5 @@
     "esbuild": "^0.25.10",
     "source-map-support": "^0.5.21"
   },
-  "packageManager": "pnpm@10.17.1"
+  "packageManager": "pnpm@10.18.0"
 }
