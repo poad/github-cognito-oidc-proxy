@@ -7,7 +7,7 @@ import react from 'eslint-plugin-react';
 import globals from 'globals';
 
 // import nextPlugin from '@next/eslint-plugin-next';
-import reactHooksPlugin from 'eslint-plugin-react-hooks';
+import reactHooks from 'eslint-plugin-react-hooks';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import flowtypePlugin from 'eslint-plugin-flowtype';
 import pluginPromise from 'eslint-plugin-promise';
@@ -45,6 +45,7 @@ export default defineConfig(
   // }),
   // @ts-expect-error ignore type error
   pluginPromise.configs['flat/recommended'],
+  reactHooks.configs.flat.recommended,
   {
     files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
     languageOptions: {
@@ -82,11 +83,9 @@ export default defineConfig(
       // // @ts-expect-error ignore type error
       // '@next/next': nextPlugin,
       'flow-type': flowtypePlugin,
-      'react-hooks': reactHooksPlugin,
     },
     extends: [
       ...compat.config(jsxA11yPlugin.configs.recommended),
-      'react-hooks/recommended',
     ],
     rules: {
       '@stylistic/indent': ['error', 2],
