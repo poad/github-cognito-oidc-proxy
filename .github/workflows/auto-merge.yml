@@ -1,4 +1,4 @@
-name: pull-request-auto-merge
+name: auto-merge
 
 on:
   pull_request:
@@ -9,7 +9,9 @@ permissions:
 
 jobs:
   pull-request-auto-merge:
-    runs-on: ubuntu-24.04-arm
+    runs-on: ubuntu-latest
+    # リポジトリオーナーの Pull Request はドラフト以外は自動マージを有効にする
+    if: ${{ github.event.pull_request.draft == false && (github.actor == 'dependabot[bot]' || github.repository_owner == github.actor) }}
     steps:
       - uses: actions/checkout@v5
 

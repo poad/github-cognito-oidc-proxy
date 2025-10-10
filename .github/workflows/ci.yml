@@ -10,20 +10,23 @@ on:
 
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
 
     - name: Use Node.js
-      uses: actions/setup-node@v5
+      uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
       with:
         node-version: 'lts/*'
         check-latest: true
         package-manager-cache: false
 
-    - uses: pnpm/action-setup@v4
+    - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
       name: Install pnpm
       with:
         run_install: |
@@ -32,7 +35,7 @@ jobs:
             args: [--no-frozen-lockfile]
         package_json_file: example/app/package.json
 
-    - uses: oven-sh/setup-bun@v2
+    - uses: oven-sh/setup-bun@735343b667d3e6f658f44d0eca948eb6282f2b76 # v2.0.2
 
     - name: Build (example/app)
       working-directory: example/app
@@ -41,15 +44,15 @@ jobs:
   build-backend:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
 
     - name: Use Node.js
-      uses: actions/setup-node@v5
+      uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
       with:
         node-version: 'lts/*'
         check-latest: true
 
-    - uses: pnpm/action-setup@v4
+    - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
       name: Install pnpm
       with:
         run_install: |
@@ -58,13 +61,13 @@ jobs:
             args: [--no-frozen-lockfile]
         package_json_file: package/package.json
 
-    - uses: oven-sh/setup-bun@v2
+    - uses: oven-sh/setup-bun@735343b667d3e6f658f44d0eca948eb6282f2b76 # v2.0.2
 
     - name: Build (package)
       working-directory: package
       run: bun run lint && bun run --bun build
 
-    - uses: pnpm/action-setup@v4
+    - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
       name: Install pnpm (example/app)
       with:
         run_install: |
@@ -73,7 +76,7 @@ jobs:
             args: [--no-frozen-lockfile]
         package_json_file: example/app/package.json
 
-    - uses: pnpm/action-setup@v4
+    - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
       name: Install pnpm (example/cdk)
       with:
         run_install: |
