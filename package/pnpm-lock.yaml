@@ -55,8 +55,8 @@ importers:
         specifier: ^8.10.155
         version: 8.10.155
       '@types/node':
-        specifier: ^24.7.1
-        version: 24.7.1
+        specifier: ^24.7.2
+        version: 24.7.2
       '@types/pem-jwk':
         specifier: ^2.0.2
         version: 2.0.2
@@ -80,7 +80,7 @@ importers:
         version: 3.6.2
       ts-node:
         specifier: ^10.9.2
-        version: 10.9.2(@types/node@24.7.1)(typescript@5.9.3)
+        version: 10.9.2(@types/node@24.7.2)(typescript@5.9.3)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -96,8 +96,8 @@ packages:
   '@aws-cdk/asset-node-proxy-agent-v6@2.1.0':
     resolution: {integrity: sha512-7bY3J8GCVxLupn/kNmpPc5VJz8grx+4RKfnnJiO1LG+uxkZfANZG3RMHhE+qQxxwkyQ9/MfPtTpf748UhR425A==}
 
-  '@aws-cdk/cloud-assembly-schema@48.13.0':
-    resolution: {integrity: sha512-xzcNCfygJRJJ+S1DI82hNcUgNWcwj0Z4tnTeBJ+5uW7f5rpyP9objT4L3OaEGdumLuOSuuvy5+iQQNAjCic0zA==}
+  '@aws-cdk/cloud-assembly-schema@48.14.0':
+    resolution: {integrity: sha512-mo1MaPKsNVh3QSuosREcwIh8TrVZ9deHVLAjzbjkQuTxb/7LGqkf1E5HHxlAt6Z0+z+DZt7dTPIJ92NcR0tjDQ==}
     engines: {node: '>= 18.0.0'}
     bundledDependencies:
       - jsonschema
@@ -399,8 +399,8 @@ packages:
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
-  '@types/node@24.7.1':
-    resolution: {integrity: sha512-CmyhGZanP88uuC5GpWU9q+fI61j2SkhO3UGMUdfYRE6Bcy0ccyzn1Rqj9YAB/ZY4kOXmNf0ocah5GtphmLMP6Q==}
+  '@types/node@24.7.2':
+    resolution: {integrity: sha512-/NbVmcGTP+lj5oa4yiYxxeBjRivKQ5Ns1eSZeB99ExsEQ6rX5XYU1Zy/gGxY/ilqtD4Etx9mKyrPxZRetiahhA==}
 
   '@types/pem-jwk@2.0.2':
     resolution: {integrity: sha512-wkdQZtXBObWNxv8Uo1N6SiNU/ZkhvK7UkrBPr0yNvEUlI6/zx2FuQJ95njlw/1jmlKE+cHAFDVB26Z9vNuebfg==}
@@ -1532,7 +1532,7 @@ snapshots:
 
   '@aws-cdk/asset-node-proxy-agent-v6@2.1.0': {}
 
-  '@aws-cdk/cloud-assembly-schema@48.13.0': {}
+  '@aws-cdk/cloud-assembly-schema@48.14.0': {}
 
   '@aws-lambda-powertools/commons@2.27.0': {}
 
@@ -1739,7 +1739,7 @@ snapshots:
 
   '@types/json5@0.0.29': {}
 
-  '@types/node@24.7.1':
+  '@types/node@24.7.2':
     dependencies:
       undici-types: 7.14.0
 
@@ -1934,7 +1934,7 @@ snapshots:
     dependencies:
       '@aws-cdk/asset-awscli-v1': 2.2.242
       '@aws-cdk/asset-node-proxy-agent-v6': 2.1.0
-      '@aws-cdk/cloud-assembly-schema': 48.13.0
+      '@aws-cdk/cloud-assembly-schema': 48.14.0
       constructs: 10.4.2
 
   aws-cdk@2.1030.0:
@@ -2933,14 +2933,14 @@ snapshots:
     dependencies:
       typescript: 5.9.3
 
-  ts-node@10.9.2(@types/node@24.7.1)(typescript@5.9.3):
+  ts-node@10.9.2(@types/node@24.7.2)(typescript@5.9.3):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 24.7.1
+      '@types/node': 24.7.2
       acorn: 8.15.0
       acorn-walk: 8.3.4
       arg: 4.1.3
