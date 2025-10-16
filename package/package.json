@@ -19,7 +19,7 @@
     "@eslint/js": "^9.37.0",
     "@middy/core": "^6.4.5",
     "@stylistic/eslint-plugin": "^5.4.0",
-    "@types/aws-lambda": "^8.10.155",
+    "@types/aws-lambda": "^8.10.156",
     "@types/node": "^24.7.2",
     "@types/pem-jwk": "^2.0.2",
     "aws-cdk": "^2.1030.0",
@@ -38,7 +38,7 @@
     "aws-lambda": "^1.0.7",
     "constructs": "^10.4.2",
     "email-validator": "^2.0.4",
-    "esbuild": "^0.25.10",
+    "esbuild": "^0.25.11",
     "fp-ts": "^2.16.11",
     "pem-jwk": "^2.0.0",
     "source-map-support": "^0.5.21"
