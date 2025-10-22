@@ -12,23 +12,23 @@
     "lint-fix": "eslint --fix"
   },
   "dependencies": {
-    "next": "^16.0.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "next": "16.0.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
     "@eslint/compat": "^1.4.0",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.38.0",
-    "@next/eslint-plugin-next": "^16.0.0",
+    "@next/eslint-plugin-next": "16.0.0",
     "@stylistic/eslint-plugin": "^5.5.0",
     "@types/node": "^24.9.1",
-    "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
     "eslint": "^9.38.0",
     "eslint-config-import": "^0.13.0",
-    "eslint-config-next": "^16.0.0",
+    "eslint-config-next": "16.0.0",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-import": "^2.32.0",
@@ -43,5 +43,11 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.2"
   },
-  "packageManager": "pnpm@10.18.3"
+  "packageManager": "pnpm@10.19.0",
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.2.2",
+      "@types/react-dom": "19.2.2"
+    }
+  }
 }
