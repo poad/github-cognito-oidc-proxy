@@ -77,8 +77,8 @@ importers:
         specifier: ^7.37.5
         version: 7.37.5(eslint@9.38.0)
       eslint-plugin-react-hooks:
-        specifier: ^7.0.0
-        version: 7.0.0(eslint@9.38.0)
+        specifier: ^7.0.1
+        version: 7.0.1(eslint@9.38.0)
       globals:
         specifier: ^16.4.0
         version: 16.4.0
@@ -1020,8 +1020,8 @@ packages:
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
 
-  eslint-plugin-react-hooks@7.0.0:
-    resolution: {integrity: sha512-fNXaOwvKwq2+pXiRpXc825Vd63+KM4DLL40Rtlycb8m7fYpp6efrTp1sa6ZbP/Ap58K2bEKFXRmhURE+CJAQWw==}
+  eslint-plugin-react-hooks@7.0.1:
+    resolution: {integrity: sha512-O0d0m04evaNzEPoSW+59Mezf8Qt0InfgGIBJnpC0h3NH/WjUAR7BIKUfysC6todmtiZ/A0oUVS8Gce0WhBrHsA==}
     engines: {node: '>=18'}
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
@@ -2798,7 +2798,7 @@ snapshots:
       eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.46.2(eslint@9.38.0)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.38.0)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.38.0)
       eslint-plugin-react: 7.37.5(eslint@9.38.0)
-      eslint-plugin-react-hooks: 7.0.0(eslint@9.38.0)
+      eslint-plugin-react-hooks: 7.0.1(eslint@9.38.0)
       globals: 16.4.0
       typescript-eslint: 8.46.2(eslint@9.38.0)(typescript@5.9.3)
     optionalDependencies:
@@ -2966,7 +2966,7 @@ snapshots:
       '@eslint-community/eslint-utils': 4.9.0(eslint@9.38.0)
       eslint: 9.38.0
 
-  eslint-plugin-react-hooks@7.0.0(eslint@9.38.0):
+  eslint-plugin-react-hooks@7.0.1(eslint@9.38.0):
     dependencies:
       '@babel/core': 7.28.5
       '@babel/parser': 7.28.5
