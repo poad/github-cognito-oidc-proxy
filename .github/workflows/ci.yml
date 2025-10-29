@@ -39,7 +39,7 @@ jobs:
 
     - name: Build (example/app)
       working-directory: example/app
-      run: bun run lint && bun run --bun build
+      run: bun run lint && pnpm build
 
   build-backend:
     runs-on: ubuntu-latest
@@ -65,7 +65,7 @@ jobs:
 
     - name: Build (package)
       working-directory: package
-      run: bun run lint && bun run --bun build
+      run: bun run lint && pnpm build
 
     - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
       name: Install pnpm (example/app)
@@ -87,4 +87,4 @@ jobs:
 
     - name: Build (example)
       working-directory: example/cdk
-      run: bun run lint && bun run --bun build
+      run: bun run lint && pnpm build
