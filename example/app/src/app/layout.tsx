@@ -1,7 +1,9 @@
 'use client';
 import { ReactNode } from 'react';
 
-export default function Layout({ children }: { children: ReactNode }) {
+interface ReactNodeProps { children: ReactNode }
+
+export default function Layout({ children }: ReactNodeProps) {
   return (
     <html lang="en">
       <body>{children}</body>

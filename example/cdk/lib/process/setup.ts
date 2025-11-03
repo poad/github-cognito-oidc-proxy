@@ -1,7 +1,9 @@
 import * as childProcess from 'child_process';
 import * as fs from 'fs';
 
-export const nextJsExport = ({ endpoint }: { endpoint: string }) => {
+interface NextJsExportProps { endpoint: string };
+
+export const nextJsExport = ({ endpoint }: NextJsExportProps) => {
   [`${process.cwd()}/../app/.next`, `${process.cwd()}/../app/out`].forEach(
     (dir) => {
       if (fs.existsSync(dir)) {
