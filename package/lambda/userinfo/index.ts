@@ -16,19 +16,21 @@ interface Email {
   visibility?: 'private' | 'public';
 }
 
+interface GetUserResponse {
+  id: number;
+  name: string;
+  login: string;
+  html_url: string;
+  avatar_url: string;
+  blog: string;
+  updated_at: string;
+}
+
 const getUser = async (
   token: string,
 ): Promise<
   Either<
-    {
-      id: number;
-      name: string;
-      login: string;
-      html_url: string;
-      avatar_url: string;
-      blog: string;
-      updated_at: string;
-    },
+    GetUserResponse,
     string
   >
 > => {
@@ -45,15 +47,7 @@ const getUser = async (
     );
   }
 
-  const user = (await response.json()) as {
-    id: number;
-    name: string;
-    login: string;
-    html_url: string;
-    avatar_url: string;
-    blog: string;
-    updated_at: string;
-  };
+  const user = (await response.json()) as GetUserResponse;
 
   return left({
     id: user.id,
@@ -79,12 +73,7 @@ const getValidEmail = async (token: string): Promise<Either<Email, string>> => {
       `Cannot get mails. status: ${response.statusText}. ${response.text()}`,
     );
   }
-  const emails = (await response.json()) as {
-    email: string;
-    primary: boolean;
-    verified: boolean;
-    visibility?: 'private' | 'public';
-  }[];
+  const emails = (await response.json()) as Email[];
 
   logger.info(JSON.stringify(emails));
 
