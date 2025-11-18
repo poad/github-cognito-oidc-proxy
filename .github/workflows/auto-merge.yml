@@ -13,7 +13,7 @@ jobs:
     # リポジトリオーナーの Pull Request はドラフト以外は自動マージを有効にする
     if: ${{ github.event.pull_request.draft == false && (github.actor == 'dependabot[bot]' || github.repository_owner == github.actor) }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v5.0.1
 
       - name: Enable auto-merge for Pull Request
         run: |
