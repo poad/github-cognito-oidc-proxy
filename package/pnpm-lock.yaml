@@ -49,11 +49,11 @@ importers:
         specifier: ^6.4.5
         version: 6.4.5
       '@stylistic/eslint-plugin':
-        specifier: ^5.5.0
-        version: 5.5.0(eslint@9.39.1)
+        specifier: ^5.6.0
+        version: 5.6.0(eslint@9.39.1)
       '@types/aws-lambda':
-        specifier: ^8.10.158
-        version: 8.10.158
+        specifier: ^8.10.159
+        version: 8.10.159
       '@types/node':
         specifier: ^24.10.1
         version: 24.10.1
@@ -373,8 +373,8 @@ packages:
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
 
-  '@stylistic/eslint-plugin@5.5.0':
-    resolution: {integrity: sha512-IeZF+8H0ns6prg4VrkhgL+yrvDXWDH2cKchrbh80ejG9dQgZWp10epHMbgRuQvgchLII/lfh6Xn3lu6+6L86Hw==}
+  '@stylistic/eslint-plugin@5.6.0':
+    resolution: {integrity: sha512-owEc4B8ME+O/xyZOkLVyLqPMsUgJXIM4XzCm5Vt3WvRXpyoOfYxgA+JkEiFqXPCI8+Nc2BzAT+KGAK7QleGs8Q==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=9.0.0'
@@ -391,8 +391,8 @@ packages:
   '@tsconfig/node16@1.0.4':
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
 
-  '@types/aws-lambda@8.10.158':
-    resolution: {integrity: sha512-v/n2WsL1ksRKigfqZ9ff7ANobfT3t/T8kI8UOiur98tREwFulv9lRv+pDrocGPWOe3DpD2Y2GKRO+OiyxwgaCQ==}
+  '@types/aws-lambda@8.10.159':
+    resolution: {integrity: sha512-SAP22WSGNN12OQ8PlCzGzRCZ7QDCwI85dQZbmpz7+mAk+L7j+wI7qnvmdKh+o7A5LaOp6QnOZ2NJphAZQTTHQg==}
 
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
@@ -1721,7 +1721,7 @@ snapshots:
 
   '@rtsao/scc@1.1.0': {}
 
-  '@stylistic/eslint-plugin@5.5.0(eslint@9.39.1)':
+  '@stylistic/eslint-plugin@5.6.0(eslint@9.39.1)':
     dependencies:
       '@eslint-community/eslint-utils': 4.9.0(eslint@9.39.1)
       '@typescript-eslint/types': 8.47.0
@@ -1739,7 +1739,7 @@ snapshots:
 
   '@tsconfig/node16@1.0.4': {}
 
-  '@types/aws-lambda@8.10.158': {}
+  '@types/aws-lambda@8.10.159': {}
 
   '@types/estree@1.0.8': {}
 
