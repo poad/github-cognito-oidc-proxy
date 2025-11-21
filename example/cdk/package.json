@@ -23,14 +23,14 @@
     "eslint": "^9.39.1",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import": "^2.32.0",
-    "pnpm": "^10.22.0",
+    "pnpm": "^10.23.0",
     "prettier": "^3.6.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.47.0"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.225.0",
+    "aws-cdk-lib": "^2.226.0",
     "constructs": "^10.4.3",
     "esbuild": "^0.27.0",
     "source-map-support": "^0.5.21"
