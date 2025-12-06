@@ -15,7 +15,7 @@
     "noUnusedParameters": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": false,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "inlineSourceMap": true,
     "inlineSources": true,
     "experimentalDecorators": true,
